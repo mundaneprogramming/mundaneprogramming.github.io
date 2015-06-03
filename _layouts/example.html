@@ -1,0 +1,24 @@
+---
+layout: page
+---
+
+
+<section id="file-listing">
+  {% if page.files %}
+    <h3>File manifest</h3>
+    <ul class="files">
+      {% for file in page.files %}
+        <li>
+          <span class="name">{{ file.name }}</span>
+          <a href="{{site.github_url}}/{{file.name}}">[github]</a>
+          <a href="/{{file.name}}">[raw]</a>
+        </li>
+        {% endfor %}
+    </ul>
+  {% endif %}
+</section> <!-- section#file-listing -->
+
+
+
+
+{{ content }}
