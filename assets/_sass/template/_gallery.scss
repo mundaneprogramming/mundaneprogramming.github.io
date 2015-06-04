@@ -1,0 +1,49 @@
+.gallery{
+  padding: 2.5em 0;
+
+  .caption{
+      font-size: $font-size-base * 1.1;
+      font-family: $font-family-sans-serif;
+      padding: 1.0em 0;
+
+      .title{ font-weight: bold; margin-right: 0.4em;}
+
+    }
+}
+
+.gallery{
+  &.buzzfeed{
+    .image{
+      margin-bottom: 2.0em;
+    }
+  }
+
+  &.instagram{
+    @extend .row;
+    .image{
+      @extend .col-sm-4;
+       padding: 0 !important;
+       margin: 0 !important;
+       @extend .magic-border;
+      .caption{
+        p{
+          margin: 0 !important;
+        }
+      }
+    }
+
+    .modal .imgwrap{
+      width: 85%;
+      max-height: 100%;
+        margin: auto;
+
+      img{
+        max-width: 85%;
+      }
+    }
+
+  }
+}
+
+
+

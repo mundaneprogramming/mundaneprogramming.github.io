@@ -3,7 +3,7 @@ layout: example
 title: Get coordinate data from Google Geocoding
 description: |
   blah balah blah
-
+rank: 1
 files:
   - name: code/google-geocode-address.py
     description: google geocode an address plz
