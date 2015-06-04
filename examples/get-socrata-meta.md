@@ -1,5 +1,4 @@
 ---
-layout: example
 title: Get metadata about a Socrata dataset
 description: |
   Get the most important information about a Socrata dataset.

@@ -1,5 +1,4 @@
 ---
-layout: example
 title: Get coordinate data from Google Geocoding
 description: |
   Get latitude and longitude, and other Google geodata, for any given location.

@@ -19,3 +19,9 @@ permalink: pretty
 sass:
     sass_dir: assets/_sass
 
+defaults:
+  - scope:
+      path: "examples"
+      type: "pages"
+    values:
+      layout: "example"
