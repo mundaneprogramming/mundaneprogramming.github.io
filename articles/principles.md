@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Principles of Mundane Programming
+description: Some thoughts about motivations and how to get started on day-to-day programming.
 ---
 
 ## Guidelines
@@ -15,6 +16,16 @@ title: Principles of Mundane Programming
 - Be lazy
 - Iterate
 
+Don't do anything unless it helps **you**:
+
+- Is writing the script educational?
+- Does the script do something useful?
+
+Many examples here are written in a command-line, functional style. Not because that's always the ideal way to do things, but because I felt like doing it that way. Writing things to use from the command-line necessarily creates a lot of cruft, but it makes the scripts much more usable to me. The functional-style makes it easier to revisit and re-use some of the components in future projects.
+
+
+
+
 ## Motivations
 
 - Learn how to debug
@@ -23,7 +34,3 @@ title: Principles of Mundane Programming
 - Get used to installing and trying out different libraries and languages
 - 
 
-
-Some tips:
-
-Create a `~/myscripts` directory and stash everything there. If you're on multiple computers attached to a Dropbox, I like to use `~/Dropbox/myscripts`
