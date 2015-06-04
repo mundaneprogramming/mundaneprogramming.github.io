@@ -14,10 +14,19 @@ hide_header: true
         {{ xs | markdownify }}
       </section>
 
+
+
       <section class="examples">
-        <h3>Examples</h3>
-        {% include examples-listing.html %}
+        {% capture xs %}{% include pages/homepage/home-examples.md %}{% endcapture %}
+        {{ xs | markdownify }}
       </section>
+
+
+      <section class="resources">
+        {% capture xs %}{% include pages/homepage/resources.md %}{% endcapture %}
+        {{ xs | markdownify }}
+      </section>
+
 
   </div>
 </div>

@@ -2,21 +2,29 @@
 layout: page
 ---
 
+<div class="example-page">
+  <div class="description">
+    {{ page.description }}
+  </div>
 
-<section id="file-listing">
-  {% if page.files %}
-    <h3>File manifest</h3>
-    <ul class="files">
-      {% for file in page.files %}
-        <li>
-          <span class="name">{{ file.name }}</span>
-          <a href="{{site.github_url}}/{{file.name}}">[github TODO]</a>
-          <a href="/{{file.name}}">[raw TODO]</a>
-        </li>
-        {% endfor %}
-    </ul>
-  {% endif %}
-</section> <!-- section#file-listing -->
+
+  <section id="file-listing">
+    {% if page.files %}
+      <h4>File manifest</h4>
+      <ul class="files">
+        {% for file in page.files %}
+          <li>
+            <span class="name">{{ file.name }}</span>
+            <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}">[View on Github]</a>
+            &nbsp;
+            <a href="/{{file.name}}">[raw]</a>
+          </li>
+          {% endfor %}
+      </ul>
+    {% endif %}
+  </section> <!-- section#file-listing -->
+
+</div>
 
 
 
