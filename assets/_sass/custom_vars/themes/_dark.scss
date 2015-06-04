@@ -1,0 +1,44 @@
+.theme-dark{
+  // define blackness
+  $gray-base:              #fff !default;
+  // Probably should leave these alone for the most part
+  $gray-lighter:          darken($gray-base, 13.5%) !default;
+  $gray-light:            darken($gray-base, 20%) !default;
+  $gray:                  darken($gray-base, 33.5%) !default;
+  $gray-dark:             darken($gray-base, 46.7%) !default;
+  $gray-darker:           darken($gray-base, 93.5%) !default;
+
+
+  $brand-primary:         lighten(#428bca, 15%) !default; // #337ab7
+  // Probably should leave these alone for the most part
+  $brand-success:         #5cb85c !default;
+  $brand-info:            #5bc0de !default;
+  $brand-warning:         #f0ad4e !default;
+  $brand-danger:          #d9534f !default;
+
+
+  //** Background color for `<body>`.
+  $body-bg:               #000 !default;
+  //** Global text color on `<body>`.
+  $text-color:            $gray-light !default;
+
+  //** Global textual link color.
+  $link-color:            $brand-primary !default;
+  //** Link hover color set via `darken()` function.
+  $link-hover-color:      lighten($link-color, 6%) !default;
+
+  background: $body-bg;
+  color: $text-color;
+  background-color: $body-bg;
+
+  a {
+    color: $link-color;
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+    }
+  }
+
+}
+@import
+    "custom_vars/themes/normal"

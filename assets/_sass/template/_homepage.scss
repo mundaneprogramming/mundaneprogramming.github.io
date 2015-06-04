@@ -1,0 +1,20 @@
+@import "template/homepage-banner";
+@import "template/posts-array";
+@import "template/posts-list";
+
+.homepage{
+
+}
+
+.callout{
+  background: $gray-lighter;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  p{
+    font-size: 1.3em;
+  }
+
+  padding: 4.0em 3.0em;
+
+}
+

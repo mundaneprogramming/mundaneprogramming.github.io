@@ -7,6 +7,15 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://mundaneprogramming.github.io" # the base hostname & protocol for your site
 twitter_username: dancow
 github_username:  mundaneprogramming
+github_repo: mundaneprogramming/mudnaneprogramming.github.io
 
 # Build settings
+
 markdown: kramdown
+kramdown:
+  coderay_line_numbers: table
+
+permalink: pretty
+sass:
+    sass_dir: assets/_sass
+

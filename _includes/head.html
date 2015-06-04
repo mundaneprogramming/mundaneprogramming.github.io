@@ -1,12 +1,56 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <!-- Standard meta -->
+  {% if page.title %}
+      {% assign meta_title = page.title %}
+    {% else %}
+      {% assign meta_title = site.title %}
+  {% endif %}
+
+  {% if page.description %}
+    {% assign meta_description = page.description %}
+  {% elsif page.excerpt %}
+    {% assign mega_description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+  {% else %}
+    {% assign meta_description = site.description %}
+  {% endif %}
+
+  {% assign meta_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+
+
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <link rel="canonical" href="{{ meta_url }}">
+  <!-- Facebook OpenGraph stuff  https://developers.facebook.com/docs/sharing/best-practices  -->
+
+<!--
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  <meta property="og:title" content="{{ meta_title }}" />
+  <meta property="og:url" content="{{ meta_url }}" />
+  <meta property="og:description" content="{{ meta_description }}" />
+  <meta property="og:image" content="{{site.meta_thumbnail_url}}" />
+
+ -->
+
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
+
+
+  {% if site.google_analytics_id %}
+    {% include widgets/google-analytics.html gid=site.google_analytics_id %}
+  {% endif %}
+
 </head>
+  <body>
+
+
+{% if page.hide_header != true %}
+  {% include header.html %}
+{% endif %}

@@ -1,0 +1,11 @@
+<div class="examples-listing">
+  {% assign site_pages = site.pages | sort: 'rank', 'last' %}
+  {% for p in site_pages %}
+    {% if p.path contains 'examples' %}
+      <div class="item example">
+        <h4><a href="{{p.url}}">{{p.title}}</a></h4>
+        <p>{{p.description}}</p>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

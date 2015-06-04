@@ -1,0 +1,27 @@
+.homepage-banner{
+  background-color: black;
+  background: url(/images/homepage-banner.jpg);
+  border-bottom: thin solid #aaa;
+  color: white;
+  min-height: 400px;
+  padding-bottom: 2.0em;
+  padding-top: 1.0em;
+  text-align: center;
+
+
+  h1.title{
+    font-size: 150px;
+  }
+  .slug{
+    font-size: 40px
+  }
+}
+
+
+@media (max-width: $screen-sm-min) {
+  .homepage-banner{
+    min-height: 100px;
+    h1.title{ font-size: 40px; }
+    .slug{ font-size: 20px;}
+  }
+}
