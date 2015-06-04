@@ -1,5 +1,4 @@
 ---
-layout: example
 title: Get HTTP Status code
 description: |
   Get HTTP status code for any given link
