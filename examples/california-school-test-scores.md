@@ -45,6 +45,8 @@ for x in xlslinks:
   print(x.attrib['href'])
 ~~~
 
+e.g.
+
 ~~~
 documents/sat13.xls
 documents/sat12.xls
@@ -54,6 +56,19 @@ documents/ap01.xls
 documents/ap00.xls
 documents/ap99.xls
 ~~~
+
+This reflects how the links exist in the raw HTML:
+
+~~~html
+<li><a href="documents/sat02.xls">SAT 2001–02</a> &nbsp;(XLS; Revised 04-Jun-2009)</li>
+~~~
+
+If you click that _relative_ link via a web browser, the browser correctly concatenates it to the URL of the current page:
+
+`http://www.cde.ca.gov/ds/sp/ai/<strong>documents/sat02.xls</strong>`
+
+However, since we're in Python-land, we have no such convenience. We have to manually join the two strings. It's an easy enough pattern. But I recommend looking up the __urljoin()__ function, which can handle this simple scenario as well as edge cases that you'll encounter in the wilder Web:
+
 
 ~~~py
 from urllib.parse import urljoin
@@ -147,9 +162,11 @@ OK, try again:
 for xlsname in glob('*.xls'):
   book = open_workbook(xlsname)
   sheet = book.sheets()[0]
-  header_idx = next(i for i in range(10) if all(j in str(sheet.row_values(i)) for j in ['County', 'District', 'Name']))
-  
-  print(xlsname, 'has headers at:', header_idx) 
+  header_idx = next(i for i in range(10) 
+    if all(j in str(sheet.row_values(i)) 
+    for j in ['County', 'District', 'Name']))
+  hdrs = sheet.row_values(header_idx)
+  print('%s has %d headers on row %d:' %(xlsname, len(hdrs), header_idx))
 ~~~
 
 
@@ -158,13 +175,108 @@ for xlsname in glob('*.xls'):
 This will be the hardest part of the show.
 
 
+~~~py
+from collections import defaultdict
+testheaders = defaultdict(lambda: defaultdict(list))
+for t in ['sat', 'act', 'ap']: 
+  d = testheaders[t] # e.g. {'ap': []}
+  for xlsname in glob(t + '*.xls'):
+    book = open_workbook(xlsname)
+    sheet = book.sheets()[0]
+    header_idx = next(i for i in range(10) if 
+        all(j in str(sheet.row_values(i)) 
+        for j in ['County', 'District', 'Name']))
+    )]
+    d[tuple(heads)].append(xlsname)
+~~~
+
+
+
+#### Clean up the headers
+
+Change:
+
+~~~py
+['County\nNumber', 'District\nNumber', 'School\nNumber', 'County Name', 'District Name', 'School Name', 'Grade 12\nEnrollment', 'Number\nTested', 'Percent\nTested', 'Average\nScore', 'Number\n w/Score\n>=21', 'Percent\nw/Score\n>=21']
+~~~
+
+to:
+
+~~~py
+('County Number', 'District Number', 'School Number', 'County Name', 'District Name', 'School Name', 'Grade 12', 'Number Tested', 'Percent Tested', 'Average Score', 'Scor21Ct', 'PctScr21')
+~~~
+
+
+
+~~~py
+import re
+def fooey(tup):
+  return tuple([re.sub('\s+', ' ', h).strip() for h in tup])
+
+for d in testheaders.values():
+  d = {fooey(k): v for k, v in d.items()}
+
+# clean up the headers, remove internal newlines
+~~~
+
+
+#### Create JSON-friendly structure
+
+(unnecessary)
+
+And to get a feel for how that looks:
+
+~~~py
+import json
+jheaders = {c: {str(k): v for k, v in d.items()} 
+                    for c, d in testheaders.items()}
+print(json.dumps(jheaders, indent = 2))
+~~~
 
 
 
 
 
 
+#### ACT data
+
+Let's start with the easiest data; ACT test files have a uniform number of columns: 12. And over the 15 years, there's only two variations of how the columns are named.
+
+~~~py
+act_cols = [list(cols) for cols in testheaders['act'].keys()]
+maxcols = max(len(cols) for cols in act_cols)
+for i in range(maxcols):
+  colnames = [cols[i] if len(cols) >= i else None for cols in act_cols]
+  print(colnames)
+~~~
+
+~~~py
+['County Number', 'County Number']
+['District Number', 'District Number']
+['School Number', 'School Number']
+['County Name', 'County Name']
+['District Name', 'District Name']
+['School Name', 'School Name']
+['Grade 12 Enrollment', 'Grade 12']
+['Number Tested', 'Number Tested']
+['Percent Tested', 'Percent Tested']
+['Average Score', 'Average Score']
+['Number w/Score >=21', 'Scor21Ct']
+['Percent w/Score >=21', 'PctScr21']
+~~~
 
 
 
+### Generalize
 
+
+~~~py
+def fooheads(tname):
+  tcols = [list(cols) for cols in testheaders[tname].keys()]
+  maxcols = max(len(cols) for cols in tcols)
+  for i in range(maxcols):
+    colnames = [cols[i] if len(cols) > i else None for cols in tcols]
+    print(colnames)
+
+
+~~~
