@@ -34,3 +34,14 @@ Many examples here are written in a command-line, functional style. Not because 
 - Get used to installing and trying out different libraries and languages
 - 
 
+
+
+## Not quite accurate/helpful beliefs about programming
+
+- Programming is easy
+- Programming should only be done for really amazing or nerdy things.
+- Programming should produce a webpage or startup
+- Programming is solely a mental pursuit
+- There are things that can only be done via programming
+- Memorizing syntax and libraries and intricate rules is key for being successful at programming 
+- Programming is not math
