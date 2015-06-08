@@ -39,6 +39,7 @@ Many examples here are written in a command-line, functional style. Not because 
 ## Not quite accurate/helpful beliefs about programming
 
 - Programming is easy
+- Your code "isn't working"
 - Programming is usually the fast way to solve a problem
 - Programming should only be done for really amazing or nerdy things.
 - Programming should produce a webpage or startup

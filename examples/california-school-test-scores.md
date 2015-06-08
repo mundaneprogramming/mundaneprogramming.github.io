@@ -89,11 +89,34 @@ for url in urls:
 ## Organizing the files
 
 
+### Rename the files
+
+~~~py
+import re
+import os
+import glob
+from os.path import splitext, dirname, basename
+RAWDATA_PATH = './rawdata'
+os.makedirs(RAWDATA_PATH, exist_ok = True)
+for xlsname in glob('*.xls'):
+  bname, ext = splitext(basename(xlsname)) # sat99, xls
+  tname, yr = re.search('([a-z]+)(\d{2})', bname).groups() # 99
+  year = ("19%s" % yr) if int(yr) > 90 else ("20%s" % yr)
+  newname = os.path.join(RAWDATA_PATH, "%s-%s%s" % (tname, year, ext))
+  os.rename(xlsname, newname)
+  print(xlsname, 'to:', newname)
+~~~
+
+
+
+
+
 ### Verify the row count
 
 ~~~py
 from glob import glob
 from xlrd import open_workbook
+RAWDATA_PATH
 for xlsname in glob('*.xls'):
   book = open_workbook(xlsname)
   sheet = book.sheets()[0]
@@ -170,10 +193,44 @@ for xlsname in glob('*.xls'):
 ~~~
 
 
-### Reconciling the formats
+## Reconciling the formats
 
 This will be the hardest part of the show.
 
+### Make new text files
+
+~~~py
+import csv
+import re
+from os.path import splitext
+for xlsname in glob('*.xls'):
+  bname = splitext(basename(xlsname))[0] # sat99
+  yr = int(re.search('\d{2}', bname).group()) # 99
+  f = open('result.csv', 'wb')
+  cwriter = (fp, quoting=csv.QUOTE_ALL)
+
+  book = open_workbook(xlsname)
+  sheet = book.sheets()[0]
+  header_idx = next(i for i in range(10) 
+    if all(j in str(sheet.row_values(i)) 
+    for j in ['County', 'District', 'Name']))
+  hdrs = sheet.row_values(header_idx)
+  print('%s has %d headers on row %d:' %(xlsname, len(hdrs), header_idx))
+
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+----------
 
 ~~~py
 from collections import defaultdict
@@ -277,6 +334,49 @@ def fooheads(tname):
   for i in range(maxcols):
     colnames = [cols[i] if len(cols) > i else None for cols in tcols]
     print(colnames)
-
-
 ~~~
+
+
+
+----------------
+
+
+
+- Fetch the webpage
+- Parse the webpage
+- Extract the URLs
+- Filter the URLs
+- Rename the URLs
+- Download each URL
+- Save the URLs
+- Rename the files
+- Inspect the files
+------------------- 
+- Find the sheets
+- Find the header rows for each sheet
+- Verify that each row has the right pattern
+- Clean up the headers
+- Rewrite as CSV
+- Compile the headers
+- Compare the headers
+- Write a lookup table
+- Verify the values in each table
+- Combine the three different tests
+- Combine three tests into one file
+--------------------
+Audit time
+"--" to NA
+--------------------
+Some Visualization time
+--------------------
+Table joins and more data downloading
+-------------
+More integrity checks
+-------------
+Data exporting
+-------------
+Data visualizing in R
+--------------
+
+
+
