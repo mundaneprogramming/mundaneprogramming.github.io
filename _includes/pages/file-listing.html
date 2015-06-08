@@ -5,9 +5,19 @@
         <li>
           <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}">
             <span class="name">{{ file.name }}</span>
-          <a>
+          </a>
 
-          <a href="/{{file.name}}">[raw]</a>
+
+          <div class="description">
+            {{ file.description }}
+          </div>
+
+          <div class="links">
+
+            <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}" class="github">[github]</a>
+            <a class="raw" href="/{{file.name}}">[raw]</a>
+          </div>
+
         </li>
         {% endfor %}
     </ul>

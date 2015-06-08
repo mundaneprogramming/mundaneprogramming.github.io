@@ -7,10 +7,44 @@
 
 
 .example-page{
+
+  #file-listing{
+    ul.files{
+      padding-left: 1.0em;
+
+      li{
+        margin-bottom: 1.0em;
+      }
+    }
+
+    .name{
+      font-weight: bold;
+    }
+
+    .links{
+      font-size: 0.8em;
+    }
+
+    .description{
+      font-size: 1.0em;
+      font-style: normal;
+      margin-bottom: 1px;
+    }
+  }
+
   .description{
     font-size: 1.2em;
     line-height: 1.1em;
     margin-bottom: 2.0em;
     font-style: italic;
+  }
+}
+
+.example-page{
+  .container{
+    p{
+      max-width: $prose-container-width;
+    }
+
   }
 }
