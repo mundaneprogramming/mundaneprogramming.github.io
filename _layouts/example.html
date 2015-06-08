@@ -3,19 +3,27 @@ layout: page
 ---
 
 <div class="example-page">
-  <div class="description">
-    {{ page.description }}
+  <div class="container">
+    <div class="description">
+      {{ page.description }}
+    </div>
+
+
+    <section id="file-listing">
+      <div class="well">
+        {% include pages/file-listing.html %}
+      </div>
+    </section> <!-- section#file-listing -->
+
   </div>
 
-
-  <section id="file-listing">
-    {% include pages/file-listing.html %}
-
-  </section> <!-- section#file-listing -->
+  <div class="container">
+    {{ content }}
+  </div>
 
 </div>
 
 
 
 
-{{ content }}
+
