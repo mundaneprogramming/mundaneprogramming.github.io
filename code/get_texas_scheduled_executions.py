@@ -43,4 +43,4 @@ d['previous'] = {
 }
 
 
-json.dumps(d, indent = 2)
+print(json.dumps(d, indent = 2))
