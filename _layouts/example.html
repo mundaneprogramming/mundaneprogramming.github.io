@@ -9,19 +9,8 @@ layout: page
 
 
   <section id="file-listing">
-    {% if page.files %}
-      <h4>File manifest</h4>
-      <ul class="files">
-        {% for file in page.files %}
-          <li>
-            <span class="name">{{ file.name }}</span>
-            <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}">[View on Github]</a>
-            &nbsp;
-            <a href="/{{file.name}}">[raw]</a>
-          </li>
-          {% endfor %}
-      </ul>
-    {% endif %}
+    {% include pages/file-listing.html }
+
   </section> <!-- section#file-listing -->
 
 </div>

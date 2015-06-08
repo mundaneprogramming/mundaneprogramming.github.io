@@ -5,13 +5,12 @@ import requests
 d = {}
 
 # get next execution
-url = "http://www.tdcj.state.tx.us/death_row/dr_scheduled_executions.html"
+url = "https://www.tdcj.state.tx.us/death_row/dr_executed_offenders.html"
 resp = requests.get(url)
 doc = html.fromstring(resp.text)
 row = doc.cssselect('table tr')[1]
 cols = row.cssselect('td')
-exdate = datetime.strptime(cols[0].text_content(), '%m/%d/%Y')
+exdate = datetime.strptime(cols[7].text_content(), '%m/%d/%Y')
 
-
-print((exdate - datetime.now()).days, "days until Texas executes someone.")
-# "9 days until Texas executes someone."
+print((datetime.now() - exdate).days, "days since Texas executed someone.")
+# "5 days since Texas executed someone.""
