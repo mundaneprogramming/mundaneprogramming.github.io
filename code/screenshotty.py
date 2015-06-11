@@ -72,44 +72,14 @@ def get_canonical_format_name(ofmt):
     elif o == 'png':
         return PNG_FORMAT
     else:
-        raise FormatError()
+        oopsmsg = "Image output format or file extension was: %s\n It must be: %s" % (ofmt, ', '.join(APPROVED_FORMAT_ALIASES))
+        raise Exception(oopsmsg)
 
 
-def save_as(img, filename, output_format, **kwargs):
+def save_image(img, filename, output_format, **kwargs):
     add_meta_screenshot_timestamp(img)
     img.save(filename, output_format, **kwargs)
     return filename
-
-class FormatError(Exception):
-    """Exception raised for not having the correct format
-
-    Attributes:
-        expr -- input expression in which the error occurred
-        msg  -- explanation of the error
-    """
-
-    def __init__(self):
-        msg = "Image output format must be: %s" % ', '.join(APPROVED_FORMAT_ALIASES)
-        super(Exception, self).__init__(msg)
-
-# def save_as_gif(img, filename):
-#     img.save(filename, format = 'gif')
-#     return filename
-
-# def save_as_jpg(img, filename, quality = JPG_QUALITY_DEFAULT, optimize = True):
-#     """
-#     saves to disk, returns path of file
-#     """
-#     img.save(filename, format = 'jpg', quality = quality)
-#     return outfn
-
-# def save_as_png(img, filename, compress_level = PNG_COMPRESS_LEVEL_DEFAULT, optimize = False):
-#     """
-#     saves to disk, returns path of file
-#     """
-#     img.save(filename, format = 'png', compress_level = compress_level, optimize = optimize)
-#     return filename
-
 
 #######################
 # BEGIN ARGUMENT PARSING
@@ -220,12 +190,6 @@ elif output_format == GIF_FORMAT:
 # reopen the saved screenshot file
 print("\n######\nSaving to %s,\nas format %s,\nwith parameters %s\n########\n" % (output_path, output_format, output_args ))
 img = Image.open(tempscreengrab_file.name).convert('RGBA')
-save_as(img, output_path, output_format, **output_args)
-
-
-
-
-
-
+save_image(img, output_path, output_format, **output_args)
 # remove the temp screen grab file from memory
 tempscreengrab_file.close()

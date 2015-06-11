@@ -1,12 +1,17 @@
 
 
-## Hey there Intro
+## Be a Better Programmer with Mundane Programming
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, excepturi, delectus est odio, minus distinctio quis ut, consequatur ratione sed qui. Aliquam quibusdam repudiandae animi inventore sit eos impedit officiis!
+This is a repository of thoughts and guides on finding everyday reasons to program. 
+
+Computers were _made_ to do mundane tasks for us. And programming is how we tell computers how to do those tasks. If you lack exciting, imaginative ideas, then tell boring ideas to your computer. They make for essential programming practice. Even when you barely succeed at it, you'll reduce the mundane tasks in your life and increase what you can tell a computer to do for you.
+
+If you want to program and to program well, don't wait until you have a world-changing idea, or a job with programming in its title. You have plenty of reasons to program today, and to program tomorrow.
 
 
 
-### Srccon blurb
+
+### SRCCON 2015 blurb
 
 Presented by [Dan Nguyen](https://twitter.com/dancow) and [Travis Swicegood](https://twitter.com/tswicegood).
 
