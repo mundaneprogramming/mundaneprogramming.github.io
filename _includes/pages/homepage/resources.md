@@ -12,6 +12,9 @@ Useful programming resources and readings related to mundane and personal script
 
 - [Eight Terminal Utilities Every OS X Command Line User Should Know](http://www.mitchchn.me/2014/os-x-terminal/) - this short list of highly-effective command-line tools built into OS X got me into finally appreciating the Unix idea of small programs doing-one-thing-and-doing-it-well. I use `open`, `pbpaste`, and `pbcopy` on a daily basis -- they're worth it for the speed increase alone. Even though they don't easily fit into general-purpose scripts,  using them exposed me to more ways and ideas of integrating programs for convenience.
 
+
+- [The Three Great Virtues of a Programmer](http://c2.com/cgi/wiki?LazinessImpatienceHubris) - nothing wrong with doing a little work so that a computer does a lot of work for you.
+
 - [How to be a Programmer: A Short, Comprehensive, and Personal Summary](http://samizdat.mines.edu/howto/HowToBeAProgrammer.html) - this is more of a general treatise on being a programmer, but the debugging section is a must-read for programmers at every level. One advantage of mundane programming is that it keeps things simple enough for you to practice debugging in a sane way.
 
 - [First web scraper](http://first-web-scraper.readthedocs.org/en/latest/) - A step-by-step guide to writing a web scraper with Python for scraping jail logs. Coincidentally, scraping jail logs as a cops reporter is the first time that I remember using programming for something on the job.
