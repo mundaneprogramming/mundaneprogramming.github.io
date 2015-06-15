@@ -47,3 +47,18 @@ Many examples here are written in a command-line, functional style. Not because 
 - There are things that can only be done via programming
 - Memorizing syntax and libraries and intricate rules is key for being successful at programming 
 - Programming does not require mathematical thinking
+
+
+
+
+-----
+
+more thoughts, step by step guide:
+
+
+Checklist for a mundane programming project
+
+1. Is this a mundane task that you've actually done, in mundane fashion?
+2. Do you know what a successful outcome looks like?
+3. Can you think of all the milestones to success?
+4. When your'e done, is it something that you can use right away?
