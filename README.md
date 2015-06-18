@@ -3,13 +3,18 @@
 
 ### TODO list
 
-[] - Add author bios
-[] - Write project page templates
-[] - Add text, links to footer
-[] - A better header?
-[] - A favicon?
-[] - XML/JSON feed of posts?
+- [] Add author bios
+- [] Write project page templates
+- [] Add text, links to footer
+- [] A better header?
+- [] A favicon?
+- [] XML/JSON feed of posts?
 
+#### Pages
+
+- [] Convert Word docx to HTML
+- [] Regex practice
+- [] Text editor suggestions
 
 [mundaneprogramming.github.io](http://mundaneprogramming.github.io)
 
