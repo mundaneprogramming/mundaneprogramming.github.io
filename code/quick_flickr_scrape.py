@@ -1,5 +1,7 @@
 # make an app here:
 # https://www.flickr.com/services/apps/create/noncommercial/?
+# also, via wikipedia
+# https://github.com/wikimedia/pywikibot-core/blob/master/scripts/flickrripper.py
 from os import environ
 import requests
 baseurl = 'https://api.flickr.com/services/rest/'
