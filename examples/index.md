@@ -11,4 +11,4 @@ The source code of the scripts is included &ndash; because, why not? &ndash; but
 
 
 
-{% include examples-listing.html %}
+{% include snippets/examples-listing.html %}

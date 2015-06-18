@@ -1,5 +1,7 @@
 ---
 title: Follow all Twitter accounts listed on a page
+authors:
+  - dannguyen
 ---
 
 Great way to practice regexes (no need to actually parse HTML)

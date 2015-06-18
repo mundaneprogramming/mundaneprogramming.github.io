@@ -1,0 +1,1 @@
+{% assign aslug = include.author_slug %}{% assign author = site.data.authors[aslug] %}{% if author %}<span class="name"><a href="/#author-info-{{aslug}}">{{author.name}}</a></span>{% else %}<span class="name">{{aslug}}</span>{% endif %}
