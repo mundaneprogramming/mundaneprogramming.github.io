@@ -8,6 +8,7 @@ url: "http://mundaneprogramming.github.io" # the base hostname & protocol for yo
 twitter_username: dancow
 github_username:  mundaneprogramming
 github_repo: mundaneprogramming/mundaneprogramming.github.io
+google_analytics_id: "UA-64284356-1"
 
 # Build settings
 
@@ -25,3 +26,5 @@ defaults:
       type: "pages"
     values:
       layout: "example"
+
+

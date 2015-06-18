@@ -1,5 +1,7 @@
 ---
 title: Get coordinate data from Google Geocoding
+authors:
+  - dannguyen
 description: |
   Get latitude and longitude, and other Google geodata, for any given location.
 featured: true

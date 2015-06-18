@@ -27,6 +27,11 @@ hide_header: true
         {{ xs | markdownify }}
       </section>
 
+      <section class="authors">
+        {% capture xs %}{% include pages/homepage/authors-info.md %}{% endcapture %}
+        {{ xs | markdownify }}
+      </section>
+
 
   </div>
 </div>
