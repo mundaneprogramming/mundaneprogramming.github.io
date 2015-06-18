@@ -1,5 +1,7 @@
 ---
 title: Name and optimize a screengrab file
+authors:
+  - dannguyen
 rank: 4
 description: |
   Control what happens to an image file after a screenshot is taken

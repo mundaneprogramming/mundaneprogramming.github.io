@@ -43,19 +43,18 @@
 
 
 
-  {% if site.google_analytics_id %}
-    {% include widgets/google-analytics.html gid=site.google_analytics_id %}
-  {% endif %}
-
 
   <script src="/assets/js/vendor/jquery.js"></script>
   <script src="/assets/js/vendor/headroom.js"></script>
   <script src="/assets/js/main.js"></script>
 
 
+  {% if site.google_analytics_id %}
+    {% include snippets/google-analytics.html ga_id=site.google_analytics_id %}
+  {% endif %}
 
 </head>
-  <body>
+<body>
 
 
 {% if page.hide_header != true %}

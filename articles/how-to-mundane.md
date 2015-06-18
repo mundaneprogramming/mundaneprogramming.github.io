@@ -2,6 +2,10 @@
 title: What to learn and etc.
 ---
 
+# How to learn?
+
+Basically, learn how to debug.
+
 # Is it worth the time?
 Maybe.
 
@@ -22,6 +26,8 @@ Maybe.
 - Some error handling
 - Self-documenting code style
 - Following best practices in style
+- Reducing file clutter
+- Creating environments
 
 ## Things to not worry about
 
@@ -30,7 +36,9 @@ Maybe.
 - Test driven development
 - Documentation (in the form of comments)
 - Complete DRY
-
+- Optimization
+- Big O notation
+- Feature creep
 
 ## Learn one, or two new things at a time. 
 Don't replace your whole process. For example, this [thorough webscraping tutorial](http://newcoder.io/scrape/) might be _too_ thorough, as it introduces:

@@ -1,0 +1,7 @@
+<xml xmlns:o="urn:schemas-microsoft-com:office:office">
+ <o:MainFile HRef="::Hello Lorem Ipsum.docx.htm"/>
+ <o:File HRef="themedata.xml"/>
+ <o:File HRef="image001.jpg"/>
+ <o:File HRef="image002.png"/>
+ <o:File HRef="filelist.xml"/>
+</xml>

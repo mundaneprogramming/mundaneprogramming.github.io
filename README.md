@@ -1,5 +1,16 @@
 # Mundane Programming
 
+
+### TODO list
+
+[] - Add author bios
+[] - Write project page templates
+[] - Add text, links to footer
+[] - A better header?
+[] - A favicon?
+[] - XML/JSON feed of posts?
+
+
 [mundaneprogramming.github.io](http://mundaneprogramming.github.io)
 
 #### A guide on how to do mundane programming to become a non-mundane programmer.

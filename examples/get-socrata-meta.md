@@ -1,9 +1,12 @@
 ---
 title: Get metadata about a Socrata dataset
+authors:
+  - dannguyen
 description: |
   Get the most important information about a Socrata dataset.
 featured: true
 rank: 5
+
 files:
   - name: code/socrata-meta-get.py
     description: A bunch of scripts that parse a Socrata URL and extracts a preview of useful metadata, including number of rows and columns, updated timestamps, and usage metrics

@@ -20,3 +20,30 @@ Create a `~/myscripts` directory and stash everything there. If you're on multip
 
 bash_profile etc etc etc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus accusamus vitae tempora veniam aspernatur, aliquid nemo dignissimos eos reprehenderit, asperiores dolorum praesentium vel saepe pariatur rem, repudiandae recusandae sapiente non!
 
+
+
+## What language
+
+Python
+
+### Ruby
+
+Ruby is fun. It lets you be creative. This is not a good thing if you are new to programming.
+
+### PHP
+
+PHP is fine. But building a website, or a WordPress site, is usually not an everyday task.
+
+### R
+Hadley Wickham, among others, are making R very usable. But it's not as well-supported as Python, or as multi-purpose.
+
+### JavaScript
+Again, great for building webpages. Good to iffy for anything else.
+
+### Java
+A great language for going into enterprise. Not for personal programming.
+
+
+
+
+

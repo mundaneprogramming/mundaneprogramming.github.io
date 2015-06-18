@@ -1,0 +1,19 @@
+dannguyen:
+    name: Dan Nguyen
+    twitter: dancow
+    github: dannguyen
+    website: http://danwin.com
+    description: |
+      Dan is a Lorem ipsum dolor sit amet, __consectetur__ adipisicing elit. Dolore eius nesciunt omnis non vero ea perspiciatis, pariatur facilis maxime id earum veniam iusto.
+
+      Rerum _provident_ laudantium excepturi beatae mollitia commodi!
+
+geoffhing:
+    name: Geoff Hing
+    twitter: geoffhing
+    github: ghing
+    description: |
+      Geoff is a Lorem ipsum [provident recusandae eum](/#TK), unde asperiores ipsa. Tempora suscipit quia saepe,
+      quas illo tenetur totam minima.
+
+      Optio pariatur neque ea cum id? Earum!
