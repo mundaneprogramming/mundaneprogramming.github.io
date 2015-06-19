@@ -7,31 +7,25 @@ hide_header: true
 
 
   <div class="container">
-    <h1 class="page-heading">Be a Better Programmer Through Mundane Programming</h1>
+    <h1 class="page-heading">
+      Mundane Programming. Or: How to Program for Tomorrow.
+    </h1>
 
-      <section class="intro">
-        {% capture xs %}{% include pages/homepage/intro.md %}{% endcapture %}
-        {{ xs | markdownify }}
-      </section>
+    <section class="section-intro">
+      {% capture xs %}{% include pages/homepage/intro.md %}{% endcapture %}
+      {{ xs | markdownify }}
+    </section>
 
+    <section class="section-examples">
+      <h3>Example <a href="/examples">Recipes and Projects</a></h3>
+      {% capture xs %}{% include pages/homepage/home-examples.md %}{% endcapture %}
+      {{ xs | markdownify }}
+    </section>
 
-
-      <section class="examples">
-        {% capture xs %}{% include pages/homepage/home-examples.md %}{% endcapture %}
-        {{ xs | markdownify }}
-      </section>
-
-<!--
-      <section class="resources">
-        {% capture xs %}{% include pages/homepage/resources.md %}{% endcapture %}
-        {{ xs | markdownify }}
-      </section>
- -->
-      <section class="authors">
-        {% capture xs %}{% include pages/homepage/about-authors.md %}{% endcapture %}
-        {{ xs | markdownify }}
-      </section>
-
-
+    <section class="section-authors">
+      <h3>Contributors</h3>
+      {% capture xs %}{% include pages/homepage/about-authors.md %}{% endcapture %}
+      {{ xs | markdownify }}
+    </section>
   </div>
 </div>

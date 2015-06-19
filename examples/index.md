@@ -1,5 +1,5 @@
 ---
-title: Examples
+title: The Examples
 layout: listing
 ---
 {% capture markdownblk %}
