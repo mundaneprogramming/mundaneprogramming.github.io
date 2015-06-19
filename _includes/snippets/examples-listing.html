@@ -13,7 +13,7 @@
   {% endif %}
   {% for p in site_pages %}
     <!-- ugly hack to contain only things in /examples -->
-    {% if p.path contains pagetypes and p.layout != 'index' %}
+    {% if p.path contains pagetypes and p.layout != 'listing' %}
       <div class="item {{pagetype}}">
         <h5 class="title"><a href="{{p.url}}">{{p.title}}</a></h5>
         <p>{{p.description}}</p>

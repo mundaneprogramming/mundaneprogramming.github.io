@@ -11,4 +11,5 @@ The source code of the scripts is included &ndash; because, why not? &ndash; but
 <!-- probably should make this blurb appear at the bottom of every example/recipe page -->
 
 
-{% include snippets/examples-listing.html %}
+{% include snippets/examples-listing.html pagetype="example"%}
+{% include snippets/examples-listing.html pagetype="project" %}

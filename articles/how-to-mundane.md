@@ -58,3 +58,15 @@ Focus on one thing at a time. Figure out the parser. And just use that. Then mov
 # Goals
 
 - Don't touch your mouse
+
+
+# Concrete skills
+
+- Regex
+- xpath
+- Keyboard shortcuts
+- CSS selectors
+- JSON/CSV serialization
+- cronjobs
+- Remote deployment
+- Multithreading

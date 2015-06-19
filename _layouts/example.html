@@ -2,25 +2,46 @@
 layout: page
 ---
 
+
+
 <div class="example-page">
   <div class="container">
-    <div class="description">
-      {{ page.description }}
-    </div>
+    <section id="meta-boilerplate">
+          <div class="description">
+            {{ page.description }}
+          </div>
 
+          <ul class="keywords list-inline">
+              <strong>Keywords: </strong>
+              {% if page.keywords %}
+                {% for kgrp in page.keywords %}
+                  {% for keyword in kgrp[1] %}
+                    <li class="keyword">{{keyword}}</li>
+                  {% endfor %}
+                {% endfor %}
+              {% endif %}
+          </ul>
+    </section>
 
-    <section id="file-listing">
-      <div class="well">
-        {% include pages/file-listing.html %}
-      </div>
-    </section> <!-- section#file-listing -->
+    <section id="meta-nav" class="well">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include snippets/toc.html %}
+          </div>
+          <div class="col-sm-6">
+            <div id="file-manifest">
+              <h5>Related files</h5>
+              {% include pages/file-manifest.html %}
+            </div>
+          </div>
+        </div>
+    </section> <!-- section#file-manifest -->
 
   </div>
 
   <div class="container">
     {{ content }}
   </div>
-
 </div>
 
 
