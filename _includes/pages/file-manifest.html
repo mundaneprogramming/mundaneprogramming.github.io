@@ -1,9 +1,7 @@
   {% if page.files %}
-    <h4>File manifest</h4>
-    <div class="row">
       <ul class="files list-unstyled">
         {% for file in page.files %}
-          <li class="col-sm-6">
+          <li class="">
             <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}">
               <span class="name">{{ file.name | remove_first: 'code/'}}</span>
             </a>
@@ -21,5 +19,4 @@
           </li>
           {% endfor %}
       </ul>
-    </div> <!-- row -->
   {% endif %}

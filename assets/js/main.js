@@ -6,4 +6,8 @@ $(document).ready(function(){
   // initialise
   headroom.init();
 
+  // https://github.com/ghiculescu/jekyll-table-of-contents
+  // ...I miss middleman...
+  $('#table-of-contents .toc').toc();
 })
+

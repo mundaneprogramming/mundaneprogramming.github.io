@@ -1,14 +1,23 @@
 
 .example-page{
 
-  #file-listing{
-    ul.files{
-      li{
-        margin-bottom: 1.0em;
-      }
-    }
+  #meta-boilerplate{
+    margin-top: 1.5em;
+    margin-bottom: 1.0em;
+  }
 
+  #file-manifest{
+
+    h5{
+      margin-bottom: 1px;
+    }
+    .description{
+      font-size: 0.85em;
+      font-style: normal;
+      margin-bottom: 1px;
+    }
     .name{
+      font-size: 0.85em;
       font-weight: bold;
     }
 
@@ -16,19 +25,25 @@
       font-size: 0.8em;
     }
 
-    .description{
-      font-size: 1.0em;
-      font-style: normal;
-      margin-bottom: 1px;
+    ul.files{
+      li{
+        margin-bottom: 1.0em;
+      }
     }
+
   }
 
   .description{
     font-size: 1.2em;
-    line-height: 1.1em;
-    margin-bottom: 2.0em;
-    font-style: italic;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
   }
+
+  .keywords{
+    margin-left: 0;
+  }
+
+
 }
 
 // .example-page{
