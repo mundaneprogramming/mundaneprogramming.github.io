@@ -1,5 +1,3 @@
-### About the authors
-
 <div class="row">
 {% for a in site.data.authors %}
   {% assign author = a[1] %}

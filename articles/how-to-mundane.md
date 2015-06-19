@@ -58,10 +58,11 @@ Focus on one thing at a time. Figure out the parser. And just use that. Then mov
 # Goals
 
 - Don't touch your mouse
-
+- Look for efficiencies. Things like syntax-hilighting are incredibly important
 
 # Concrete skills
 
+- Visual recognition
 - Regex
 - xpath
 - Keyboard shortcuts
