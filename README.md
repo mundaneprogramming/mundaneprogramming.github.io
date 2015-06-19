@@ -3,18 +3,28 @@
 
 ### TODO list
 
+#### Functionality
+
+- [ ] snippets/code-snippet.html
+
+
+#### General
+
 - [ ] Add author bios
 - [ ] Write project page templates
-- [ ] Add text, links to footer
+- [ ] Add text, links in footer
 - [ ] A better header?
 - [ ] A favicon?
 - [ ] XML/JSON feed of posts?
 
 #### Pages
 
+- [ ] About page is not good
 - [ ] Convert Word docx to HTML
 - [ ] Regex practice
 - [ ] Text editor suggestions
+- [ ] Add context to Travis's Craigslist example
+
 
 [mundaneprogramming.github.io](http://mundaneprogramming.github.io)
 

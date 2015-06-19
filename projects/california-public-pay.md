@@ -1,8 +1,12 @@
 ---
 title: California Salaries Tracker
 description: A demonstration of working with multiple CSV files programatically
+authors:
+    - dannguyen
 ---
 
+
+- Show how to import into database
 
 
 

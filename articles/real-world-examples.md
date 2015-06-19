@@ -24,6 +24,7 @@
 
 - [I wrote software to help with my work. My company wants me to give it to every department, should I ask for a raise? : personalfinance (reddit.com)](http://www.reddit.com/r/personalfinance/comments/2juz38/i_wrote_software_to_help_with_my_work_my_company/) 
 
+- [My grueling day as an Amazon Mechanical Turk](http://kernelmag.dailydot.com/features/report/4732/my-gruelling-day-as-an-amazon-mechanical-turk/)
 
 ## Resources
 
