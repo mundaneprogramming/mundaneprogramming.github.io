@@ -1,14 +1,21 @@
+{% if include.pagetype %}
+  {% assign pagetype = include.pagetype  %}
+{% else %}
+  {% assign pagetype = 'example' %}
+{% endif %}
+{% assign pagetypes = pagetype | append: "s" %}
 
-<div class="examples-listing">
+
+<div class="{{pagetypes}}-listing listing">
   {% assign site_pages = site.pages | sort: 'rank', 'last' %}
   {% if include.featured %}
     {% assign site_pages = site.pages | where:"featured",true %}
   {% endif %}
   {% for p in site_pages %}
     <!-- ugly hack to contain only things in /examples -->
-    {% if p.path contains 'examples' and  p.title != 'Examples' %}
-      <div class="item example">
-        <h4 class="title"><a href="{{p.url}}">{{p.title}}</a></h4>
+    {% if p.path contains pagetypes and p.layout != 'index' %}
+      <div class="item {{pagetype}}">
+        <h5 class="title"><a href="{{p.url}}">{{p.title}}</a></h5>
         <p>{{p.description}}</p>
       </div>
     {% endif %}

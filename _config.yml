@@ -27,4 +27,9 @@ defaults:
     values:
       layout: "example"
 
+  - scope:
+      path: "projects"
+      type: "pages"
+    values:
+      layout: "example"
 

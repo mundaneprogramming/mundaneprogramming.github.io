@@ -52,3 +52,9 @@ Don't replace your whole process. For example, this [thorough webscraping tutori
 - Setting up cron
 
 Focus on one thing at a time. Figure out the parser. And just use that. Then move on to spidering. And then move to deserialization. And then, later, to databases.
+
+
+
+# Goals
+
+- Don't touch your mouse
