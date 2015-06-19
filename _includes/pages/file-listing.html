@@ -1,24 +1,25 @@
   {% if page.files %}
     <h4>File manifest</h4>
-    <ul class="files">
-      {% for file in page.files %}
-        <li>
-          <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}">
-            <span class="name">{{ file.name }}</span>
-          </a>
+    <div class="row">
+      <ul class="files list-unstyled">
+        {% for file in page.files %}
+          <li class="col-sm-6">
+            <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}">
+              <span class="name">{{ file.name | remove_first: 'code/'}}</span>
+            </a>
 
 
-          <div class="description">
-            {{ file.description }}
-          </div>
+            <div class="description">
+              {{ file.description }}
+            </div>
 
-          <div class="links">
+            <div class="links">
+              <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}" class="github">[github]</a>
+              <a class="raw" href="/{{file.name}}">[raw]</a>
+            </div>
 
-            <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}" class="github">[github]</a>
-            <a class="raw" href="/{{file.name}}">[raw]</a>
-          </div>
-
-        </li>
-        {% endfor %}
-    </ul>
+          </li>
+          {% endfor %}
+      </ul>
+    </div> <!-- row -->
   {% endif %}
