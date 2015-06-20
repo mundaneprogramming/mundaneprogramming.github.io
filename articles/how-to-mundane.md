@@ -71,3 +71,38 @@ Focus on one thing at a time. Figure out the parser. And just use that. Then mov
 - cronjobs
 - Remote deployment
 - Multithreading
+
+
+
+### How to build interfaces
+
+[The beauty of grep](https://medium.com/@rualthanzauva/grep-was-a-private-command-of-mine-for-quite-a-while-before-i-made-it-public-ken-thompson-a40e24a5ef48)
+
+### Visual acuity
+
+One of the must-read examples of code is Peter Norvig's spell-checker in 21 lines. It's in Python but he has links to translations in every other major language.
+
+http://norvig.com/spell-correct.html
+
+~~~py
+splits = [(word[:i], word[i:]) for i in range(len(word) + 1)]
+~~~
+
+~~~py
+splits = []
+for i in range(len(word) + 1):
+  a = word[0:i]
+  b = word[i:-1]
+  splits.append((a, b))
+~~~
+
+
+https://www.youtube.com/watch?v=1juW3dDQ968
+
+
+
+### The role of a mentor
+
+Learning anythi
+
+

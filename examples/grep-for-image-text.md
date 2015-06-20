@@ -12,4 +12,6 @@ keywords:
     - Command line interface
 ---
 
+How do you find text in images?
 
+https://github.com/madmaze/pytesseract

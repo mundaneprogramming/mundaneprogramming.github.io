@@ -2,8 +2,6 @@
 title: Fetch latest updates on Texas death row
 authors:
   - dannguyen
-  - Jane Eyre
-  - Leland Junior
 description: |
   An exercise in scraping and parsing HTML about criminal justice events.
 featured: true
