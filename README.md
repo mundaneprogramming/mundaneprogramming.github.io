@@ -3,7 +3,7 @@
 [Session agenda](/session-agenda)
 
 
-
+[live site](http://mundaneprogramming.github.io)
 
 
 
