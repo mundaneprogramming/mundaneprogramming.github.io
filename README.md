@@ -1,6 +1,6 @@
 # Mundane Programming
 
-[Session agenda](/session-agenda)
+[Session agenda](https://github.com/mundaneprogramming/mundaneprogramming.github.io/blob/master/articles/session-agenda.md)
 
 
 [live site](http://mundaneprogramming.github.io)
