@@ -59,6 +59,8 @@ Focus on one thing at a time. Figure out the parser. And just use that. Then mov
 
 - Don't touch your mouse
 - Look for efficiencies. Things like syntax-hilighting are incredibly important
+- Stop hard-coding things
+- 
 
 # Concrete skills
 
@@ -104,5 +106,9 @@ https://www.youtube.com/watch?v=1juW3dDQ968
 ### The role of a mentor
 
 Learning anythi
+
+----------
+
+
 
 
