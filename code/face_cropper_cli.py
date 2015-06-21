@@ -11,24 +11,6 @@ CVOPTS = {
     'flags': cv2.cv.CV_HAAR_SCALE_IMAGE
 }
 
-def open_image(imagepath):
-    return cv2.imread(imagepath)
-
-
-def get_image_dims(image):
-    return image.shape[0:2]
-
-def detect_things(image, cascadepath):
-    """ image is a numpy Array; Returns array of
-        detected objects, each as (x, y, w, h) """
-    cascade = cv2.CascadeClassifier(cascadepath)
-    # begin detection
-    return cascade.detectMultiScale(image, **CVOPTS)
-
-def get_big(things):
-    # each thing is a numpy.ndarray arranged as [x, y, width, height]
-    return max(list(things), key = lambda t: t[2] * t[3])
-
 
 def padd(imagew, imageh, cropdims, pads = (0.1, 0.1, 0.1, 0.1)):
     # get coordinates of the current crop
@@ -52,30 +34,20 @@ def padd(imagew, imageh, cropdims, pads = (0.1, 0.1, 0.1, 0.1)):
     return np.array([x0, y0, x1 - x0, y1 - y0])
 
 
+def detect_things(image, cascadepath):
+    """ image is a numpy Array; Returns array of
+        detected objects, each as (x, y, w, h) """
+    cascade = cv2.CascadeClassifier(cascadepath)
+    # begin detection
+    return cascade.detectMultiScale(image, **CVOPTS)
 
-def resize_to_fill_with_aspect_ratio(image, w = None, h = None):
-    iw, ih = get_image_dims(image)
-    if not w and not h:
-        return image
-    elif w and h:
-        nfactor = w / float(iw) if w > h else h / float(ih)
-    else:
-        nfactor = #TODO
-
-
-    return cv2.resize(image, (nw, nh))
-
+def get_biggest(things):
+    # each thing is a numpy.ndarray arranged as [x, y, width, height]
+    return max(list(things), key = lambda t: t[2] * t[3])
 
 def crop_image(image, dims):
     x, y, w, h = dims
     return image[y:y+h, x:x+w]
-
-def crop_to_fit(image, w, h):
-    iw, ih = get_image_dims(image)
-    if iw >= w and ih >= h:
-        return image
-    else:
-        TODO
 
 
 
@@ -86,18 +58,26 @@ if __name__ == "__main__":
     parser.add_argument('--cascadepath', '-c',
         default = DEFAULT_FACES_CASCADE_PATH,
         help ='Path to haar cascades file' )
+    parser.add_argument('--dim', '-d',
+        help = "[width]x[height]. Either is optional, e.g. [width]x or x[height]"
+    )
 
     # set up args
     args = parser.parse_args()
     imgpath = os.path.expanduser(args.imagepath[0])
     cascadepath = os.path.expanduser(args.cascadepath)
-    # open image and detect
-    img = open_image(imgpath)
-    dims = get_biggest(detect_things(imgpath, cascadepath))
+    # open image
+    img = cv2.imread(imgpath)
+    # set up variables for the biggest crop
+    cw, _o, ch = args.dim.partition('x') if args.dim else (None, None, None)
+    crop_width = int(cw) if cw else None
+    crop_height = int(cw) if ch else None
+    # detect biggest thing
+    cropdims = get_biggest(detect_things(img, cascadepath))
     # crop and resize
-    new_img = crop_image(img, dims)
-    new_img = resize_to_fill_with_aspect_ratio(new_img, NEWWIDTH, NEWHEIGHT)
-    new_img = croptofit(new_img, NEWWIDTH, NEWHEIGHT)
+    new_img = crop_image(img, cropdims)
+    new_img = resize_to_fill_with_aspect_ratio(new_img, crop_width, crop_height)
+    new_img = crop_to_fit(new_img, crop_width, crop_height)
     # save the file
     fn, ext = os.path.splitext(imgpath)
     outpath = fn + '.crop' + ext
