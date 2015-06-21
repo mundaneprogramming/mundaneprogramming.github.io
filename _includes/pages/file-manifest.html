@@ -1,6 +1,5 @@
-  {% if page.files %}
       <ul class="files list-unstyled">
-        {% for file in page.files %}
+        {% for file in include.files %}
           <li class="">
             <a href="https://github.com/{{site.github_repo}}/tree/master/{{file.name}}">
               <span class="name">{{ file.name | remove_first: 'code/'}}</span>
@@ -19,4 +18,3 @@
           </li>
           {% endfor %}
       </ul>
-  {% endif %}
