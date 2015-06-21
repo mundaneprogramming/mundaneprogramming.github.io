@@ -1,11 +1,9 @@
 import cv2
 import os
-import sys
-from string import Template
 DEFAULT_FACES_CASCADE_PATH = '/usr/local/Cellar/opencv/2.4.11_1/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml'
 face_cascade_path = DEFAULT_FACES_CASCADE_PATH
 face_cascade = cv2.CascadeClassifier(face_cascade_path)
-infname = "/tmp/obama.jpg"
+infname = "/tmp/ulm.jpg"
 base_outfname = os.path.basename(infname)
 scale_factor = 1.2
 min_neighbors = 3
@@ -18,6 +16,6 @@ faces = face_cascade.detectMultiScale(image, scaleFactor = scale_factor,
 
 for i, (x, y, w, h) in enumerate(faces):
   img = image[y:y+h, x:x+w]
-  outfname = "/tmp/%s.faces-%dx%d_%dx%d.jpg" % (base_outfname, x, y, w, h)
+  outfname = "/tmp/%s.faces--%dx%d_%dx%d.jpg" % (base_outfname, x, y, w, h)
   cv2.imwrite(outfname, img)
-  print("Wrote image:", outfname)
+  print("Wrote face:", outfname)
