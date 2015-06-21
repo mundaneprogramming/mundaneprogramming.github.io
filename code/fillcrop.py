@@ -33,8 +33,8 @@ def crop_to_fit(image, width = None, height = None):
     return image[yoff:nh+yoff, xoff:nw+xoff]
 
 def fillcrop(image, width = None, height = None):
-    new_img = resize_to_fill_with_aspect_ratio(image, crop_width, crop_height)
-    return crop_to_fit(new_img, crop_width, crop_height)
+    new_img = resize_to_fill_with_aspect_ratio(image, width, height)
+    return crop_to_fit(new_img, width, height)
 
 
 
