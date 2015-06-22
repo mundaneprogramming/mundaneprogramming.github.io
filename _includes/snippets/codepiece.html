@@ -1,0 +1,20 @@
+
+{% assign r_ext = include.relpath | split: "." | last %}
+
+{% capture codepieceblk %}
+~~~{{r_ext}}
+{% include_relative {{include.relpath}} %}
+~~~
+{% endcapture %}
+
+<div class="codepiece brief">
+{{ codepieceblk | markdownify }}
+</div>
+
+
+
+{% if include.parentdir %}
+{%capture filename%}{{include.parentdir}}{{include.relpath}}{%endcapture%}
+<a href="https://github.com/{{site.github_repo}}/tree/master/{{filename}}" class="github">[github]</a>
+<a class="raw" href="/{{filename}}">[raw]</a>
+{% endif %}

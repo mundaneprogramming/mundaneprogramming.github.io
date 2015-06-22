@@ -1,0 +1,14 @@
+
+pre{
+  font-size: 14px;
+}
+
+
+.codepiece{
+  overflow: auto;
+  &.brief{
+    pre{
+      max-height: 400px;
+    }
+  }
+}
