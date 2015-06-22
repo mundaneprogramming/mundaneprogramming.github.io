@@ -166,7 +166,7 @@ IndexError: list index out of range
 def extract_shortcode(weburl):
     u = weburl.split('instagram.com/p/')
     if len(u) > 1:
-        x = u[0]
+        x = u[1]
         return x.split('/')[0]
     else: # just return whatever you got
         return weburl

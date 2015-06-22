@@ -1,3 +1,5 @@
+import argparse
+import json
 import os
 import requests
 ACCESS_FILENAME = os.path.expanduser("~/Downloads/myinstagramcode.txt")
@@ -19,5 +21,18 @@ def get_shortlink_photo(weburl):
     url = INSTAGRAM_DOMAIN + path
     atts = {"access_token": ACCESS_TOKEN}
     resp = requests.get(url, params = atts).json()
-
     return resp['data']
+
+
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("shortcode", nargs = 1, help = "Instagram web URL/shortcode")
+args = parser.parse_args()
+shortcode = args.shortcode[0]
+
+data = get_shortlink_photo(shortcode)
+txt = json.dumps(data, indent = 2)
+print(txt)
+
+
