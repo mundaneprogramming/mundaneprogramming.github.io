@@ -54,6 +54,7 @@ Don't replace your whole process. For example, this [thorough webscraping tutori
 Focus on one thing at a time. Figure out the parser. And just use that. Then move on to spidering. And then move to deserialization. And then, later, to databases.
 
 
+<<<<<<< HEAD
 # Things to do
 
 1. Put the Terminal icon on your dock
@@ -85,12 +86,17 @@ Focus on one thing at a time. Figure out the parser. And just use that. Then mov
 27. How to parse JSON
 28. How to convert JSON into CSV 
 29. How to rename a file
+=======
+>>>>>>> 34217ff5ead3949be60de6ef6a474fa6019121e1
 
 # Goals
 
 - Don't touch your mouse
 - Look for efficiencies. Things like syntax-hilighting are incredibly important
+<<<<<<< HEAD
   - Compare autocompletion and highlight in Sublime vs textpad
+=======
+>>>>>>> 34217ff5ead3949be60de6ef6a474fa6019121e1
 - Stop hard-coding things
 - 
 
