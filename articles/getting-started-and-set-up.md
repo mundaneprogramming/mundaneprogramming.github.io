@@ -18,32 +18,16 @@ Some tips:
 Create a `~/myscripts` directory and stash everything there. If you're on multiple computers attached to a Dropbox, I like to use `~/Dropbox/myscripts`
 
 
-bash_profile etc etc etc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus accusamus vitae tempora veniam aspernatur, aliquid nemo dignissimos eos reprehenderit, asperiores dolorum praesentium vel saepe pariatur rem, repudiandae recusandae sapiente non!
 
 
+## Python
 
-## What language
-
-Python
-
-### Ruby
-
-Ruby is fun. It lets you be creative. This is not a good thing if you are new to programming.
-
-### PHP
-
-PHP is fine. But building a website, or a WordPress site, is usually not an everyday task.
-
-### R
-Hadley Wickham, among others, are making R very usable. But it's not as well-supported as Python, or as multi-purpose.
-
-### JavaScript
-Again, great for building webpages. Good to iffy for anything else.
-
-### Java
-A great language for going into enterprise. Not for personal programming.
-
-
-
-
-
+- http://learnpythonthehardway.org/book/
+- http://docs.python-guide.org/en/latest/
+- https://developers.google.com/edu/python/
+- [Python Cookbook, Third Edition - David Beazley, Brian K. Jones](http://chimera.labs.oreilly.com/books/1230000000393)
+- http://www.codecademy.com/en/tracks/python
+- https://www.coursera.org/course/interactivepython1
+- http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/
+- http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2008/
+- r/learnpython

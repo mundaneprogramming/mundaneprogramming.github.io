@@ -6,8 +6,27 @@ title: What to learn and etc.
 
 Basically, learn how to debug.
 
-# Is it worth the time?
-Maybe.
+
+## Copying
+
+Don't copy and paste. Learn Cmd-Tab to switch applications, copy by sight. Practice typing. Practice rewrites:
+
+https://github.com/madmaze/pytesseract
+
+~~~py
+from PIL import Image
+import pytesseract
+print(pytesseract.image_to_string(Image.open('test.png')))
+~~~
+
+
+~~~py
+from PIL import Image
+import pytesseract
+fname = 'copy.png'
+img = Image.open(fname)
+print(pytesseract.image_to_string(img)))
+~~~
 
 
 ## Things to focus on
@@ -102,6 +121,7 @@ Focus on one thing at a time. Figure out the parser. And just use that. Then mov
 
 # Concrete skills
 
+- How to work in text and just in text
 - Visual recognition
 - Regex
 - xpath
