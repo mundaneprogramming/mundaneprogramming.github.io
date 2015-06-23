@@ -26,5 +26,5 @@ Expectations as mundane as:
 
 [Eli Lilly Faculty Registry 2010 (PDF)](/files/eli-lilly-faculty-registry-2010.pdf)
 [Eli Lilly Archived Registries](http://www.lillyphysicianpaymentregistry.com/Payments-to-Physicians/Archives)
-[Merck Transparency Disclosures](http://www.merckresponsibility.com/ethics-transparency/transparency-disclosures/)
+[Merck Transparency Disclosures](http://www.merckresponsibility.com/transparency-disclosures/)
 [Merck Transparency Report 3Q09](www.merck.com/corporate-responsibility/docs/business-ethics-transparency/3Q09-Transparency-Report.pdf)
