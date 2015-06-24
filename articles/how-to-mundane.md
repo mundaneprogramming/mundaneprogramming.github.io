@@ -76,46 +76,12 @@ Focus on one thing at a time. Figure out the parser. And just use that. Then mov
 <<<<<<< HEAD
 # Things to do
 
-1. Put the Terminal icon on your dock
-2. Enable opening from Terminal from Finder
-3. Use Tab for auto complete
-4. (put this as 1) Learn the keyboard shortcut for Application switching
-5. Download a text editor
-6. Enable syntax highlighting
-7. Run script files from the command line
-8. Open iPython
-9. Use the %paste
-10. Cmd-C for Copy
-11. Cmd-V for paste
-12. head and tail
-13. curl a file instead of downloading
-14. grep a text file for text
-15. (move higher) Cmd-S for Save
-16. Find and replace with regex
-17. Grep with regex
-18. Keyboard short cut for history
-19. Cmd-W to close a window
-20. Cmd-F to Find in a document
-21. Cmd-F-Shift in a project
-22. How to open a text file
-23. How to write a text file to disk
-24. How to download and read a file from Python
-25. How to download and save a file from Python
-26. How to parse CSV from basic functions
-27. How to parse JSON
-28. How to convert JSON into CSV 
-29. How to rename a file
-=======
->>>>>>> 34217ff5ead3949be60de6ef6a474fa6019121e1
 
 # Goals
 
 - Don't touch your mouse
 - Look for efficiencies. Things like syntax-hilighting are incredibly important
-<<<<<<< HEAD
   - Compare autocompletion and highlight in Sublime vs textpad
-=======
->>>>>>> 34217ff5ead3949be60de6ef6a474fa6019121e1
 - Stop hard-coding things
 - 
 
