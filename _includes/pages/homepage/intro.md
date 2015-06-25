@@ -9,7 +9,7 @@ Feel free to make comments or edits to this site's __Github repo__: [{{site.gith
 
 
 
-The topic of _Mundane Programming_ was proposed for a session at [SRCCON 2015](http://srccon.org/) and presented by {% include snippets/author-byline.html author_slug="dannguyen" %} and {% include snippets/author-byline.html author_slug="geoffhing" %}. You can [read more about the presentation here](/about/#srccon-2015).
+The topic of _Mundane Programming_ was proposed for a session at [SRCCON 2015](http://srccon.org/) and presented by {% include snippets/author-byline.html author_slug="dannguyen" %} and {% include snippets/author-byline.html author_slug="geoffhing" %}. You can [see the slides here](/slides).
 
 
 
