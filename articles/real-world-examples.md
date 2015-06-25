@@ -1,5 +1,7 @@
 
 
+- [How to Break News While You Sleep - Features - Source: An OpenNews project (source.opennews.org)](https://source.opennews.org/en-US/articles/how-break-news-while-you-sleep/) 
+
 - [xkcd: Is it worth the time?](https://xkcd.com/1205/) -  http://imgs.xkcd.com/comics/is_it_worth_the_time.png
 - [The year of the disappearing websites -- Restricted Data (blog.nuclearsecrecy.com)](http://blog.nuclearsecrecy.com/2013/12/27/year-disappearing-websites/) 
 - [Computing: Out of the hood : Naturejobs (nature.com)](http://www.nature.com/naturejobs/science/articles/10.1038/nj7479-319a) 

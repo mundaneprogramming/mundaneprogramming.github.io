@@ -54,3 +54,23 @@ Done:
  [24, 24, 24, 24, 24, 24, 24, 24],
  [24, 24, 24, 24, 24, 24, 24, 24]]
 ~~~
+
+
+
+### Rename stuff
+
+```
+dan daniel dani DAN 
+rodan dan dandan daniel dan
+daniel danny Dan danielle
+```
+
+Rename all "dan" as "daniel"
+
+
+
+### Find and select and copy
+
+Cmd-Option-F
+regex a pattern
+Find-All, Cmd-C

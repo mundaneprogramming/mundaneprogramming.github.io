@@ -8,5 +8,18 @@ rank: 8
 keywords:
   skills:
     - Regular expressions
+    - Command line interface
 ---
 
+
+- http://www.wdyl.com/profanity?q=hell
+- http://thenextweb.com/google/2011/08/17/google-inadvertently-creates-a-profanity-api/
+- http://www.washingtonpost.com/blogs/style-blog/post/cqcx-ap-corrects-title-of-play-about-journalistic-corrections/2012/02/16/gIQAvKPjHR_blog.html
+http://bleacherreport.com/articles/2267891-chicago-sun-times-accidentally-leaves-dummy-text-in-chicago-bears-article
+
+> While Google’s recently launched What Do You Love? site was a neat showcase for some of the company’s services, what interested developers was the list of profanities in its Javascript code – it was essentially an official Google list of what was and wasn’t a swear word. The list quickly got hidden, but that’s where things get really interesting.
+
+[All the dirty words from Google's "what do you love" project: http://www.wdyl.com/ (gist.github.com)](https://gist.github.com/jamiew/1112488) 
+
+http://www.commitlogsfromlastnight.com/
+https://news.ycombinator.com/item?id=7290000

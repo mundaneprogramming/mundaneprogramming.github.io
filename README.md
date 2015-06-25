@@ -1,8 +1,18 @@
 # Mundane Programming
 
-note: this is my scribblepad currently
+[Session agenda](https://github.com/mundaneprogramming/mundaneprogramming.github.io/blob/master/articles/session-agenda.md)
 
-### Scripts
+
+[live site](http://mundaneprogramming.github.io)
+
+
+
+
+-----------
+
+blah blah blah filler
+
+### Scripts used
 
 [ghiculescu/jekyll-table-of-contents](https://github.com/ghiculescu/jekyll-table-of-contents)
 

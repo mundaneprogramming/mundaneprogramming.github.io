@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import argparse
 from datetime import datetime
-from os.path import splitext, expanduser, relpath
+from os import makedirs
+from os.path import splitext, expanduser, relpath, dirname
 from PIL import Image
 from subprocess import call
 from tempfile import NamedTemporaryFile
@@ -74,6 +75,8 @@ args = parser.parse_args()
 output_path = expanduser(args.output_path[0])
 pause_sec = int(args.pause)
 
+
+
 ## determine optimization level
 if args.best:
     do_optimization_pass = False
@@ -93,6 +96,9 @@ else:  # or it is implicit in output_path's extension
 
 output_format = get_canonical_format_name(_ofmt)
 
+
+## Make the parent directories for the output_path
+makedirs(dirname(output_path), exist_ok = True)
 
 # Save the file depending on output_format
 ##############

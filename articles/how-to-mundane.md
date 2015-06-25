@@ -6,8 +6,27 @@ title: What to learn and etc.
 
 Basically, learn how to debug.
 
-# Is it worth the time?
-Maybe.
+
+## Copying
+
+Don't copy and paste. Learn Cmd-Tab to switch applications, copy by sight. Practice typing. Practice rewrites:
+
+https://github.com/madmaze/pytesseract
+
+~~~py
+from PIL import Image
+import pytesseract
+print(pytesseract.image_to_string(Image.open('test.png')))
+~~~
+
+
+~~~py
+from PIL import Image
+import pytesseract
+fname = 'copy.png'
+img = Image.open(fname)
+print(pytesseract.image_to_string(img)))
+~~~
 
 
 ## Things to focus on
@@ -54,14 +73,21 @@ Don't replace your whole process. For example, this [thorough webscraping tutori
 Focus on one thing at a time. Figure out the parser. And just use that. Then move on to spidering. And then move to deserialization. And then, later, to databases.
 
 
+<<<<<<< HEAD
+# Things to do
+
 
 # Goals
 
 - Don't touch your mouse
 - Look for efficiencies. Things like syntax-hilighting are incredibly important
+  - Compare autocompletion and highlight in Sublime vs textpad
+- Stop hard-coding things
+- 
 
 # Concrete skills
 
+- How to work in text and just in text
 - Visual recognition
 - Regex
 - xpath
@@ -71,3 +97,30 @@ Focus on one thing at a time. Figure out the parser. And just use that. Then mov
 - cronjobs
 - Remote deployment
 - Multithreading
+
+
+
+### How to build interfaces
+
+[The beauty of grep](https://medium.com/@rualthanzauva/grep-was-a-private-command-of-mine-for-quite-a-while-before-i-made-it-public-ken-thompson-a40e24a5ef48)
+
+### Visual acuity
+
+One of the must-read examples of code is Peter Norvig's spell-checker in 21 lines. It's in Python but he has links to translations in every other major language.
+
+http://norvig.com/spell-correct.html
+
+~~~py
+splits = [(word[:i], word[i:]) for i in range(len(word) + 1)]
+~~~
+
+~~~py
+splits = []
+for i in range(len(word) + 1):
+  a = word[0:i]
+  b = word[i:-1]
+  splits.append((a, b))
+~~~
+
+
+https://www.youtube.com/watch?v=1juW3dDQ968

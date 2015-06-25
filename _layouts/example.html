@@ -12,8 +12,9 @@ layout: page
           </div>
 
           <ul class="keywords list-inline">
-              <strong>Keywords: </strong>
               {% if page.keywords %}
+                <h5>Keywords</h5>
+
                 {% for kgrp in page.keywords %}
                   {% for keyword in kgrp[1] %}
                     <li class="keyword">{{keyword}}</li>
@@ -30,8 +31,11 @@ layout: page
           </div>
           <div class="col-sm-6">
             <div id="file-manifest">
-              <h5>Related files</h5>
-              {% include pages/file-manifest.html %}
+              {% if page.files %}
+                <h5>Related files</h5>
+                {% include pages/file-manifest.html files=page.files %}
+              {% endif %}
+
             </div>
           </div>
         </div>
