@@ -28,6 +28,8 @@
 
 - [My grueling day as an Amazon Mechanical Turk](http://kernelmag.dailydot.com/features/report/4732/my-gruelling-day-as-an-amazon-mechanical-turk/)
 
+- [The PastPages Web Log • Introducing StoryTracker 1.0 (blog.pastpages.org)](http://blog.pastpages.org/post/102373248288/introducing-storytracker-1-0) 
+
 ## Resources
 
 - http://www.reddit.com/r/DailyProgrammer
