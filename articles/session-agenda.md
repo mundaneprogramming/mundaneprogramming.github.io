@@ -68,9 +68,27 @@ curl -X POST \
 -u YOURACCOUNTID:[AuthToken]
 ~~~
 
+#### Transforming spreadsheet data
 
+Learning to be comfortable with the command-line isn't capital P programming per-se, but it definitely uses what I'll call "programatic thinking". This means you'll have to think about how to break your problem into smaller chunks.
 
+This example is a task I had to do this week to prepare a canonical list of Grateful Dead song titles for reconciling using Open Refined and reconcile-csv.  While it's certainly possible, and not terribly difficult to open the source Excel file in a spreasdsheet application, make the required edits, and save as a CSV, doing this programatically offers a couple of benefits:
 
+* **Replicable**.  If you modify the spreadsheet by hand, you may forget what you modified.  Even if you keep notes, natural language descriptions of tasks are often tedious to write or ambiguous to read. A "program", even if it's just a bunch of command line utilities piped together, should produce the same results each time you run it.
+* **Transferable**. In this case, learning a little bit about regexes in sed might take more time than just editing the file manually, that syntax that you learn might come in handy when tackling a task that is too big for a manual solution. 
+
+~~~sh
+# Convert Excel to CSV using in2csv, part of the awesome csvkit
+in2csv ~/Downloads/Grateful_Dead_Track_Titles.xlsx |\
+# Strip the first line of the file, an annoying document title
+tail -n +2 |\
+# Add a proper column header
+sed -e '1s/^/title\
+/' |\
+# Add a line-number column to act as a quick-and-dirty primary key,
+# because reconcile-csv needs it
+csvcut -l > grateful_dead_track_titles.csv
+~~~
 
 ### More complicated examples?
 
