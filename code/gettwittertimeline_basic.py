@@ -7,7 +7,7 @@ import json
 DEFAULT_TWITTER_CREDS_PATH = '~/.creds/me.json'
 MAX_COUNT = 200
 
-THE_SCREEN_NAME = 'opennews'
+screen_name = 'opennews'
 
 
 # Get an API handler
