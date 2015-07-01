@@ -11,6 +11,8 @@ layout: page
             {{ page.description }}
           </div>
 
+
+
           <ul class="keywords list-inline">
               {% if page.keywords %}
                 <h5>Keywords</h5>
@@ -40,8 +42,32 @@ layout: page
           </div>
         </div>
     </section> <!-- section#file-manifest -->
-
   </div>
+
+
+    {% if page.synopsis %}
+    <section class="meta-synops">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="synopsis">
+              {{ page.synopsis }}
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <ol class="routine">
+              {% for rstep in page.routine %}
+
+                <li>{{ rstep }}</li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+
 
   <div class="example-content">
     <div class="container">

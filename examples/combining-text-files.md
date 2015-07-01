@@ -3,15 +3,26 @@ title: Combining text files
 description: |
   In many real world situations, data is not only dirty, it's not even put together in a single file.
 routine:
-  - Open a blank, new text file
-  - Open an existing text file
-  - Copy existing text file
-  - Paste existing text file into new text file
-  - Open another existing text file
-  - Repeat
+  - Open a blank, new text file.
+  - Open an existing text file.
+  - Copy existing text file.
+  - Paste existing text file into new text file.
+  - Open another existing text file.
+  - Repeat.
+synopsis: |
+  Using the relatively clean and straightforward baby names data from the Social Security Administration, this example shows several variations of how to combine text files in Bash and in Python, including how to add data on a per-file, per-line basis. This is a good time to not only get acquainted with the conveniences of Bash programming, but to practice using higher-level CSV libraries (even though they are overkill in this situation).
+keywords: |
+  skills:
+    - Regular expressions
+    - Delimiting text
+  languages:
+    Python: ['csv', 're', 'os.path']
+    Bash: ['cat']
+authors:
+  - dannguyen
 rank: 1
 featured: true
-complete: false
+complete: true
 
 ---
 
@@ -30,9 +41,9 @@ This is actually good enough for many situations, and even the most skilled prac
 
 ## Baby names by state
 
-The U.S. [Social Security Administration releases bulk data on baby names](TK) in two different zip files: [TK](by state) and [TK](by year). Each zip file contains dozens of text files totaling in the tens of megabytes.
+The U.S. [Social Security Administration releases bulk data on baby names](http://www.ssa.gov/oact/babynames/limits.html) in two different zip files: [by state](http://www.ssa.gov/oact/babynames/state/namesbystate.zip) and [by year (nationwide)](http://www.ssa.gov/oact/babynames/names.zip). Each zip file contains dozens of text files totaling in the tens of megabytes.
 
-The [states file](TK) is pretty straightforward. The list of text files, one for each state, looks like this:
+The [states file](http://www.ssa.gov/oact/babynames/state/namesbystate.zip) is pretty straightforward. The list of text files, one for each state, looks like this:
 
 ~~~
 AK.TXT    HI.TXT    MI.TXT    NV.TXT    TX.TXT
@@ -142,7 +153,9 @@ with open("allstates.csv", "w") as output:
 
 ## Baby names by year
 
-How the SSA packages the _by year_ baby names text files is a little more complicated. Each year has its own headerless file:
+How the SSA packages the [nationwide _by year_ baby names text files](http://www.ssa.gov/oact/babynames/names.zip) is more complicated. 
+
+Each year has its own headerless file:
 
 ~~~
 NationalReadMe.pdf  yob1924.txt   yob1969.txt
