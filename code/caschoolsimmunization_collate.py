@@ -51,6 +51,8 @@ for xlsname in glob(os.path.join(XLS_DIR, '*.xls*')):
 print("There are", len(data), 'data rows all together')
 
 # write a JSON
+# Note: fields that don't exist in a given layout are *not* included as null values.
+#       they are simply left out of each dict
 jname = os.path.join(FINISHED_DIR, 'k-immune.json')
 print("Writing to JSON:", jname)
 with open(jname, "w") as jfile:

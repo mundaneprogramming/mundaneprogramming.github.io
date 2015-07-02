@@ -157,13 +157,33 @@ The relevant URL:
     https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fdanwin.com%2F2013%2F11%2Flonnie-johnson-the-millionaire-super-soaker-inventing-rocket-scientist%2F&amp;region=follow_link&amp;screen_name=dancow
 
 
-For this situation, we'd probably want to 
+For this situation, it's easier just to use a separate regex than to come up with an omni-pattern:
 
+~~~py
+rxintent = r"twitter.com/intent/follow\?.+?creen_name=(\w+)"
+linktxt = '<a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fdanwin.com%2F2013%2F11%2Flonnie-johnson-the-millionaire-super-soaker-inventing-rocket-scientist%2F&amp;region=follow_link&amp;screen_name=dancow">button</a>'
+print(re.search(rxintent, linktxt).groups()[0])
+# dancow
+~~~
+
+
+## Filter out duplicates
 
 
 
 
 ## Twitter URLs to exclude
+
+This is problematic:
+
+~~~
+https://twitter.com/intent/follow
+~~~
+
+
+TK exclude
+
+
 
 
 
