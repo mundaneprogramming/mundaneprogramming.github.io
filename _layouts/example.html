@@ -7,6 +7,7 @@ layout: page
 <div class="example-page">
   <section id="meta-top">
     <div class="container">
+      <div class="well">
       <section id="meta-boilerplate">
             <div class="description">
               {{ page.description }}
@@ -25,7 +26,34 @@ layout: page
             </ul>
       </section>
 
-      <section id="meta-nav" class="well">
+
+{% if page.the_need %}
+    <section class="meta-synops">
+        <div class="row">
+          <div class="col-sm-6">
+            <div id="the_need">
+              <h5>The need</h5>
+              {{ page.the_need | markdownify }}
+            </div>
+          </div>
+          <div class="col-sm-6">
+              <h5>The old-fashioned routine</h5>
+
+            <ol id="the_routine">
+              {% for rstep in page.the_routine %}
+                <li>{{ rstep }}</li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
+    </section>
+    {% endif %}
+
+
+
+
+
+      <section id="meta-nav">
           <div class="row">
             <div class="col-sm-6">
               {% include snippets/toc.html %}
@@ -40,32 +68,13 @@ layout: page
               </div>
             </div>
           </div>
-      </section> <!-- section#file-manifest -->
-    </div>
-    {% if page.the_need %}
-    <section class="meta-synops">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="the_need">
-              <h5>The need</h5>
-              {{ page.the_need | markdownify }}
-            </div>
-          </div>
-          <div class="col-sm-6">
-              <h5>The old-fashioned routine</h5>
+      </section> <!-- section#meta-nav -->
 
-            <ol class="the_routine">
-              {% for rstep in page.the_routine %}
-                <li>{{ rstep }}</li>
-              {% endfor %}
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-    {% endif %}
-  </section> <!--meta-->
+
+    </div> <!--well -->
+    </div> <!--container -->
+
+  </section> <!--meta-top -->
 
 
 
