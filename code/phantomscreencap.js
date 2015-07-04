@@ -1,27 +1,63 @@
+
+var util = require('util');
 var system = require('system')
-var url = '';
-optparse = require('optparse');
+var optparse = require('optparse');
 var switches = [
-  ['-h', '--help', 'Shows help']
+  ['-f', '--f FORMAT', 'image format. default is jpg'],
+  ['-q', '--quality NUMBER', 'Quality from 0 to 100, default is 75'],
+  ['-d', '--dim WIDTH_x_HEIGHT', 'Specify dimensions of viewport as [width]x[height]; default is 1200px wide, with height 2/3 of width'],
+  ['-h', '--help', 'Shows help'],
 ];
 
 var parser = new optparse.OptionParser(switches);
 
+
+var opts = {
+  url: '',
+  format: 'jpg',
+  quality: 75,
+  dim:{
+    width: 1200,
+    height: 900
+  }
+}
+
+
+
 parser.on('help', function(){
-  console.log("Help there")
+  console.dir(switches)
 })
 
-parser.on(1, function(value){
-  url = value;
+parser.on('format', function(e, val){
+  opts['format'] = val;
 })
 
+parser.on('quality', function(e, val){
+  opts['quality'] = parseInt(val);
+})
 
+parser.on('dim', function(e, val){
+  var d = val.split('x');
+  if(parseInt(d[0]) > 0){
+    opts.dim.width = parseInt(d[0]);
+  }
+  if(parseInt(d[1]) > 0){
+    opts.dim.height = parseInt(d[1]);
+  }else{
+    opts.dim.height = parseInt(opts.dim.width * (2/3));
+  }
+})
+
+parser.on(1, function(uval){
+  opts.url = uval;
+})
 
 parser.parse(system.args);
 
-console.log('Hello, world!');
 
-console.log('URL is: ' + url)
+console.log('Hello, world!');
+console.log(util.inspect(opts, false, null));
+
 
 phantom.exit();
 
