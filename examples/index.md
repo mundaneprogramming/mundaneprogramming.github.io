@@ -10,6 +10,9 @@ The source code of the scripts is included &ndash; because, why not? &ndash; but
 {{ markdownblk | markdownify }}
 <!-- probably should make this blurb appear at the bottom of every example/recipe page -->
 
+## Examples
+{% include snippets/examples-table.html pagetype="example"%}
 
-{% include snippets/examples-listing.html pagetype="example"%}
-{% include snippets/examples-listing.html pagetype="project" %}
+## Projects
+
+{% include snippets/examples-table.html pagetype="project" %}

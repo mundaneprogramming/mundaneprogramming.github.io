@@ -1,5 +1,7 @@
 ---
 title: Archive a single webpage and its visual elements
+description: |
+  Take a basic snapshot of a webpage and the stylesheets and images used in its visual presentation.
 authors:
   - dannguyen
 ---

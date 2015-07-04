@@ -1,0 +1,26 @@
+{% if include.pagetype %}
+  {% assign pagetype = include.pagetype  %}
+{% else %}
+  {% assign pagetype = 'example' %}
+{% endif %}
+{% assign pagetypes = pagetype | append: "s" %}
+
+
+<table class="{{pagetypes}}-listing table table-condensed table-striped" style="font-size: smaller;">
+  {% assign site_pages = site.pages | sort: 'rank', 'last' %}
+  {% if include.featured %}
+    {% assign site_pages = site.pages | where:"featured",true %}
+  {% endif %}
+  {% for p in site_pages %}
+    <!-- ugly hack to contain only things in /examples -->
+    {% if p.path contains pagetypes and p.layout != 'listing' %}
+      <tr class="item {{pagetype}}">
+        <td class="title"><a href="{{p.url}}">{{p.title}}</a></td>
+        <td>{{ p.content | number_of_words }}</td>
+        <td>{{p.description}}</td>
+        <td>{% include pages/file-manifest.html files=p.files %}</td>
+
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
