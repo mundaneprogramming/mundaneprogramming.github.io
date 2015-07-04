@@ -3,3 +3,4 @@ _drafts
 .sass-cache
 .DS_Store
 *.pyc
+code/node_modules
