@@ -1,0 +1,1 @@
+{% if include.title %}{% assign linktitle = include.title %}{%else%}{% assign linktitle = include.filename %}{%endif%}<a class="github" href="https://github.com/{{site.github_repo}}/tree/master/{{include.filename}}">{{ linktitle | remove_first: 'code/'}}</a>

@@ -5,59 +5,58 @@ layout: page
 
 
 <div class="example-page">
-  <div class="container">
-    <section id="meta-boilerplate">
-          <div class="description">
-            {{ page.description }}
-          </div>
+  <section id="meta-top">
+    <div class="container">
+      <section id="meta-boilerplate">
+            <div class="description">
+              {{ page.description }}
+            </div>
 
+            <ul class="keywords list-inline">
+                {% if page.keywords %}
+                  <h5>Keywords</h5>
 
-
-          <ul class="keywords list-inline">
-              {% if page.keywords %}
-                <h5>Keywords</h5>
-
-                {% for kgrp in page.keywords %}
-                  {% for keyword in kgrp[1] %}
-                    <li class="keyword">{{keyword}}</li>
+                  {% for kgrp in page.keywords %}
+                    {% for keyword in kgrp[1] %}
+                      <li class="keyword">{{keyword}}</li>
+                    {% endfor %}
                   {% endfor %}
-                {% endfor %}
-              {% endif %}
-          </ul>
-    </section>
+                {% endif %}
+            </ul>
+      </section>
 
-    <section id="meta-nav" class="well">
-        <div class="row">
-          <div class="col-sm-6">
-            {% include snippets/toc.html %}
-          </div>
-          <div class="col-sm-6">
-            <div id="file-manifest">
-              {% if page.files %}
-                <h5>Related files</h5>
-                {% include pages/file-manifest.html files=page.files %}
-              {% endif %}
+      <section id="meta-nav" class="well">
+          <div class="row">
+            <div class="col-sm-6">
+              {% include snippets/toc.html %}
+            </div>
+            <div class="col-sm-6">
+              <div id="file-manifest">
+                {% if page.files %}
+                  <h5>Related files</h5>
+                  {% include pages/file-manifest.html files=page.files %}
+                {% endif %}
 
+              </div>
             </div>
           </div>
-        </div>
-    </section> <!-- section#file-manifest -->
-  </div>
-
-
-    {% if page.synopsis %}
+      </section> <!-- section#file-manifest -->
+    </div>
+    {% if page.the_need %}
     <section class="meta-synops">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <div class="synopsis">
-              {{ page.synopsis }}
+            <div class="the_need">
+              <h5>The need</h5>
+              {{ page.the_need }}
             </div>
           </div>
           <div class="col-sm-6">
-            <ol class="routine">
-              {% for rstep in page.routine %}
+              <h5>The routine</h5>
 
+            <ol class="the_routine">
+              {% for rstep in page.the_routine %}
                 <li>{{ rstep }}</li>
               {% endfor %}
             </ol>
@@ -66,6 +65,8 @@ layout: page
       </div>
     </section>
     {% endif %}
+  </section> <!--meta-->
+
 
 
 
@@ -73,8 +74,20 @@ layout: page
     <div class="container">
       {{ content }}
     </div>
-
   </div>
+
+  {% if page.related_links %}
+  <section class="related_links">
+    <div class="container">
+      <ul class="list-">
+        {% for link in page.related_links %}
+          <li><a href="{{link.url}}">{{link.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  {%endif%}
+
 </div>
 
 

@@ -11,3 +11,9 @@ $(document).ready(function(){
   $('#table-of-contents .toc').toc();
 })
 
+
+
+// hacky code to remove example-page constraints of p-wrapped image tags
+$(document).ready(function(){
+  $('.example-content p > img').unwrap().wrap("<div class='imgwrap'></div>");
+})

@@ -2,14 +2,14 @@
 title: Combining text files
 description: |
   In many real world situations, data is not only dirty, it's not even put together in a single file.
-routine:
+the_routine:
   - Open a blank, new text file.
   - Open an existing text file.
   - Copy existing text file.
   - Paste existing text file into new text file.
   - Open another existing text file.
   - Repeat.
-synopsis: |
+the_need: |
   Using the relatively clean and straightforward baby names data from the Social Security Administration, this example shows several variations of how to combine text files in Bash and in Python, including how to add data on a per-file, per-line basis. This is a good time to not only get acquainted with the conveniences of Bash programming, but to practice using higher-level CSV libraries (even though they are overkill in this situation).
 keywords: |
   skills:

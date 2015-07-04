@@ -1,9 +1,11 @@
 ---
-title: Automated webpage screenshots with CasperJS
+title: Automated webpage screenshots with PhantomJS
 description: |
   The problem with non-browser tools is that, well, they don't act like browsers. "Headless" programs provide some of the functionality of a full-fledged web browser for automated systems (such as testing, or mass screenshot grabbing)
 
-routine:
+the_need: |
+  I wanted a way to quickly screencap good and bad examples of fancy web graphics. However, using __wget__ doesn't work because wget won't execute the JavaScript that's often used in modern web visualizations. Using PhantomJS, I create a command-line script that can _act_ like a web browser without me having to open up an actual browser.
+the_routine:
   - Open browser.
   - Visit URL.
   - Activate screencapture program.
@@ -13,32 +15,77 @@ routine:
 authors:
   - dannguyen
 files:
+  - name: code/phantomscreencap.js
+    description: A PhantomJS command-line script that visits a URL and takes a screenshot of the rendered site.
   - name: code/casper_capture.js
-    description: Uses CasperJS combined with PhantomJS to take a screenshot.
+    description: Uses CasperJS, a testing framework that sits atop PhantomJS, to take the screenshot. Turns out to be more overhead than it's worth.
+
+related_links:
+  - title: PhantomJS Examples
+    url: http://phantomjs.org/examples/
+  - title: How To Build A CLI Tool With Node.js And PhantomJS 
+    url: http://www.smashingmagazine.com/2014/02/12/build-cli-tool-nodejs-phantomjs/ 
+  - title: "StackOverflow: how to ignore errors in phantomjs"
+    url: http://stackoverflow.com/a/19538646/160863
+  - url: http://www.phase2technology.com/blog/using-casperjs-capture-method/
+    title: Using CasperJS Capture Method
+  - title: "Render not honoring viewport size · Issue #10619 · ariya/phantomjs · GitHub (github.com)"
+    url: https://github.com/ariya/phantomjs/issues/10619
+  - title: "Web Fonts do not render, use fallback fonts instead. · Issue #10592 · ariya/phantomjs · GitHub (github.com)"
+    url: https://github.com/ariya/phantomjs/issues/10592
+
 ---
 
 
 
+## Hello there
+
+http://ogesdw.dol.gov/homePage.php
 
 
-// sample URL http://ogesdw.dol.gov/homePage.php
-// http://stackoverflow.com/questions/26517852/taking-reliable-screenshots-of-websites-phantomjs-and-casperjs-both-return-empt
-
-
-
-The [PastPages project](http://www.pastpages.org/) takes snapshots of news homepages and tracks stories.
-
-
-CasperJS is often used for automated visual testing, such as seeing [what a site looks like across different device dimensions](http://www.phase2technology.com/blog/using-casperjs-capture-method/).
+The [PastPages project](http://www.pastpages.org/), which archives news sites homepages, uses PhantomJS to take the snapshots.
 
 
 
 
-Use minimist: https://www.npmjs.com/package/minimist
+### Demonstration 
 
-```
- npm install -g minimist
-```
+Using {% include github-link.html filename="code/phantomscreencap.js" %}:
+
+~~~sh
+phantomjs phantomscreencap.js http://www.example.com
+~~~
+
+Output:
+
+~~~
+Options:
+{ url: 'http://www.drudgereport.com',
+  format: 'jpg',
+  output_filename: 'www_drudgereport_com.2015-07-04T190333.690Z.jpg',
+  quality: 75,
+  dim: { width: 1200, height: 900 } }
+~~~
+
+Here's part of the drudgereport.com snapshot; because of the complexities of web-rendering, my attempt to affix the viewport at 1200x900 pixels doesn't quite work. So this is just a crop:
 
 
-http://www.smashingmagazine.com/2014/02/12/build-cli-tool-nodejs-phantomjs/
+
+![drudge.comimage](/files/images/phantomjs/phantomjs-www_drudgereport_com.jpg)
+
+Another complication: webfonts won't be rendered, so sites with fancy fonts won't appear exactly as intended. Here's nytimes.com:
+
+![nytimes.comimage](/files/images/phantomjs/phantomjs-www_nytimes_com.2015-07-04T194150.jpg)
+
+
+
+
+
+
+### CasperJS
+
+[CasperJS is a framework](http://casperjs.org/) that sits atop PhantomJS and is intended to make it easier to write automated visual testing, such as seeing [what a site looks like across different device dimensions](http://www.phase2technology.com/blog/using-casperjs-capture-method/). I used it in the {% include github-link.html filename="code/casper_capture.js" %} example but it turns out to be not particularly useful. Also, I had [trouble getting CasperJS to deal with HTTPS sites](http://stackoverflow.com/questions/26415188/casperjs-phantomjs-doesnt-load-https-page).
+
+
+
+

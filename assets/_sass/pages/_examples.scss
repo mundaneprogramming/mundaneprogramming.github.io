@@ -7,10 +7,15 @@
 }
 
 .example-page{
-
-
   img{
     max-width: 100%;
+  }
+
+
+  #meta-top{
+    margin-bottom: 2.0em;
+    padding-bottom: 1.0em;
+    border-bottom: thin solid #aaa;
   }
 
   #meta-boilerplate{

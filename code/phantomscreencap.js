@@ -5,7 +5,7 @@ var optparse = require('optparse');
 var switches = [
   ['-f', '--format FORMAT', 'image format. default is jpg'],
   ['-q', '--quality NUMBER', 'Quality from 0 to 100, default is 75'],
-  ['-d', '--dim WIDTH_x_HEIGHT', 'Specify dimensions of viewport as [width]x[height]; default is 1200px wide, with height 2/3 of width'],
+  ['-w', '--width NUMBER', 'Specify a minimum width for the browser page'],
   ['-o', '--output FILENAME', 'Specify the output path of the filename' ],
   ['-h', '--help', 'Shows help'],
 ];
@@ -26,8 +26,6 @@ var opts = {
 
 
 
-
-
 parser.on('help', function(){
   console.dir(switches)
 })
@@ -43,6 +41,10 @@ parser.on('format', function(e, val){
 parser.on('quality', function(e, val){
   opts['quality'] = parseInt(val);
 })
+
+// note that the dimensions is not something that is actually honored by
+// the phantomjs browser
+// [Render not honoring viewport size · Issue #10619 · ariya/phantomjs · GitHub (github.com)](https://github.com/ariya/phantomjs/issues/10619)
 
 parser.on('dim', function(e, val){
   var d = val.split('x');
@@ -60,13 +62,8 @@ parser.on(1, function(uval){
   opts.url = uval;
 })
 
-
-// set output filename if not already set
-
-
-
 parser.parse(system.args);
-
+// set output filename if not already set
 if(!opts.output_filename || opts.output_filename === ''){
   var fu = opts.url.split("//").slice(1).join('__');
   fu = fu.replace(/[^a-z0-9]/gi, '_').toLowerCase();
@@ -75,16 +72,26 @@ if(!opts.output_filename || opts.output_filename === ''){
 }
 
 
-
-
-console.log('Parameters:');
+console.log('Options:');
 console.log(util.inspect(opts, false, null));
 
-
 var page = require('webpage').create();
+// via: http://stackoverflow.com/a/19538646/160863
+page.onError = function(msg, trace) {
+    var msgStack = ['ERROR: ' + msg];
+    if (trace && trace.length) {
+        msgStack.push('TRACE:');
+        trace.forEach(function(t) {
+            msgStack.push(' -> ' + t.file + ': ' + t.line + (t.function ? ' (in function "' + t.function + '")' : ''));
+        });
+    }
+    // uncomment to log into the console
+    // console.error(msgStack.join('\n'));
+};
+
 page.open(opts.url, function() {
   page.viewportSize = opts.dim
-  page.render(opts.output_filename);
+  page.render(opts.output_filename, {format: opts.format, quality: opts.quality});
   phantom.exit();
 });
 

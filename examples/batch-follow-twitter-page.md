@@ -4,12 +4,12 @@ authors:
   - dannguyen
 description: |
   Find the text pattern that indicates a Twitter handle and feed it to the API.
-routine:
+the_routine:
   - Open and read webpage
   - Identify links to Twitter accounts
   - For each link, click to go to that Twitter account page
   - Click the "Follow" button
-synopsis: |
+the_need: |
   All Twitter account links have an obvious pattern, so use a regex (no HTML parsing needed!) to extract them, then one-by-one, use the Twitter API endpoint to execute a "follow" action.
 rank: 10
 complete: false
