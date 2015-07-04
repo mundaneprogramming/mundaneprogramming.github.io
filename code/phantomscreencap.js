@@ -3,9 +3,10 @@ var util = require('util');
 var system = require('system')
 var optparse = require('optparse');
 var switches = [
-  ['-f', '--f FORMAT', 'image format. default is jpg'],
+  ['-f', '--format FORMAT', 'image format. default is jpg'],
   ['-q', '--quality NUMBER', 'Quality from 0 to 100, default is 75'],
   ['-d', '--dim WIDTH_x_HEIGHT', 'Specify dimensions of viewport as [width]x[height]; default is 1200px wide, with height 2/3 of width'],
+  ['-o', '--output FILENAME', 'Specify the output path of the filename' ],
   ['-h', '--help', 'Shows help'],
 ];
 
@@ -15,6 +16,7 @@ var parser = new optparse.OptionParser(switches);
 var opts = {
   url: '',
   format: 'jpg',
+  output_filename: '',
   quality: 75,
   dim:{
     width: 1200,
@@ -24,9 +26,15 @@ var opts = {
 
 
 
+
+
 parser.on('help', function(){
   console.dir(switches)
 })
+
+parser.on('output', function(e, val){
+  opts['output_filename'] = val;
+});
 
 parser.on('format', function(e, val){
   opts['format'] = val;
@@ -52,14 +60,34 @@ parser.on(1, function(uval){
   opts.url = uval;
 })
 
+
+// set output filename if not already set
+
+
+
 parser.parse(system.args);
 
+if(!opts.output_filename || opts.output_filename === ''){
+  var fu = opts.url.split("//").slice(1).join('__');
+  fu = fu.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+  opts.output_filename = fu + '.' + new Date().toISOString().replace(/:/g, '') +
+    '.' + opts.format;
+}
 
-console.log('Hello, world!');
+
+
+
+console.log('Parameters:');
 console.log(util.inspect(opts, false, null));
 
 
-phantom.exit();
+var page = require('webpage').create();
+page.open(opts.url, function() {
+  page.viewportSize = opts.dim
+  page.render(opts.output_filename);
+  phantom.exit();
+});
+
 
 
 
@@ -67,7 +95,6 @@ phantom.exit();
 
 
 // var phantom = require("phantom")
-// var page = require('webpage').create();
 // var assert = require('assert');
 
 
@@ -95,22 +122,12 @@ phantom.exit();
 // // set args
 // var url = phantom.args[0]
 // // set output filename
-// if( casper.cli.has("output")) {
-//   var fname = casper.cli.get("output")
-// } else{
-//   var fname = safeurltofilename(url) + '.' + new Date().toISOString().replace(/:/g, '') +
-//     '.' + fileformat;
-// }
 
 
 
 
 
 
-// page.open(url, function() {
-//   page.render('github.png');
-//   phantom.exit();
-// });
 
 
 // usage
