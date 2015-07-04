@@ -15,5 +15,5 @@ $(document).ready(function(){
 
 // hacky code to remove example-page constraints of p-wrapped image tags
 $(document).ready(function(){
-  $('.example-content p > img').unwrap().wrap("<div class='imgwrap'></div>");
+  $('.example-content p > img').wrap("<div class='imgwrap'></div>");
 })

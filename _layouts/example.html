@@ -49,11 +49,11 @@ layout: page
           <div class="col-sm-6">
             <div class="the_need">
               <h5>The need</h5>
-              {{ page.the_need }}
+              {{ page.the_need | markdownify }}
             </div>
           </div>
           <div class="col-sm-6">
-              <h5>The routine</h5>
+              <h5>The old-fashioned routine</h5>
 
             <ol class="the_routine">
               {% for rstep in page.the_routine %}

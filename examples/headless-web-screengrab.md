@@ -3,6 +3,9 @@ title: Automated webpage screenshots with PhantomJS
 description: |
   The problem with non-browser tools is that, well, they don't act like browsers. "Headless" programs provide some of the functionality of a full-fledged web browser for automated systems (such as testing, or mass screenshot grabbing)
 
+featured: true
+rank: 4
+
 the_need: |
   I wanted a way to quickly screencap good and bad examples of fancy web graphics. However, using __wget__ doesn't work because wget won't execute the JavaScript that's often used in modern web visualizations. Using PhantomJS, I create a command-line script that can _act_ like a web browser without me having to open up an actual browser.
 the_routine:
