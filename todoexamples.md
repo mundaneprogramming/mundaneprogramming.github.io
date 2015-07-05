@@ -1,5 +1,5 @@
 ---
-title: The Examples
+title: The Examples Todos
 layout: listing
 ---
 {% capture markdownblk %}
@@ -11,8 +11,8 @@ The source code of the scripts is included &ndash; because, why not? &ndash; but
 <!-- probably should make this blurb appear at the bottom of every example/recipe page -->
 
 ## Examples
-{% include snippets/examples-listing.html pagetype="example"%}
+{% include snippets/examples-table.html pagetype="example"%}
 
 ## Projects
 
-{% include snippets/examples-listing.html pagetype="project" %}
+{% include snippets/examples-table.html pagetype="project" %}

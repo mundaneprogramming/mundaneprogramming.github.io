@@ -17,7 +17,14 @@
       <tr class="item {{pagetype}}">
         <td class="title"><a href="{{p.url}}">{{p.title}}</a></td>
         <td>{{ p.content | number_of_words }}</td>
-        <td>{{p.description}}</td>
+        <td>
+          {{p.description}}
+          <ul class="list">
+            {% for t in p.todos %}
+              <li>{{t}}</li>
+            {% endfor %}
+          </ul>
+        </td>
         <td>{% include pages/file-manifest.html files=p.files %}</td>
 
       </tr>

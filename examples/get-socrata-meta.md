@@ -10,6 +10,15 @@ rank: 5
 files:
   - name: code/socrata-meta-get.py
     description: A bunch of scripts that parse a Socrata URL and extracts a preview of useful metadata, including number of rows and columns, updated timestamps, and usage metrics
+
+related_links:
+  - title: "Analyze all the datasets (thomaslevine.com)"
+    url: https://thomaslevine.com/!/socrata-summary/
+  - title: "Dada Portal -- Progeny of Ten Socrata Datasets (thomaslevine.com)"
+    url: https://thomaslevine.com/!/socrata-genealogies/
+
+
+
 ---
 
 

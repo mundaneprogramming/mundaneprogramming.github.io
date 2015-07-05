@@ -4,6 +4,13 @@ authors:
   - dannguyen
 featured: true
 rank: 42
+files:
+  - name: code/face_cropper.py
+    description: Find and crop all faces in an image.
+  - name: code/face_cropper_big.py
+    description: Crop just the biggest face from an image.
+  - name: code/face_cropper_cli.py
+    description: A command-line interface for cropping a face from an image.
 ---
 
 

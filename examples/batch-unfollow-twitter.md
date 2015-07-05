@@ -2,6 +2,9 @@
 title: Autonuke your Twitter feed
 authors:
   - dannguyen
+files:
+  - name: code/twitterunfollow_cli.py
+
 ---
 
 Inspired by: [I Nuked My Twitter Feed And You Should Too - BuzzFeed News (buzzfeed.com)](http://www.buzzfeed.com/charliewarzel/i-nuked-my-twitter-feed-and-you-should-too#.nsvOgXOly) 

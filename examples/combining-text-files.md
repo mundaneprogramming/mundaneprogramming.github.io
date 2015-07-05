@@ -22,7 +22,12 @@ authors:
   - dannguyen
 rank: 1
 featured: true
-complete: true
+complete: false
+files: 
+  - name: code/babynames_nation_combine.py
+  - name: code/babynames_state_combine.py
+
+
 
 ---
 

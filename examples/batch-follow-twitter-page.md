@@ -13,6 +13,11 @@ the_need: |
   All Twitter account links have an obvious pattern, so use a regex (no HTML parsing needed!) to extract them, then one-by-one, use the Twitter API endpoint to execute a "follow" action.
 rank: 10
 complete: false
+files:
+  - name: code/twitterlistfrompage.py
+    description: |
+      Get all Twitter handles listed on a page using a regex pattern.
+
 ---
 
 

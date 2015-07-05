@@ -1,5 +1,11 @@
 ---
-title: Create a Google Static Maps Directions Sheet
+title: Create a Google Static Map with Markers
+description: Put some markers on a map and customize it
+todos:
+  - Show different map styles
+  - Write synopsis
+files:
+  - name: code/staticmapguide.py
 ---
 
 https://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&

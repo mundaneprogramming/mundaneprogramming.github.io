@@ -9,6 +9,10 @@ keywords:
   skills:
     - Regular expressions
     - Command line interface
+files:
+  - name: code/dummywords_sweep_inline.py
+todos:
+  - break up the code
 ---
 
 

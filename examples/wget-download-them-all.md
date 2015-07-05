@@ -1,5 +1,6 @@
 ---
 title: Download all files of a certain type from a single web page
+rank: 2
 ---
 
 

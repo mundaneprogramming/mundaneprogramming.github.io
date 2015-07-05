@@ -10,6 +10,12 @@ keywords:
   skills:
     - Image processing
     - Command line interface
+todos:
+  - synopsis
+files:
+  - name: code/imagetextsearch.py
+
+
 ---
 
 How do you find text in images?
