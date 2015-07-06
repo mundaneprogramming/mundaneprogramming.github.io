@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]--><!--[if IE 7 ]>    <html class="ie7"> <![endif]--><!--[if IE 8 ]>    <html class="ie8"> <![endif]--><!--[if IE 9 ]>    <html class="ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--><html class="">
+<!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime();</script><!--
+  _____ _   _ ____  ____  _   _ _   _
+ | ____| \ | |  _ \|  _ \| | | | \ | |
+ |  _| |  \| | | | | |_) | | | |  \| |
+ | |___| |\  | |_| |  _ <| |_| | |\  |
+ |_____|_| \_|____/|_| \_\\___/|_| \_|
+
+--><link href="https://d2b200hbvr9pbb.cloudfront.net" rel="dns-prefetch">
+<link href="https://d1n0c1ufntxbvh.cloudfront.net" rel="dns-prefetch">
+<link href="https://use.typekit.net" rel="dns-prefetch">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c751a71187","applicationID":"5052876","transactionName":"eltZFkQNWFpSExcWE1tYXgEZEltFQw==","queueTime":3,"applicationTime":78,"agentToken":null,"agent":"js-agent.newrelic.com/nr-632.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o?o:n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):(o[e]||(o[e]=[]),void o[e].push(n))}var r=e("ee").create(),o={};n.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=(e(2),window),f=u.document,s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta property="endrun:generated_time" content="1436102476222">
+<meta property="endrun:dyno" content="web.2">
+<meta property="endrun:queue_time" content="8">
+<title>Is Google More Accurate Than the FBI? | The Marshall Project</title>
+<link rel="stylesheet" media="all" href="/assets/app/app-6db4f06097c3afac92e66bbd6c06bd66f647c00faf1cab5a3dfbfdedff6be733.css">
+<script src="/assets/app/head-c935d06848ab74e984bad45c8c5a0d208f152dd8f8426f04bafe313291d5f3e1.js"></script><link rel="canonical" href="https://www.themarshallproject.org/2015/07/02/is-google-more-accurate-than-the-fbi">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.themarshallproject.org/rss/recent.rss">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'vse4zee',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script><meta property="og:image" content="https://s3.amazonaws.com/tmp-uploads-1/social/mp-fb-og.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Marshall Project">
+<meta property="og:url" content="https://www.themarshallproject.org/2015/07/02/is-google-more-accurate-than-the-fbi">
+<meta property="og:title" content="Is Google More Accurate than the FBI?">
+<meta property="og:description" content="In tracking deaths by police, the tech world might beat Uncle Sam.">
+<meta property="article:publisher" content="https://www.facebook.com/TheMarshallProject.org">
+<meta name="article:published_time" content="1435869180">
+<!-- UTC seconds --><meta name="article:modified_time" content="1435869180">
+<!-- UTC seconds --><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MarshallProj">
+<meta name="twitter:title" content="Is Google More Accurate that the FBI?">
+<meta name="twitter:description" content="Is Google More Accurate that the FBI?">
+<meta name="twitter:image:src" content="https://s3.amazonaws.com/tmp-uploads-1/social/mp-tw-og.png">
+<meta itemprop="name" content="Is Google More Accurate Than the FBI?">
+<meta itemprop="description" content="In tracking deaths by police, the tech world might beat Uncle Sam.">
+<meta itemprop="image" content="https://s3.amazonaws.com/tmp-uploads-1/social/mp-fb-og.png">
+<meta property="endrun:word_count" content="1847">
+<meta property="endrun:reading_time" content="402">
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Is Google More Accurate than the FBI?",
+  "alternativeHeadline": "Is Google More Accurate that the FBI?",
+  "image": [
+    "https://s3.amazonaws.com/tmp-uploads-1/social/mp-fb-og.png"
+  ],
+  "datePublished": "2015-07-02T16:33:00-04:00",
+  "description": "In tracking deaths by police, the tech world might beat Uncle Sam."
+}
+</script><script>
+window.endrun_config = {
+  post_id: "477",
+  path: "/2015/07/02/is-google-more-accurate-than-the-fbi",
+  template: "public#post",
+  lovestory_zero_endpoint: "https://lovestory.herokuapp.com/api/v2/boot",
+  lovestory_url: "https://d18glvfsbyiquw.cloudfront.net/i.gif",
+  lovestory_ws: "https://lovestory-ws.herokuapp.com",
+  lovestory_rt: "https://lovestory-rt.herokuapp.com/i.gif",
+  env: "production",
+}
+window.stream_config = {
+  except_posts: [477]
+}
+window.stream_config.is_post_hottub = true;
+window.stream_config.featured_block_config = "";
+
+</script>
+</head>
+<body class="">
+
+
+<header><div class="header-menu-trigger">
+    <a class="header-menu-button" href="#"><span></span></a>
+  </div>
+  <div class="header-logo">
+    <a href="/?ref=nav">
+      <img id="nav-logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAAzCAMAAACpMC/iAAAC9FBMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////3x43lAAAA+3RSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg6Ozw9Pj9AQUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVpb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" data-retina-src="/assets/m-header-0e8d782e1e01d3414795def48efa06e711554ae418fcb2699ad3530d19a21b4f.png"></a>  </div>
+
+  <div class="header-items">
+    <a href="/search?via=navright" alt="Search" class="header-link">
+      <svg version="1.1" id="Layer_1" width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve"><g><path style="fill:#FFFFFF;" d="M13.645,11.807c0.353,0.401,0.389,0.766,0.105,1.096l-0.813,0.813c-0.424,0.377-0.825,0.377-1.202,0l-3.358-3.359C7.506,10.853,6.587,11.1,5.621,11.1c-1.509,0-2.823-0.56-3.942-1.679C0.56,8.302,0,6.988,0,5.48s0.53-2.799,1.591-3.871C2.651,0.536,3.936,0,5.444,0s2.828,0.56,3.959,1.679c1.131,1.12,1.697,2.434,1.697,3.942c0,1.037-0.272,1.992-0.813,2.864L13.645,11.807z M2.775,2.81C2.032,3.553,1.661,4.443,1.661,5.48s0.401,1.956,1.202,2.757c0.801,0.801,1.721,1.202,2.758,1.202c1.037,0,1.926-0.371,2.668-1.114c0.743-0.742,1.114-1.643,1.114-2.704c0-1.037-0.401-1.95-1.202-2.74S6.48,1.697,5.444,1.697C4.406,1.697,3.517,2.068,2.775,2.81z"></path></g></svg></a>
+    <a href="http://bit.ly/fbmp-topnav" class="header-link">
+      <svg version="1.1" id="Layer_1" width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve"><g><path style="fill:#FFFFFF;" d="M5.17,10.46C5.168,9.649,5.159,8.838,5.171,8.027C5.18,7.459,5.128,6.949,4.375,6.988c-0.948,0.048-0.96-0.564-0.956-1.257c0.003-0.641,0.043-1.161,0.894-1.13c1.183,0.044,0.806-0.886,0.862-1.494c0.228-2.444,0.965-3.124,3.433-3.097c0.685,0.008,1.424-0.141,1.391,0.985c-0.024,0.821,0.007,1.492-1.133,1.415c-0.83-0.056-1.023,0.506-1.032,1.256C7.824,4.48,8.234,4.638,8.917,4.616c0.513-0.017,1.165-0.064,0.975,0.766C9.756,5.98,10.086,6.979,9,6.948C7.887,6.916,7.813,7.51,7.835,8.362c0.038,1.505-0.031,3.014,0.021,4.518c0.036,1.045-0.588,1.074-1.343,1.07c-0.743-0.003-1.415-0.002-1.351-1.058C5.212,12.084,5.173,11.271,5.17,10.46z"></path></g></svg></a>
+    <a href="http://bit.ly/twittermp-topnav" class="header-link">
+      <svg version="1.1" id="Layer_1" width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 14 13.2" style="enable-background:new 0 0 14 13.2;" xml:space="preserve"><g><path style="fill:#FFFFFF;" d="M0.023,10.904c1.418-0.175,2.596-0.325,3.819-1.332C1.403,9.386,1.332,7.131,0.887,5.85C0.401,4.453-0.356,2.502,0.622,0.617C2.051,2,3.535,3.005,5.33,3.479c0.952,0.252,1.533,0.283,1.747-1.052C7.402,0.408,9.374-0.5,11.249,0.275c0.557,0.23,1,0.52,1.715,0.49c0.827-0.035,1.339,0.887,0.775,1.554c-0.599,0.709-0.647,1.416-0.751,2.217C12.198,10.648,5.51,14.085,0.023,10.904z"></path></g></svg></a>
+    <a href="/about?via=navright">About</a>
+    <a href="/donate?via=navright">Donate</a>
+  </div>
+
+</header><div class="topshelf-dock" data-topshelf-id="8586972d2627adb202e9388e3abd404f"></div>
+<div class="topshelf nocontent robots-nocontent" data-topshelf-id="8586972d2627adb202e9388e3abd404f" data-placement="post" data-default-tab="facebook">
+  <div class="topshelf-height-tester" style="position:absolute;left:-9999em;"></div>
+  <div class="container topshelf-container topshelf-container-hide-mobile">
+    <div class="topshelf-wrapper">
+      <div class="nav">
+        <div class="topshelf-picker">
+          <div class="picker-item" data-selection="opening-statement">Opening Statement</div>
+
+          <div class="picker-item" data-selection="facebook">
+<svg width="12px" height="12px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 223.2 223.2" enable-background="new 0 0 223.2 223.2" xml:space="preserve"><g><g><polygon fill="#FFFFFF" points="3.6,3.6 3.6,219.6 34.5,219.6 34.5,34.5    "></polygon><polygon fill="#FFFFFF" points="65.3,65.3 65.3,219.6 96.2,219.6 96.2,96.2     "></polygon><polygon fill="#FFFFFF" points="188.7,34.5 188.7,219.6 219.6,219.6 219.6,3.6    "></polygon><polygon fill="#FFFFFF" points="127,96.2 127,219.6 157.9,219.6 157.9,65.3     "></polygon></g></g></svg> Popular on Facebook</div>
+
+          <div class="picker-item" data-selection="quick-reads">
+<svg width="12px" height="12px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 223.2 223.2" enable-background="new 0 0 223.2 223.2" xml:space="preserve"><g><g><polygon fill="#FFFFFF" points="3.6,3.6 3.6,219.6 34.5,219.6 34.5,34.5    "></polygon><polygon fill="#FFFFFF" points="65.3,65.3 65.3,219.6 96.2,219.6 96.2,96.2     "></polygon><polygon fill="#FFFFFF" points="188.7,34.5 188.7,219.6 219.6,219.6 219.6,3.6    "></polygon><polygon fill="#FFFFFF" points="127,96.2 127,219.6 157.9,219.6 157.9,65.3     "></polygon></g></g></svg> Quick Reads</div>
+        </div>
+        <div class="topshelf-dropdown">
+          <div class="topshelf-title">
+
+            <span class="topshelf-title-display"></span><!-- js -->
+
+            <svg version="1.1" width="8px" height="5px" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 77 40" enable-background="new 0 0 77 40" xml:space="preserve"><polygon points="77,0 39.4,37.6 1.8,0 "></polygon></svg>
+</div>
+          <div class="topshelf-desc topshelf-desc-opening-statement">
+            Links from this morning’s criminal justice roundup.
+            <div class="topshelf-desc-links">
+              <a href="/subscribe?ref=topshelf-post">Sign up</a>
+              <a href="http://eepurl.com/br-BRz">Today’s Issue</a>
+            </div>
+          </div>
+          <div class="topshelf-desc topshelf-desc-quick-reads">
+            <span>Shorter stories for when time is tight.</span>
+          </div>
+          <div class="topshelf-desc topshelf-desc-facebook">
+            <span>Our most shared stories.</span>
+          </div>
+        </div>
+      </div>
+<!-- .nav -->
+
+      <div class="ul-wrap">
+        <ul class="opening-statement-items">
+<!-- generated_at 1435869032.8675659 --><li>
+        <a href="#" data-href="/ts/decode/7a62cb6d1e0c7f1c85ba0f921715579d?i=1" class="ts1-os-data-href">
+          <div class="topshelf-link">highline</div>
+          <div class="topshelf-headline">Cruel and All-Too-Usual</div>
+        </a>
+      </li>
+
+
+
+
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/bccbe41d3742ec7f7cfb7710c413b38e?i=4" class="ts1-os-data-href">
+          <div class="topshelf-link">nytimes.com</div>
+          <div class="topshelf-headline">Full toll from Aurora theater shooting goes untold at trial</div>
+        </a>
+      </li>
+
+
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/a0d7c3ac29d9e4509f943bea43a39561?i=6" class="ts1-os-data-href">
+          <div class="topshelf-link">buzzfeed.com</div>
+          <div class="topshelf-headline">Anti-Death Penalty Activists Are Winning The Fundraising Battle In Nebraska</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/5de7a8bbc66e53d4326b56bd92f32eda?i=7" class="ts1-os-data-href">
+          <div class="topshelf-link">chicagotribune.com</div>
+          <div class="topshelf-headline">Report gives harrowing detail of Nebraska prison 'rampage'</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/e9d84a9037dcf3ea9dd53321b4079758?i=8" class="ts1-os-data-href">
+          <div class="topshelf-link">usatoday.com</div>
+          <div class="topshelf-headline">California internet outage</div>
+        </a>
+      </li>
+
+
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/ccda1111b5fa173c6340c6356384a383?i=10" class="ts1-os-data-href">
+          <div class="topshelf-link">desmoinesregister</div>
+          <div class="topshelf-headline">Sick county jail inmate asks for prison instead of probation</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/04670bb442f8d1a9ed34b396caa85f54?i=11" class="ts1-os-data-href">
+          <div class="topshelf-link">wlsam.com</div>
+          <div class="topshelf-headline">Cook County Jail nurse fired for investigating missing inmate medication</div>
+        </a>
+      </li>
+
+
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/06dc40639f210fd747f304258eb23b8d?i=13" class="ts1-os-data-href">
+          <div class="topshelf-link">thedailybeast.com</div>
+          <div class="topshelf-headline">How I escaped becoming Dylann Roof</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/d62606897fdba69264bed13d7c21e594?i=14" class="ts1-os-data-href">
+          <div class="topshelf-link">nytimes.com</div>
+          <div class="topshelf-headline">Regulating Sex</div>
+        </a>
+      </li>
+
+
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/44a923becc333a8ef9163d322fb19126?i=16" class="ts1-os-data-href">
+          <div class="topshelf-link">civilbeat.com</div>
+          <div class="topshelf-headline">Prison Agreement Undercuts Hawaii Values on Death Penalty</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/a6a85cda59df0b3088216993de191734?i=17" class="ts1-os-data-href">
+          <div class="topshelf-link">mic.com</div>
+          <div class="topshelf-headline">From Ferguson to Freedom: Hip-Hop’s Role</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/365663b3a06224b8b0ffd290e484a370?i=18" class="ts1-os-data-href">
+          <div class="topshelf-link">youtube.com</div>
+          <div class="topshelf-headline">Is Violence a Function of our Culture? (Full Session)</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/60c3f5267a5f557ed19f9c68869c370c?i=19" class="ts1-os-data-href">
+          <div class="topshelf-link">thecrimereport.org</div>
+          <div class="topshelf-headline">Report: Federal Hate Crime Charges Extraordinarily Rare</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/d3a512247d0032cef5dc59457965693b?i=20" class="ts1-os-data-href">
+          <div class="topshelf-link">gawker.com</div>
+          <div class="topshelf-headline">Texas Town Is Charging Us $79,000 for Emails About Pool Party Abuse Cop</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/5583bc6d50ea762721f77808a8e77497?i=21" class="ts1-os-data-href">
+          <div class="topshelf-link">nypost.com</div>
+          <div class="topshelf-headline">The cop on a mission to rid NYC of rogue cyclists</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/ae7985b88f02ca23ddf59ff7bd0200de?i=22" class="ts1-os-data-href">
+          <div class="topshelf-link">wivb.com</div>
+          <div class="topshelf-headline">Graphic photo obtained of Richard Matt's body after shooting</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#" data-href="/ts/decode/2847bac25a89c5cd4121866ab3d4a804?i=23" class="ts1-os-data-href">
+          <div class="topshelf-link">abajournal.com</div>
+          <div class="topshelf-headline">Courts are reconsidering residency restrictions for sex offenders</div>
+        </a>
+      </li>
+
+
+  <li>
+    <div class="topshelf-opening-statement-blurb">
+      <span>Like these links?</span> Get them with context and attitude each morning.
+    </div>
+    <form action="/api/v2/email/subscribe" accept-charset="UTF-8" method="post">
+<input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="tBnzm+RAeV/6fhEz8K8oIiAXUoyRQX0BbhaZKPz38qBGgaWyxAhaUwwO+Pf1lUHxxP+0RPK9J5lJdHxOH4I3sQ=="><input type="hidden" name="ref" id="ref" value="inline-topshelf-end-post"><input type="text" name="email" id="email" value="" class="email-signup-field input topshelf-input" placeholder="email@example.com"><input type="submit" class="button submit-email topshelf-button" value="»">
+</form> </li>
+
+</ul>
+<!-- OS --><ul class="facebook-items">
+<!-- generated at 1436099503.6391585 --><li>
+            <a href="/2015/06/28/this-is-rikers?ref=tsfb">
+              <div class="topshelf-link">Feature</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;This is Rikers&lt;/b&gt; From the people who live and work there.">
+                  <b>This is Rikers</b> From the people who live and work there.
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/07/02/california-s-jail-building-boom?ref=tsfb">
+              <div class="topshelf-link">Feature</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;California’s Jail-building Boom&lt;/b&gt; What comes after mass incarceration? Local incarceration.">
+                  <b>California’s Jail-building Boom</b> What comes after mass incarceration? Local incarceration.
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/07/01/how-the-law-will-adapt-to-oregon-s-legalized-pot?ref=tsfb">
+              <div class="topshelf-link">News</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;How the Law Will Adapt to Oregon’s Legalized Pot&lt;/b&gt; Expunged arrest records, and new jobs for police dogs.">
+                  <b>How the Law Will Adapt to Oregon’s Legalized Pot</b> Expunged arrest records, and new jobs for police dogs.
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/07/01/the-case-for-smoking-in-prison?ref=tsfb">
+              <div class="topshelf-link">News</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;The Case for Smoking in Prison&lt;/b&gt; When cigarettes are outlawed, only outlaws have cigarettes.">
+                  <b>The Case for Smoking in Prison</b> When cigarettes are outlawed, only outlaws have cigarettes.
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/07/02/is-google-more-accurate-than-the-fbi?ref=tsfb">
+              <div class="topshelf-link">News</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Is Google More Accurate Than the FBI?&lt;/b&gt; In tracking deaths by police, the tech world might beat Uncle Sam.">
+                  <b>Is Google More Accurate Than the FBI?</b> In tracking deaths by police, the tech world might beat Uncle Sam.
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/06/29/a-victory-for-lethal-injection?ref=tsfb">
+              <div class="topshelf-link">Analysis</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;A Victory for Lethal Injection&lt;/b&gt; And a blazing battle over the death penalty itself.">
+                  <b>A Victory for Lethal Injection</b> And a blazing battle over the death penalty itself.
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/07/02/back-on-the-agenda-nebraska-s-death-penalty?ref=tsfb">
+              <div class="topshelf-link">News</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Back on the Agenda: Nebraska’s Death Penalty&lt;/b&gt; A grassroots effort aims to restore what the legislature just ended.">
+                  <b>Back on the Agenda: Nebraska’s Death Penalty</b> A grassroots effort aims to restore what the legislature just ended.
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/06/28/join-our-facebook-chat-on-rikers-island?ref=tsfb">
+              <div class="topshelf-link">Commentary</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Join Our Facebook Chat On Rikers Island&lt;/b&gt; Bill Keller, Dana Goldstein, Alysia Santo and Eli Hager will answer your questions on what life is like on Rikers, and recent reform efforts.">
+                  <b>Join Our Facebook Chat On Rikers Island</b> Bill Keller, Dana Goldstein, Alysia Santo and Eli Hager will answer your questions on what life is like on Rikers, and recent reform efforts.
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/07/02/justice-breyer-and-malcolm-x?ref=tsfb">
+              <div class="topshelf-link">Looking Back</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Justice Breyer and Malcolm X&lt;/b&gt; A concurring opinion from the past">
+                  <b>Justice Breyer and Malcolm X</b> A concurring opinion from the past
+              </div>
+</a>          </li>
+          <li>
+            <a href="/2015/07/02/what-was-justice-breyer-really-saying?ref=tsfb">
+              <div class="topshelf-link">Analysis</div>
+              <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;What Was Justice Breyer Really Saying?&lt;/b&gt; And to whom was he saying it?">
+                  <b>What Was Justice Breyer Really Saying?</b> And to whom was he saying it?
+              </div>
+</a>          </li>
+
+</ul>
+<!-- facebook --><ul class="quick-reads-items">
+<!-- generated_at 1435869761.7284095 --><li>
+      <a href="/2015/07/02/back-on-the-agenda-nebraska-s-death-penalty?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>4 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Back on the Agenda: Nebraska’s Death Penalty&lt;/b&gt; A grassroots effort aims to restore what the legislature just ended.">
+          <b>Back on the Agenda: Nebraska’s Death Penalty</b> A grassroots effort aims to restore what the legislature just ended.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/07/02/what-was-justice-breyer-really-saying?ref=tsqr">
+          <div class="topshelf-link">
+            Analysis
+            <span>4 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;What Was Justice Breyer Really Saying?&lt;/b&gt; And to whom was he saying it?">
+          <b>What Was Justice Breyer Really Saying?</b> And to whom was he saying it?
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/06/29/a-victory-for-lethal-injection?ref=tsqr">
+          <div class="topshelf-link">
+            Analysis
+            <span>3 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;A Victory for Lethal Injection&lt;/b&gt; And a blazing battle over the death penalty itself.">
+          <b>A Victory for Lethal Injection</b> And a blazing battle over the death penalty itself.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/06/28/join-our-facebook-chat-on-rikers-island?ref=tsqr">
+          <div class="topshelf-link">
+            Commentary
+            <span>4 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Join Our Facebook Chat On Rikers Island&lt;/b&gt; Bill Keller, Dana Goldstein, Alysia Santo and Eli Hager will answer your questions on what life is like on Rikers, and recent reform efforts.">
+          <b>Join Our Facebook Chat On Rikers Island</b> Bill Keller, Dana Goldstein, Alysia Santo and Eli Hager will answer your questions on what life is like on Rikers, and recent reform efforts.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/06/25/ohio-gets-a-third-chance-to-kill-michael-keenan?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>4 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Ohio Gets a Third Chance to Kill Michael Keenan&lt;/b&gt; A case so messy one judge says it’s an argument for abolishing the death penalty.">
+          <b>Ohio Gets a Third Chance to Kill Michael Keenan</b> A case so messy one judge says it’s an argument for abolishing the death penalty.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/06/19/what-to-read-the-charleston-massacre?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>3 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;What to Read: The Charleston Massacre&lt;/b&gt; Selected news and comment from this morning’s Opening Statement.">
+          <b>What to Read: The Charleston Massacre</b> Selected news and comment from this morning’s Opening Statement.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/06/10/cops-shooting-at-cars-a-really-bad-idea?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>3 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Cops Shooting at Cars: A Really Bad Idea&lt;/b&gt; More and more, police are told to leave that to Hollywood.">
+          <b>Cops Shooting at Cars: A Really Bad Idea</b> More and more, police are told to leave that to Hollywood.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/06/09/no-bail-less-hope-the-death-of-kalief-browder?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>4 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;No Bail, Less Hope: The Death of Kalief Browder&lt;/b&gt; A system that kept a teenager in Rikers for three years.">
+          <b>No Bail, Less Hope: The Death of Kalief Browder</b> A system that kept a teenager in Rikers for three years.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/06/02/who-runs-rikers?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>3 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Who Runs Rikers?&lt;/b&gt; The rule says no solitary for kids. The staff finds a loophole.">
+          <b>Who Runs Rikers?</b> The rule says no solitary for kids. The staff finds a loophole.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/06/02/notebook-of-a-madman?ref=tsqr">
+          <div class="topshelf-link">
+            Commentary
+            <span>4 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Diary of a Madman?&lt;/b&gt; A psychiatrist analyzes the notebook of James Holmes.">
+          <b>Diary of a Madman?</b> A psychiatrist analyzes the notebook of James Holmes.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/05/22/i-feel-unsafe-every-day?ref=tsqr">
+          <div class="topshelf-link">
+            Asked and Answered
+            <span>3 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;‘I Feel Unsafe Every Day.’&lt;/b&gt; An Oklahoma corrections officer on the stress and danger of understaffing, and why each inmate should be given a joint twice a day.">
+          <b>‘I Feel Unsafe Every Day.’</b> An Oklahoma corrections officer on the stress and danger of understaffing, and why each inmate should be given a joint twice a day.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/05/21/reversing-rick-perry?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>3 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Reversing Rick Perry&lt;/b&gt; A new Texas governor, a new policy on prison rape.">
+          <b>Reversing Rick Perry</b> A new Texas governor, a new policy on prison rape.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/05/21/when-a-psychologist-was-in-charge-of-jail?ref=tsqr">
+          <div class="topshelf-link">
+            Looking Back
+            <span>3 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;When a Psychologist Was in Charge of Jail&lt;/b&gt; Cook County Jail will soon be run by a mental health professional. And it’s not the first time.">
+          <b>When a Psychologist Was in Charge of Jail</b> Cook County Jail will soon be run by a mental health professional. And it’s not the first time.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/05/15/mcveigh-garza-jones-tsarnaev?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>4 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;McVeigh, Garza, Jones, Tsarnaev&lt;/b&gt; A closer look at the three federal inmates who have been executed since the 1960s.">
+          <b>McVeigh, Garza, Jones, Tsarnaev</b> A closer look at the three federal inmates who have been executed since the 1960s.
+        </div>
+</a>    </li>
+    <li>
+      <a href="/2015/05/15/executing-tsarnaev-not-so-fast?ref=tsqr">
+          <div class="topshelf-link">
+            News
+            <span>3 min read</span>
+          </div>
+        <div class="topshelf-headline topshelf-headline-truncatable" data-original="&lt;b&gt;Executing Tsarnaev? Not So Fast.&lt;/b&gt; Like many states, the feds have trouble getting the killer drugs.">
+          <b>Executing Tsarnaev? Not So Fast.</b> Like many states, the feds have trouble getting the killer drugs.
+        </div>
+</a>    </li>
+</ul>
+<!-- quick-reads -->
+</div>
+<!-- .ul-wrap -->
+
+      <div class="topshelf-controls">
+        <div class="right-arrow">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 275.5 612 241" enable-background="new 0 275.5 612 241" xml:space="preserve"><g><line stroke="#000000" stroke-width="28" stroke-miterlimit="10" x1="0" y1="395.2" x2="569.3" y2="395.2"></line><g><polygon points="481.1,510.9 461.1,491 563.6,394.2 461.1,300.3 481.1,277.5 606.3,394.2    "></polygon></g></g></svg>
+</div>
+
+        <div class="topshelf-counter"></div>
+
+        <div class="left-arrow">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 275.5 612 241" enable-background="new 0 275.5 612 241" xml:space="preserve"><g><line stroke="#000000" stroke-width="28" stroke-miterlimit="10" x1="37" y1="395.2" x2="606.3" y2="395.2"></line><g><polygon points="0,394.2 125.2,277.5 145.2,300.3 42.7,394.2 145.2,491 125.2,510.9    "></polygon></g></g></svg>
+</div>
+      </div>
+<!-- .topshelf-controls -->
+
+    </div>
+<!-- .topshelf-wrapper -->
+  </div>
+<!-- .container -->
+  <!-- built in 0.031067609786987305 -->
+</div>
+<!-- .topshelf -->
+
+<span data-mark="top-of-post"></span>
+<!-- single_post_partial base generated at 1435869762.461369 -->
+<style>/* auto generated */
+</style>
+<!-- _base --><div class="container">
+
+  <div class="col12 post-header post-477">
+  <div class="post-timestamp">
+    Filed
+    <span> 4:33 p.m.</span>
+  </div>
+  <div class="post-date">
+    07.02.2015
+  </div>
+  <div class="post-kicker">
+      <a href="/tag/news">News</a>
+    <span></span>
+  </div>
+  <h1 class="post-headline" data-remote="post:477:title">
+    Is Google More Accurate Than the FBI?
+  </h1>
+  <h4 class="post-deck" data-remote="post:477:deck">
+    In tracking deaths by police, the tech world might beat Uncle Sam.
+  </h4>
+</div>
+
+<article class="post-477"><aside class="col4"><div class="inner">
+
+      <div class="post-byline">
+          By <span>Mark Hansen</span>
+
+      </div>
+        <div class="post-byline-shim"></div>
+
+
+<div class="share-tools">
+  <div class="share-button" data-action="facebook">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve"><g><path fill="#111111" d="M8.3,15.5c0-1.2,0-2.3,0-3.5c0-0.8-0.1-1.5-1.1-1.5c-1.4,0.1-1.4-0.8-1.4-1.8c0-0.9,0.1-1.7,1.3-1.6
+    c1.7,0.1,1.2-1.3,1.2-2.1c0.3-3.5,1.4-4.5,4.9-4.4c1,0,2-0.2,2,1.4c0,1.2,0,2.1-1.6,2c-1.2-0.1-1.5,0.7-1.5,1.8
+    c0,1.2,0.6,1.4,1.6,1.4c0.7,0,1.7-0.1,1.4,1.1c-0.2,0.9,0.3,2.3-1.3,2.2c-1.6,0-1.7,0.8-1.7,2c0.1,2.2,0,4.3,0,6.5
+    c0.1,1.5-0.8,1.5-1.9,1.5c-1.1,0-2,0-1.9-1.5C8.4,17.8,8.3,16.7,8.3,15.5z"></path></g></svg><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.themarshallproject.org%2F2015%2F07%2F02%2Fis-google-more-accurate-than-the-fbi%3Futm_medium%3Dsocial%26utm_campaign%3Dshare-tools%26utm_source%3Dfacebook%26utm_content%3Dpost-top" onclick="window.open(this.href, '', 'height=279,width=575'); return false;" class="share-button-link"></a>
+  </div>
+  <div class="share-button" data-action="twitter">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve"><g><path fill="#111111" d="M1.2,16.9c1.9-0.2,3.4-0.4,5.1-1.8c-3.2-0.2-3.3-3.2-3.9-4.9C1.7,8.4,0.7,5.8,2,3.3
+    c1.9,1.8,3.9,3.2,6.2,3.8c1.3,0.3,2,0.4,2.3-1.4c0.4-2.7,3-3.9,5.5-2.9c0.7,0.3,1.3,0.7,2.3,0.7c1.1,0,1.8,1.2,1,2.1
+    c-0.8,0.9-0.9,1.9-1,2.9C17.4,16.6,8.5,21.2,1.2,16.9z"></path></g></svg><a href="https://twitter.com/intent/tweet?text=Is%20Google%20More%20Accurate%20that%20the%20FBI?&amp;url=https%3A%2F%2Fwww.themarshallproject.org%2F2015%2F07%2F02%2Fis-google-more-accurate-than-the-fbi%3Futm_medium%3Dsocial%26utm_campaign%3Dshare-tools%26utm_source%3Dtwitter%26utm_content%3Dpost-top" class="share-button-link"></a>
+  </div>
+
+  <div class="share-button" data-action="mailto">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve"><g><g><path fill="#111111" d="M0.9,7.2c0,3.6,0,7.2,0,10.7c6.4,0,12.7,0,19.1,0c0-3.6,0-7.1,0-10.7c-0.2,0.1-0.3,0.1-0.5,0.2
+      c-2.9,1.4-5.7,2.7-8.6,4.1c-0.3,0.1-0.6,0.2-0.9,0c-1.5-0.7-3-1.4-4.4-2.1C4.1,8.7,2.6,8,0.9,7.2z M0.9,3.4c0,0.6,0,1.1,0,1.7
+      c0,0.1,0.2,0.3,0.3,0.4c3,1.4,5.9,2.9,8.9,4.3c0.2,0.1,0.5,0.1,0.7,0c3-1.4,6-2.9,8.9-4.3c0.1-0.1,0.3-0.2,0.3-0.3
+      c0-0.6,0-1.1,0-1.7C13.7,3.4,7.3,3.4,0.9,3.4z"></path><path fill="#111111" d="M0.9,7.2C2.6,8,4.1,8.7,5.6,9.5c1.5,0.7,3,1.4,4.4,2.1c0.3,0.2,0.6,0.1,0.9,0c2.9-1.4,5.7-2.7,8.6-4.1
+      c0.1-0.1,0.3-0.1,0.5-0.2c0,3.6,0,7.1,0,10.7c-6.4,0-12.7,0-19.1,0C0.9,14.4,0.9,10.9,0.9,7.2z"></path><path fill="#111111" d="M0.9,3.4c6.4,0,12.7,0,19.1,0c0,0.6,0,1.1,0,1.7c0,0.1-0.2,0.3-0.3,0.3c-3,1.4-5.9,2.9-8.9,4.3
+      c-0.2,0.1-0.5,0.1-0.7,0c-3-1.4-5.9-2.8-8.9-4.3C1.1,5.3,1,5.2,0.9,5C0.9,4.5,0.9,3.9,0.9,3.4z"></path></g></g></svg><a class="share-button-link" href="mailto:?subject=Is%20Google%20More%20Accurate%20Than%20the%20FBI?%20(The%20Marshall%20Project)&amp;body=https%3A%2F%2Fwww.themarshallproject.org%2F2015%2F07%2F02%2Fis-google-more-accurate-than-the-fbi%3Futm_medium%3Demail%26utm_campaign%3Dshare-tools%26utm_source%3Demail%26utm_content%3Dpost-top"></a>
+  </div>
+  <div class="share-button" data-action="print">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve"><g><path fill="#111111" d="M5.2,6.6c0-2.2,0-4.4,0-6.6c3.4,0,6.7,0,10.1,0c0,2.2,0,4.4,0,6.6C12,6.6,8.6,6.6,5.2,6.6z"></path><path fill="#111111" d="M21,6c-2,0-3,0-4,0c0,1,0,2,0,2C12,8,9,8,3,8c0-1,0-1,0-2c0,0-1,0-3,0c0,4,0,7,0,11c2,0,2.6,0,3.9,0
+    c-0.4,1-0.8,2-1.2,4c5.1,0,10.1,0,15.2,0c-0.4-2-0.8-3-1.2-4c1.3,0,2.3,0,4.3,0C21,13,21,10,21,6z M18,14.2c0,0-1.1,0-1.6,0
+    c-0.1,0-0.2-0.1-0.3-0.2c-0.1-0.2-0.1-0.4-0.2-0.6c-0.1-0.1-0.3-0.3-0.4-0.3c-3.5,0-7.1,0-10.6,0c0,0-0.1,0-0.1,0
+    c0,0-0.1,0.5-0.1,0.5c-0.4,1-0.4,1.4-1.4,1.4C3.1,15,3,15,3,15c0-1,0-3,0-4c5,0,10,0,15,0C18,12,18,13.4,18,14.2z"></path></g></svg><a class="share-button-link" href="#" onclick="window.print();return false;"></a>
+  </div>
+</div>
+
+
+
+
+    </div>
+  </aside><p data-hash="0ec96a">When escaped murderer Richard Matt was shot by a U.S. Customs and Border Protection officer on June 26, he became the 459th person shot and killed by a law enforcement this year, according to a new database released Tuesday by the Washington Post. The Post has created a catalog of deaths from police-involved shootings by continually “<a href="https://github.com/washingtonpost/data-police-shootings">culling local news reports and monitoring independent databases such as Killed by Police and Fatal Encounters.</a>” They have also invited their readers to contribute to and correct their information. As of today, their database contains 463 names, as well as  information about victims’ ages, race, gender, the city in which they were killed, whether they were armed, whether they showed signs of mental illness, and the date of their death.</p>
+
+<p data-hash="1f75b5">In addition to Richard Matt, the Washington Post database contains other names you might recognize. Walter Scott — who was shot in the back in April while running from a South Carolina police officer — is number 253. But other people are absent, like Freddie Gray, who died of injuries sustained while handcuffed and shackled in a police van. His name is not in the database because the Washington Post tracks only shooting deaths involving on-duty officers. </p>
+
+<p data-hash="2ac9c3">Gray does, however, have a number in a similar database (it’s 421). The Guardian launched <a href="http://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-police-killings-us-database">The Counted</a> in June, which tracks all “deadly use of force” by law enforcement. They have a similar approach as the Washington Post in that they follow media reports and leverage existing independent tracking projects. But because they count all police-involved deaths — not just shootings — their total is higher. The Guardian estimates that there have been 550 police-involved deaths since the beginning of the year. For each death, they track similar information as the Washington Post, but include the location of the incident and the law enforcement agency involved, and exclude the possibility of mental illness.</p>
+
+<p data-hash="33b30f"><strong>Why the Numbers Differ</strong></p>
+
+<p data-hash="4d25b2">The Washington Post and the Guardian have developed their own methods for counting police-involved deaths in part because no other organization has precise tallies. The FBI, for its part, requests that law-enforcement agencies submit a count of police-involved deaths as part of its Uniform Crime Reports (UCR), the official data source on crime in the U.S. The FBI aggregates these counts and publishes estimates of justifiable homicides by police officers in its Supplementary Homicide Report. But the numbers are widely seen as incomplete because law-enforcement agencies contribute to the report voluntarily. Only about 2,700 out of 22,000 agencies recognized by the FBI contributed counts in 2013, the most recent year for which data is available. That year, the FBI tallied 461 homicides (its annual number has been around 400 for the <a href="https://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/offenses-known-to-law-enforcement/expanded-homicide/expanded_homicide_data_table_14_justifiable_homicide_by_weapon_law_enforcement_2009-2013.xls">last five years</a>).</p>
+
+<p data-hash="5f4ecf">The Center for Disease Control and Prevention also tracks deaths due to “legal intervention.” Through the National Violent Death Reporting System, it aggregates information from state authorities on a voluntary basis. Currently only 32 states participate in the program; California, Texas, and Florida — the three most populated states in the nation — do not. In 2013, the CDC estimated that there were 516 police-involved homicides in the U.S.</p>
+
+<p data-hash="620d50">By year’s end, both the FBI and the CDC numbers stand to be about half the number estimated by both the Guardian and the Washington Post. </p>
+
+<p data-hash="701a73"><strong>Why Google Alerts Get Better Numbers</strong></p>
+
+<p data-hash="8d6c83">The Guardian and the Washington Post both rely heavily on two websites, <a href="http://www.fatalencounters.org/">Fatal Encounters</a> and <a href="http://killedbypolice.net/">Killed by Police</a>, in compiling their databases. In turn, both Fatal Encounters and Killed by Police rely on something commonly thought of as a vanity tool — Google Alerts — which allow people to set up custom searches and receive email alerts when those searches return new findings.</p>
+
+<p data-hash="92c406">“We use Google Alerts and search by date and region, usually states,” said D. Brian Burghart, founder of Fatal Encounters. Burghart, who is also editor and publisher of the Reno News &amp; Review, started his site as a massive public records search: he has made over 2,000 requests, producing complete sets of police reports about police-involved deaths in Texas and Nevada. </p>
+
+<p data-hash="105565a">Eventually, because of the frustrations and “governmental hiccups” resulting from document requests submitted to a large number of law-enforcement agencies, Fatal Encounters turned to Google Alerts. (Killed by Police also relies on daily searches of Google News to update its homicide list.) </p>
+
+<p data-hash="111aa7e">Using Google Alerts to keep track of police shootings “makes sense provided there is human scrutiny,” said Krishna Bharat, founder of Google News (he is no longer working for Google). Search terms like “shooting” or “killed” or “murdered,” when paired with “police,” will return a big “basket of results,” to use Bharat’s terminology. This basket is then manually filtered to include only results of the police-involved events.</p>
+
+<p data-hash="1274f88">But because Google Alerts depend on news sites, mostly local, there are ways in which the system might run into problems. An obvious issue — technical in nature — is if Google’s algorithm fails to “crawl” a news report about a given shooting. Bharat is confident that Google is capable of finding any published news story: “Certainly in the United States, I think all publications are in.” (Media outlets apply to be a part of Google News, which currently includes about 70,000 from around the world.) Bharat is realistic, however, about the technical limitations. When Google isn’t crawling a news site, we could have “a vacuum for many months.” </p>
+
+<p data-hash="13ee7e5">A second possible problem is a human one. “Small-town reporting isn't what it used to be, and I would not be surprised if some cases just went unreported,” said Bharat. He has seen omissions of this kind and recalled one incident that escaped the attention of the news media; it was only discovered when an article about a subsequent incident alluded to it.</p>
+
+<p data-hash="143a2c7"><strong>A Closer Look at Accuracy</strong></p>
+
+<p data-hash="15c5179">In March, before either the Guardian or the Washington Post launched their databases, researchers working with the Bureau of Justice Statistics published a study suggesting that the FBI was reporting only about half of the justifiable police-involved homicides from 2003-2009 and 2011. </p>
+
+<p data-hash="1651f04">The BJS study focused on their own program for tracking those killed during an arrest or who die while in police custody; they began collecting statistics from police departments in response to the Deaths in Custody Reporting Act, which was renewed in 2014. The BJS accounting differs from the FBI's in that it also includes, for example, people who commit suicide while in custody. </p>
+
+<p data-hash="17e8e1a">The BJS evaluated their numbers by comparing them to the FBI’s using a statistical technique known as “capture-recapture.” The idea is simple enough: assuming that the BJS and the FBI do their work independently, you can use the cases recorded by one agency (capture) and then see how many are identified by the other (recapture). A little statistical work yielded estimates of how well the two reporting systems performed and how many incidents were left out. The results aligned much more closely with the Guardian and Washington Post counts.</p>
+
+<p data-hash="1877d75">Interestingly, the BJS study notes that it began its own media-monitoring program for arrest-related deaths in January of 2010, specifically mentioning Google Alerts. In an email, Dr. Duren Banks, a criminologist with RTI International (a nonprofit research institute) and the lead author on the BJS study, said that they started using alerts and other media sources “to correct for the voluntary nature of the program — we had better reporting in some jurisdictions compared to others.”</p>
+
+<p data-hash="1939915">Burghart has been conducting his own accuracy analysis, comparing Google with the police department incident records he requested from Nevada and Texas. He has nearly completed verifying the data from Houston, and of the 139 deaths identified in official police reports, 19 were not found by media searches. However, all but one of those occurred before 2008, very early in the life of Google News, which was officially launched in 2006. Since then, Google News has grown considerably and undergone technological changes that have impacted its archive. As a result, the farther back you search, the less likely you are to get thorough results. </p>
+
+<p data-hash="209e537">The remaining unmatched incident in Houston was in 2011, and while Burghart is still examining the cause, he believes it is the result of a misspelling on the police report. </p>
+
+<p data-hash="21ed77b"><strong>The Benefits of Crowdsourcing</strong></p>
+
+<p data-hash="221e62e">Fatal Encounters relies on crowdsourced information, and in a similar project last year with <a href="http://regressing.deadspin.com/were-compiling-every-police-involved-shooting-in-americ-1624180387">Deadspin</a>, published a simple set of instructions for readers to follow. The advice given suggests the complexities of using the news as a basis for data. </p>
+
+<p data-hash="232fd0d">Deadspin, for example, clarified that they “are not looking for incidence of police officers discharging their weapons and hitting no one” because they “are not as thoroughly reported and would probably bias the data.” That is, news outlets are less likely to report on them, and so these events are inconsistently entered into Google’s catalog. </p>
+
+<p data-hash="24c1d1a">The are many advantages to crowd-sourced data. The Guardian asks readers to submit a link to a news story and include “<a href="http://www.theguardian.com/us-news/ng-interactive/2015/jun/01/us-police-killings-tips">as many details as you know</a>” as well as their own contact information. The Washington Post also asks for links to existing coverage, but includes prompts for location. </p>
+
+<p data-hash="257427b">In general, participants are asked to extract some basic statistics from news reports about the incident, turning the so-called “unstructured” information of a news story into the “structured” categories. That information can then be compared across time, and between neighboring cities and states to identify trends that help address big questions like: Are shootings on the rise? Are certain races disproportionately affected? </p>
+
+<p data-hash="26180f9"><strong>The Government Steps Up</strong></p>
+
+<p data-hash="277f0ac">Days after the initial reports from the Washington Post and the Guardian, Senators Barbara Boxer and Cory Booker proposed <a href="http://www.boxer.senate.gov/press/related/150602PRIDEActBillText.pdf">the P</a><a href="http://www.boxer.senate.gov/press/related/150602PRIDEActBillText.pdf">olice Reporting of Information, Data and Evidence Act</a>, also known as the PRIDE Act, which would require law enforcement to report all incidents in which the use of force “by or against a civilian or a law enforcement officer results in serious bodily injury or death.” </p>
+
+<p data-hash="28eef54">For each incident, the act requests basic demographic data on the victim (civilian or police officer), whether the civilian had a weapon, the numbers of civilians and police involved in the incident, and a brief description of the event. In terms of implementation, the proposal offers grants to law-enforcement agencies to offset the cost of collecting statistics. </p>
+
+<p data-hash="29b6aeb">This bill also comes just after President Obama announced his <a href="https://www.whitehouse.gov/blog/2015/05/18/launching-police-data-initiative">Task Force on 21st Century Policing</a>. The effort includes a number of well-known technology organizations like Code for America, a nonprofit promoting “civic tech.” The goal is to improve and then open data collection by police departments to help “build transparency and increase community trust.” Code for America recently launched its <a href="https://codeforamerica.github.io/PoliceOpenDataCensus/#">Police Open Data Census</a>, providing advice to law-enforcement agencies about what kinds of data to release and how. They recommend making data freely available online, having it be machine readable (meaning that it can be shared and used in other applications), having it be available in real-time, and making incident-level data public. </p>
+
+<p data-hash="3064a44">These new initiatives underscore not just accountability, but also data sharing that helps develop policing practices and reduce the number of deaths, both among civilians and police. </p>
+
+
+    <span class="promo-201506-email">
+      <b>Like this story?</b> Sign up for our <a href="http://bit.ly/1Gv2TAN">morning news roundup</a> for more like it. To support our nonprofit journalism, you can <a href="http://bit.ly/1FJg63f">donate here</a>.
+    </span>
+
+  <div class="letter-tools">
+
+    <div class="outlined-button">
+      <a class="outlined-button-link" href="/submit-letter/477-is-google-more-accurate-than-the-fbi">Submit a Letter To The Editor</a>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <div class="post-footer-item">
+      Originally Filed
+      <span>Thursday, July  2, 2015 at  4:33 p.m. ET</span>
+    </div>
+    <div class="tag-group">
+    </div>
+  </div>
+  <div class="clear"></div>
+</article>
+</div>
+
+<span data-mark="bottom-of-post"></span>
+
+  <div class="stream nocontent robots-nocontent"></div>
+  <span class="bottom-of-stream"></span>
+
+<script>
+$(document).ready(function() {
+
+  var stream_collection_inserted = false;
+
+  $.getJSON("/api/v1/stream-topshelf").done(function(data) {
+    var quickreads = data.v1.quickreads;
+    var facebook   = data.v1.facebook;
+
+    $(window).on('tmp_scroll', function() {
+      if ($('.stream-post').length > 6 && stream_collection_inserted === false) {
+
+        stream_collection_inserted = true;
+        var promos = $('.stream-post');
+        $(promos[1]).after(facebook);
+        $(promos[2]).find('.promo-shim-special').removeClass('promo-rule');
+
+        $(promos[5]).after(quickreads);
+        $(promos[6]).find('.promo-shim-special').removeClass('promo-rule');
+
+        window.requestAnimationFrame(function() {
+          $(window).trigger('setup_topshelf');
+        });
+      }
+    })
+
+  })
+})
+</script><div class="menu-wrapper menu-hidden">
+  <div class="menu-section menu-section-top">
+    <div class="menu-item">
+      <a class="menu-item-link" href="/feature?ref=menu">Feature</a>
+    </div>
+    <div class="menu-item">
+      <a class="menu-item-link" href="/news?ref=menu">News</a>
+    </div>
+    <div class="menu-item">
+      <a class="menu-item-link" href="/commentary?ref=menu">Commentary</a>
+    </div>
+  </div>
+  <div class="menu-section">
+    <div class="menu-item menu-social">
+      <a class="menu-item-link" href="http://bit.ly/fbmp-menu"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve"><g><path fill="#111111" d="M8.3,15.5c0-1.2,0-2.3,0-3.5c0-0.8-0.1-1.5-1.1-1.5c-1.4,0.1-1.4-0.8-1.4-1.8c0-0.9,0.1-1.7,1.3-1.6
+    c1.7,0.1,1.2-1.3,1.2-2.1c0.3-3.5,1.4-4.5,4.9-4.4c1,0,2-0.2,2,1.4c0,1.2,0,2.1-1.6,2c-1.2-0.1-1.5,0.7-1.5,1.8
+    c0,1.2,0.6,1.4,1.6,1.4c0.7,0,1.7-0.1,1.4,1.1c-0.2,0.9,0.3,2.3-1.3,2.2c-1.6,0-1.7,0.8-1.7,2c0.1,2.2,0,4.3,0,6.5
+    c0.1,1.5-0.8,1.5-1.9,1.5c-1.1,0-2,0-1.9-1.5C8.4,17.8,8.3,16.7,8.3,15.5z"></path></g></svg></a>
+
+    </div>
+    <div class="menu-item menu-social">
+      <a class="menu-item-link" href="http://bit.ly/twittermp-menu"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 21 21" enable-background="new 0 0 21 21" xml:space="preserve"><g><path fill="#111111" d="M1.2,16.9c1.9-0.2,3.4-0.4,5.1-1.8c-3.2-0.2-3.3-3.2-3.9-4.9C1.7,8.4,0.7,5.8,2,3.3
+    c1.9,1.8,3.9,3.2,6.2,3.8c1.3,0.3,2,0.4,2.3-1.4c0.4-2.7,3-3.9,5.5-2.9c0.7,0.3,1.3,0.7,2.3,0.7c1.1,0,1.8,1.2,1,2.1
+    c-0.8,0.9-0.9,1.9-1,2.9C17.4,16.6,8.5,21.2,1.2,16.9z"></path></g></svg></a>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="menu-section">
+    <span>Subscribe to Opening Statement</span>
+    <p>Get top criminal justice news delivered to your inbox every morning. <a href="/subscribe?ref=menu-more">More</a></p>
+    <div class="menu-newsletter">
+      <form action="/api/v2/email/subscribe" accept-charset="UTF-8" method="post">
+<input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="U2Pbd7N/gqzhXQxj+OF2s+nphqb6NGPlxMFsYowk/5EPlblA3ZLSHTdfVN+5XOHQdobmPtt7J/W+gxmbPkZvYQ=="><input type="hidden" name="ref" id="ref" value="inline-menu"><input type="text" name="email" id="email" value="" class="email-signup-field js-validate-email newsletter-input form-input" placeholder="email@example.com"><input type="submit" class="newsletter-button submit-email form-button" value="Submit">
+</form>     <div class="clear"></div>
+    </div>
+  </div>
+  <div class="menu-section menu-topper">
+    <div class="menu-item menu-links">
+      <a class="menu-item-link" href="/about?ref=menu">About Us</a>
+    </div>
+    <div class="menu-item">
+      <a class="menu-item-link" href="/submit-letter?ref=menu">Letter to the Editor</a>
+    </div>
+    <div class="menu-item">
+      <a class="menu-item-link" href="/search?ref=menu">Search</a>
+    </div>
+    <div class="menu-item">
+      <a class="menu-item-link" href="/people?ref=menu">People</a>
+    </div>
+    <div class="menu-item">
+      <a class="menu-item-link" href="/funders?ref=menu">Our Funders</a>
+    </div>
+    <div class="menu-item">
+      <a class="menu-item-link" href="/donate?via=menu">Donate</a>
+    </div>
+    <div class="menu-item">
+      <a class="menu-item-link" href="/jobs?ref=menu">Jobs</a>
+    </div>
+  </div>
+
+  <div class="menu-section menu-copyright">
+    <p>Feedback? <a href="mailto:support@themarshallproject.org">support@themarshallproject.org</a></p>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-item">
+    <a href="/about">About</a>
+  </div>
+  <div class="footer-item">
+    <a href="/jobs">Jobs</a>
+  </div>
+  <div class="footer-item">
+    <a href="/people">People</a>
+  </div>
+  <div class="footer-item">
+    <a href="/funders">Funders</a>
+  </div>
+  <div class="clear"></div>
+  <div class="footer-logo">
+    <a href="/"><svg width="20px" height="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 223.2 223.2" enable-background="new 0 0 223.2 223.2" xml:space="preserve"><g><g><polygon fill="#1A1A1A" points="3.6,3.6 3.6,219.6 34.5,219.6 34.5,34.5    "></polygon><polygon fill="#1A1A1A" points="65.3,65.3 65.3,219.6 96.2,219.6 96.2,96.2     "></polygon><polygon fill="#1A1A1A" points="188.7,34.5 188.7,219.6 219.6,219.6 219.6,3.6    "></polygon><polygon fill="#1A1A1A" points="127,96.2 127,219.6 157.9,219.6 157.9,65.3     "></polygon></g></g></svg></a>
+  </div>
+</div>
+
+<div class="lights-out"></div>
+
+<script src="/assets/app/app-f9d72c71dafe8b83650d110596f2272503de084e1ff6812bf4d3165df8e173b5.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', "UA-47849981-1", 'auto');
+  var ga_pageview = {};
+  var ga_pageview = {
+    dimension1: "News",
+    dimension2: ""
+  }
+
+  ga('send', 'pageview', ga_pageview);
+
+
+</script><script type="text/javascript">
+  var _sf_async_config = {
+    uid: 58316,
+    domain: 'themarshallproject.org',
+    useCanonical: true
+  };
+
+
+  $(window).load(function() {
+    $.getScript("https://static.chartbeat.com/js/chartbeat.js");
+  });
+</script><script>
+window.fbAsyncInit = function() {
+  FB.init({ appId: 260005144189129, xfbml: true, version: 'v2.1' });
+  FB.getLoginStatus(function(response) {
+    window.FB_getLoginStatus = response.status;
+    report('facebook_getLoginStatus', response.status);
+  });
+};
+$(window).load(function() {
+  $.getScript("https://s3.amazonaws.com/s3.documentcloud.org/note_embed/note_embed.js");
+  $.getScript("https://platform.twitter.com/widgets.js");
+  $.getScript("https://connect.facebook.net/en_US/sdk.js");
+});
+</script>
+</body>
+</html>
