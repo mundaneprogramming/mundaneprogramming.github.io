@@ -93,3 +93,15 @@ txt = "A depiction of D-Day by Captain Raymond Creekmore\nSource: National Archi
 draw.multiline_textsize(txt)
 # (378, 44)
 ~~~
+
+### Changing fonts
+
+~~~py
+from PIL import ImageFont
+hfont = ImageFont.truetype("/System/Library/Fonts/HelveticaNeue.dfont", 14)
+draw.multiline_textsize(txt, font = hfont)
+# (452, 67)
+gfont = ImageFont.truetype("/Library/Fonts/GillSans.ttc", 14)
+draw.multiline_textsize(txt, font = gfont)
+# (387, 63)
+~~~
