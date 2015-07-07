@@ -17,11 +17,18 @@ related_links:
   - title: Wikipedia images in the United States public domain
     url: https://en.wikipedia.org/wiki/Category:Images_in_the_public_domain_in_the_United_States
   - title: Draw.textsize documentation
-    url: http://effbot.org/imagingbook/imagedraw.htm#tag-ImageDraw.Draw.textsize
+    url: http://pillow.readthedocs.org/en/latest/reference/ImageDraw.html#PIL.ImageDraw.PIL.ImageDraw.Draw.textsize
 ---
 
 
+## The importance of captions and branding
 
+
+## Installing Pillow
+
+http://pillow.readthedocs.org/en/latest/installation.html
+
+Need version 2.9 to get the `multiline_text` feature.
 
 
 ## Simple demonstration
@@ -53,8 +60,36 @@ python imagecreditor_basic.py /tmp/gliders.jpg \
 ![Creekmore Gliders overflow caption](/files/images/gliders.overflow.captioned.jpg)
 
 
+## Using `multiline_text`
 
 
+Replace:
 
-## Setting text size
+~~~py
+    capdraw.text(
+        (CAPTION_LEFT_PADDING, img_height + CAPTION_TOP_PADDING),
+        text, TEXT_COLOR)
+~~~
 
+with:
+
+~~~py
+    capdraw.multiline_text(
+        (CAPTION_LEFT_PADDING, img_height + CAPTION_TOP_PADDING),
+        text, TEXT_COLOR)
+~~~
+
+
+![cutoff image](/files/images/gliders.cutoff.captioned.jpg)
+
+
+## Finding text size
+
+~~~py
+from PIL import Image
+from PIL import ImageDraw
+draw = ImageDraw.Draw(Image.new('RGB', (0,0)))
+txt = "A depiction of D-Day by Captain Raymond Creekmore\nSource: National Archives:Black and White and Color Photographs\nof U.S. Air Force and Predecessor Agencies Activities,\nFacilities, and Personnel - World War II"
+draw.multiline_textsize(txt)
+# (378, 44)
+~~~

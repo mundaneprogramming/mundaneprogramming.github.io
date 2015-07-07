@@ -1,6 +1,5 @@
 from PIL import Image
 from PIL import ImageDraw
-# from PIL import ImageFont
 import argparse
 import re
 TEXT_COLOR = 'black'
@@ -19,7 +18,7 @@ def caption_image(img, text):
     # Create a Draw instance
     capdraw = ImageDraw.Draw(capimg)
     # Add text onto the Draw
-    capdraw.text(
+    capdraw.multiline_text(
         (CAPTION_LEFT_PADDING, img_height + CAPTION_TOP_PADDING),
         text, TEXT_COLOR)
     # Paste the original image onto the capimg instance
