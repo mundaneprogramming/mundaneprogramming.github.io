@@ -7,7 +7,7 @@ flickr = flickrapi.FlickrAPI(environ['FLICKR_KEY'], environ['FLICKR_SECRET'])
 # http://stuvel.eu/media/flickrapi-docs/documentation/4-uploading.html
 
 
-flickr.upload("/tmp/gliders.jpg",
+flickr.upload("/tmp/photo.jpg",
     title = "hello",
     description = "lorem ipsum jkasldfjklsjdfklasjdf",
     tags = "you there are fun",
