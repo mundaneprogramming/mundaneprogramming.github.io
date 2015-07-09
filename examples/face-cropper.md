@@ -13,33 +13,64 @@ files:
     description: A command-line interface for cropping a face from an image.
 ---
 
+Even if you're not able to achieve Facebook-level face-detection, it's still useful to be able to write tailored detection code that can meet your needs.
+
+For example, if you're creating a data site based off the U.S. Congress membership, you probably want to show the face of each congressmember, because [faces add visual impact to a page](http://designshack.net/articles/graphics/a-practical-guide-to-designing-with-faces/), and especially since those images are free-to-use and [conveniently collected by the Sunlight Foundation](https://sunlightlabs.github.io/congress/#legislator-photos).
+
+You can [clone their Github repo](https://github.com/unitedstates/images), but be warned, it's quite massive. You can practice with my sample of 30 photos here:
+
+[http://www.mundaneprogramming.com.s3.amazonaws.com/zips/unitedstates-images-sample.zip](http://www.mundaneprogramming.com.s3.amazonaws.com/zips/unitedstates-images-sample.zip)
+
+The photos themselves are nice and clear. But if you put them into an array, you'll see a visual inconsistency: some images include just the heads and shoulders, and other images are from the waist up:
+
+![image](/files/images/photos/congress-sample-inconsistencies.jpg)
+
+With 500+ sitting members of Congress, it will be painful to pick out the photos that need to be cropped and than manually crop them. However, we just need a pretty basic implementation of face-detection for a Python script, because in this case, every Congressmember's photo has a relatively obvious face, and so we can set the `detectMultiScale()` parameters to be very loose in finding candidates, and then just pick the biggest detected face...on the assumption that the biggest detected face is the _actual_ face.
 
 
+## Demo
 
+Download the sample files:
 
-
-### Refactoring
-
-~~~py
-def pad_image(image, dims, top = 0.0, right = 0.0, left = 0.0, bottom = 0.0):
-    # http://stackoverflow.com/questions/19098104/python-opencv2-cv2-wrapper-get-image-size
-    x0, y0, w, h = dims
-    x1, y1 = dims[0:1] + dims[2:3]
-    height, width, channels = image.shape
+~~~sh
+mkdir -p /tmp/testpeople
+cd /tmp/testpeople
+url=http://www.mundaneprogramming.com.s3.amazonaws.com/zips/unitedstates-images-sample.zip
+# download the file
+curl -O $url
+# unzip the zip
+unzip unitedstates-images-sample.zip
 ~~~
 
+Run the script:
 
-~~~py
-# test it out
-def resize_to_fit(image, w, h):
-    return cv2.resize(image, (w, h)) 
-
+~~~sh
+mkdir -p /tmp/testfaces # a new directory to save the faces
+cd /tmp/testpeople # just in case you aren't there already...
+for f in unitedstates-images-originals/*.jpg; do 
+  python facecrop_cli.py $f -d /tmp/testfaces
+done
 ~~~
 
+Pre-Crop (e.g. `/tmp/testpeople`):
+
+![image](/files/images/photos/congress-originals-excerpt-finder.jpg)
+
+Post-Crop (e.g. `/tmp/testfaces`):
+
+![image](/files/images/photos/congress-mugs-excerpt-finder.jpg)
 
 
 
-## Bash
+
+
+
+
+
+
+## Random stuff
+
+These are scripts to prepare the data for this lesson. No context is given.
 
 ~~~sh
 curl -o congressimages.zip https://github.com/unitedstates/images/archive/gh-pages.zip
@@ -55,7 +86,7 @@ zip -r unitedstates-images-originals.zip unitedstates-images-originals/
 aws s3 cp unitedstates-images-originals.zip s3://YOURBUCKETNAME --acl public-read
 ~~~
 
-Make an excerpt file
+Make an excerpt file of the images
 
 ~~~sh
 # http://stackoverflow.com/questions/17578873/randomly-shuffling-files-in-bash
@@ -76,11 +107,3 @@ curl -O $url
 unzip unitedstates-images-sample.zip
 ~~~
 
-
-Before:
-
-![image](/files/images/photos/congress-originals-excerpt-finder.jpg)
-
-After:
-
-![image](/files/images/photos/congress-mugs-excerpt-finder.jpg)
