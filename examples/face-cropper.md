@@ -14,14 +14,6 @@ files:
 ---
 
 
-http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_gui/py_drawing_functions/py_drawing_functions.html
-
-[Photograph of a Bride and Her Attendants in New Ulm, Minnesota; Art Hanson, 1974](https://www.flickr.com/photos/usnationalarchives/4727529322/)
-
-via Archives: [DOCUMERICA: The Environmental Protection Agency's Program to Photographically Document Subjects of Environmental Concern, 1972 - 1977](https://catalog.archives.gov/id/542493)
-
-
-https://docs.python.org/3.5/library/__main__.html
 
 
 
@@ -84,3 +76,11 @@ curl -O $url
 unzip unitedstates-images-sample.zip
 ~~~
 
+
+Before:
+
+![image](/files/images/photos/congress-originals-excerpt-finder.jpg)
+
+After:
+
+![image](/files/images/photos/congress-mugs-excerpt-finder.jpg)

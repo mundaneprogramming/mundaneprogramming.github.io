@@ -1,37 +1,200 @@
-{ "photo": { "id": "4944459226", "secret": "886b66e6fb", "server": "4118", "farm": 5, "dateuploaded": "1283233484", "isfavorite": 0, "license": 7, "safety_level": 0, "rotation": 0, "originalsecret": "dfc7414a3b", "originalformat": "jpg",
-    "owner": { "nsid": "29454428@N08", "username": "State Library of New South Wales collection", "realname": "State Library of New South Wales", "location": "Australia", "iconserver": "8544", "iconfarm": 9, "path_alias": "statelibraryofnsw" },
-    "title": { "_content": "Margaret Barr's \"Strange Children\" [ballet], 1955 \/ photographer unknown" },
-    "description": { "_content": "Margaret Barr (1904-1991) was born in Bombay, India. She went to school in California, USA, and in the 1920s studied dance with Martha Graham in New York and choreographed her first works. During the 1930s she taught at Dartington Hall in Devon, England, an experimental school run by Dorothy and Leonard Elmhirst, and opened a studio in London. The productions of her own dance dramas often featured original music by composers such as Michael Tippett, Donald Pond and Edmund Rubbra. With her husband Bruce Hart, a conscientious objector, she travelled to New Zealand at the outbreak of World War II, where she accepted the position of Director of Movement at the Auckland School of Drama. She moved to Australia ten years later, and for four decades made a unique contribution as a choreographer, director and teacher. She formed the Margaret Barr Dance Group in Sydney in 1952, was Director of Movement at the National Institute of Dramatic Art from its inception in 1958 to 1975, and conducted classes at her Annandale studio. Her choreography was motivated by strong social and potitical concerns, and her dance dramas ranged over diverse topics such as the work of Mahatma Gandhi and Margaret Mead, drought, and the Melbourne Cup. She died in Sydney on 29 May 1991.\n\nFormat: Photograph\n \nNotes: Find more detailed information about this photographic collection: <a href=\"http:\/\/acms.sl.nsw.gov.au\/item\/itemDetailPaged.aspx?itemID=421396\" rel=\"nofollow\">acms.sl.nsw.gov.au\/item\/itemDetailPaged.aspx?itemID=421396<\/a>\n\nSearch for more great images in the State Library's collections: <a href=\"http:\/\/acms.sl.nsw.gov.au\/search\/SimpleSearch.aspx\" rel=\"nofollow\">acms.sl.nsw.gov.au\/search\/SimpleSearch.aspx<\/a>\n \nFrom the collection of the State Library of New South Wales <a href=\"http:\/\/www.sl.nsw.gov.au\" rel=\"nofollow\">www.sl.nsw.gov.au<\/a>" },
-    "visibility": { "ispublic": 1, "isfriend": 0, "isfamily": 0 },
-    "dates": { "posted": "1283233484", "taken": "1955-01-01 00:00:00", "takengranularity": 6, "takenunknown": 0, "lastupdate": "1422581986" }, "views": "40953",
-    "editability": { "cancomment": 0, "canaddmeta": 0 },
-    "publiceditability": { "cancomment": 1, "canaddmeta": 1 },
-    "usage": { "candownload": 1, "canblog": 0, "canprint": 0, "canshare": 1 },
-    "comments": { "_content": 13 },
+{
+  "photo": {
+    "id": "4944459226",
+    "secret": "886b66e6fb",
+    "server": "4118",
+    "farm": 5,
+    "dateuploaded": "1283233484",
+    "isfavorite": 0,
+    "license": 7,
+    "safety_level": 0,
+    "rotation": 0,
+    "originalsecret": "dfc7414a3b",
+    "originalformat": "jpg",
+    "owner": {
+      "nsid": "29454428@N08",
+      "username": "State Library of New South Wales collection",
+      "realname": "State Library of New South Wales",
+      "location": "Australia",
+      "iconserver": "8544",
+      "iconfarm": 9,
+      "path_alias": "statelibraryofnsw"
+    },
+    "title": {
+      "_content": "Margaret Barr's \"Strange Children\" [ballet], 1955 / photographer unknown"
+    },
+    "description": {
+      "_content": "Margaret Barr (1904-1991) was born in Bombay, India. She went to school in California, USA, and in the 1920s studied dance with Martha Graham in New York and choreographed her first works. During the 1930s she taught at Dartington Hall in Devon, England, an experimental school run by Dorothy and Leonard Elmhirst, and opened a studio in London. The productions of her own dance dramas often featured original music by composers such as Michael Tippett, Donald Pond and Edmund Rubbra. With her husband Bruce Hart, a conscientious objector, she travelled to New Zealand at the outbreak of World War II, where she accepted the position of Director of Movement at the Auckland School of Drama. She moved to Australia ten years later, and for four decades made a unique contribution as a choreographer, director and teacher. She formed the Margaret Barr Dance Group in Sydney in 1952, was Director of Movement at the National Institute of Dramatic Art from its inception in 1958 to 1975, and conducted classes at her Annandale studio. Her choreography was motivated by strong social and potitical concerns, and her dance dramas ranged over diverse topics such as the work of Mahatma Gandhi and Margaret Mead, drought, and the Melbourne Cup. She died in Sydney on 29 May 1991.\n\nFormat: Photograph\n \nNotes: Find more detailed information about this photographic collection: <a href=\"http://acms.sl.nsw.gov.au/item/itemDetailPaged.aspx?itemID=421396\" rel=\"nofollow\">acms.sl.nsw.gov.au/item/itemDetailPaged.aspx?itemID=421396</a>\n\nSearch for more great images in the State Library's collections: <a href=\"http://acms.sl.nsw.gov.au/search/SimpleSearch.aspx\" rel=\"nofollow\">acms.sl.nsw.gov.au/search/SimpleSearch.aspx</a>\n \nFrom the collection of the State Library of New South Wales <a href=\"http://www.sl.nsw.gov.au\" rel=\"nofollow\">www.sl.nsw.gov.au</a>"
+    },
+    "visibility": {
+      "ispublic": 1,
+      "isfriend": 0,
+      "isfamily": 0
+    },
+    "dates": {
+      "posted": "1283233484",
+      "taken": "1955-01-01 00:00:00",
+      "takengranularity": 6,
+      "takenunknown": 0,
+      "lastupdate": "1422581986"
+    },
+    "views": "40953",
+    "editability": {
+      "cancomment": 0,
+      "canaddmeta": 0
+    },
+    "publiceditability": {
+      "cancomment": 1,
+      "canaddmeta": 1
+    },
+    "usage": {
+      "candownload": 1,
+      "canblog": 0,
+      "canprint": 0,
+      "canshare": 1
+    },
+    "comments": {
+      "_content": 13
+    },
     "notes": {
-      "note": [
-
-      ] },
-    "people": { "haspeople": 0 },
+      "note": []
+    },
+    "people": {
+      "haspeople": 0
+    },
     "tags": {
       "tag": [
-        { "id": "29361615-4944459226-312", "author": "29454428@N08", "authorname": "State Library of New South Wales collection", "raw": "ballet", "_content": "ballet", "machine_tag": 0 },
-        { "id": "29361615-4944459226-1340", "author": "29454428@N08", "authorname": "State Library of New South Wales collection", "raw": "umbrella", "_content": "umbrella", "machine_tag": 0 },
-        { "id": "29361615-4944459226-1180", "author": "29454428@N08", "authorname": "State Library of New South Wales collection", "raw": "modern", "_content": "modern", "machine_tag": 0 },
-        { "id": "29361615-4944459226-2875", "author": "29454428@N08", "authorname": "State Library of New South Wales collection", "raw": "sand", "_content": "sand", "machine_tag": 0 },
-        { "id": "29361615-4944459226-8193", "author": "29454428@N08", "authorname": "State Library of New South Wales collection", "raw": "shift", "_content": "shift", "machine_tag": 0 },
-        { "id": "29361615-4944459226-16048", "author": "29454428@N08", "authorname": "State Library of New South Wales collection", "raw": "barefoot", "_content": "barefoot", "machine_tag": 0 },
-        { "id": "29361615-4944459226-108229", "author": "27753716@N00", "authorname": "BooRadBop", "raw": "modern dance", "_content": "moderndance", "machine_tag": 0 },
-        { "id": "29361615-4944459226-2765", "author": "27753716@N00", "authorname": "BooRadBop", "raw": "movement", "_content": "movement", "machine_tag": 0 },
-        { "id": "29361615-4944459226-704", "author": "27753716@N00", "authorname": "BooRadBop", "raw": "beach", "_content": "beach", "machine_tag": 0 },
-        { "id": "29361615-4944459226-3991", "author": "27753716@N00", "authorname": "BooRadBop", "raw": "dancers", "_content": "dancers", "machine_tag": 0 },
-        { "id": "29361615-4944459226-86414043", "author": "43854658@N00", "authorname": "Pixel Wrangler", "raw": "Ballet Across The Commons", "_content": "balletacrossthecommons", "machine_tag": 0 },
-        { "id": "29361615-4944459226-65217437", "author": "43854658@N00", "authorname": "Pixel Wrangler", "raw": "Margaret Barr", "_content": "margaretbarr", "machine_tag": 0 },
-        { "id": "29361615-4944459226-136607015", "author": "43854658@N00", "authorname": "Pixel Wrangler", "raw": "Margaret Barr Dance Group", "_content": "margaretbarrdancegroup", "machine_tag": 0 },
-        { "id": "29361615-4944459226-12005012", "author": "43854658@N00", "authorname": "Pixel Wrangler", "raw": "Strange Children", "_content": "strangechildren", "machine_tag": 0 },
-        { "id": "29361615-4944459226-241212665", "author": "7975356@N07", "authorname": "thenatansons", "raw": "CommonsBest", "_content": "commonsbest", "machine_tag": 0 }
-      ] },
+        {
+          "id": "29361615-4944459226-312",
+          "author": "29454428@N08",
+          "authorname": "State Library of New South Wales collection",
+          "raw": "ballet",
+          "_content": "ballet",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-1340",
+          "author": "29454428@N08",
+          "authorname": "State Library of New South Wales collection",
+          "raw": "umbrella",
+          "_content": "umbrella",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-1180",
+          "author": "29454428@N08",
+          "authorname": "State Library of New South Wales collection",
+          "raw": "modern",
+          "_content": "modern",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-2875",
+          "author": "29454428@N08",
+          "authorname": "State Library of New South Wales collection",
+          "raw": "sand",
+          "_content": "sand",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-8193",
+          "author": "29454428@N08",
+          "authorname": "State Library of New South Wales collection",
+          "raw": "shift",
+          "_content": "shift",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-16048",
+          "author": "29454428@N08",
+          "authorname": "State Library of New South Wales collection",
+          "raw": "barefoot",
+          "_content": "barefoot",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-108229",
+          "author": "27753716@N00",
+          "authorname": "BooRadBop",
+          "raw": "modern dance",
+          "_content": "moderndance",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-2765",
+          "author": "27753716@N00",
+          "authorname": "BooRadBop",
+          "raw": "movement",
+          "_content": "movement",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-704",
+          "author": "27753716@N00",
+          "authorname": "BooRadBop",
+          "raw": "beach",
+          "_content": "beach",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-3991",
+          "author": "27753716@N00",
+          "authorname": "BooRadBop",
+          "raw": "dancers",
+          "_content": "dancers",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-86414043",
+          "author": "43854658@N00",
+          "authorname": "Pixel Wrangler",
+          "raw": "Ballet Across The Commons",
+          "_content": "balletacrossthecommons",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-65217437",
+          "author": "43854658@N00",
+          "authorname": "Pixel Wrangler",
+          "raw": "Margaret Barr",
+          "_content": "margaretbarr",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-136607015",
+          "author": "43854658@N00",
+          "authorname": "Pixel Wrangler",
+          "raw": "Margaret Barr Dance Group",
+          "_content": "margaretbarrdancegroup",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-12005012",
+          "author": "43854658@N00",
+          "authorname": "Pixel Wrangler",
+          "raw": "Strange Children",
+          "_content": "strangechildren",
+          "machine_tag": 0
+        },
+        {
+          "id": "29361615-4944459226-241212665",
+          "author": "7975356@N07",
+          "authorname": "thenatansons",
+          "raw": "CommonsBest",
+          "_content": "commonsbest",
+          "machine_tag": 0
+        }
+      ]
+    },
     "urls": {
       "url": [
-        { "type": "photopage", "_content": "https:\/\/www.flickr.com\/photos\/statelibraryofnsw\/4944459226\/" }
-      ] }, "media": "photo" }, "stat": "ok" }
+        {
+          "type": "photopage",
+          "_content": "https://www.flickr.com/photos/statelibraryofnsw/4944459226/"
+        }
+      ]
+    },
+    "media": "photo"
+  },
+  "stat": "ok"
+}
