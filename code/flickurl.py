@@ -2,10 +2,13 @@
 # https://www.flickr.com/services/apps/create/noncommercial/?
 # also, via wikipedia
 # https://github.com/wikimedia/pywikibot-core/blob/master/scripts/flickrripper.py
+from colorama import Fore, Style, Back, init as initcolorama
+from datetime import datetime
 from os import environ
-import requests
-import re
 import argparse
+import re
+import requests
+
 BASE_URL = 'https://api.flickr.com/services/rest/'
 
 
@@ -18,8 +21,6 @@ def get_photo_info(photo_id, api_key):
     atts['photo_id'] = photo_id
     photo = requests.get(BASE_URL, params = atts).json()['photo']
     return photo
-
-
 
 def get_biggest_photo_url_meta(photo_id, api_key):
     """
@@ -67,6 +68,12 @@ def extract_canonical_url(photo_info):
 
 
 if __name__ == '__main__':
+    # get some colors
+    initcolorama()
+    def cprint(*txt):
+        t = ' '.join([str(x) for x in txt])
+        print(Back.BLACK + Fore.CYAN + Style.BRIGHT + t + Style.RESET_ALL)
+    # set API key
     api_key = environ['FLICKR_KEY']
     parser = argparse.ArgumentParser()
     parser.add_argument("url", nargs = 1, help = "Flickr photo URL or ID")
@@ -76,11 +83,30 @@ if __name__ == '__main__':
     photo_url_meta = get_biggest_photo_url_meta(photo_id, api_key)
     photo_info = get_photo_info(photo_id, api_key)
     # print title
+    cprint("Title")
     print(photo_info['title']['_content'])
     # print canonical url
+    cprint("Photo page")
     print(extract_canonical_url(photo_info))
     # print direct url to photo
+    cprint("Direct URL")
     print(photo_url_meta['source'])
+    # owner name
+    cprint("Owner name")
+    print(photo_info['owner']['realname'])
+    # dates
+    if photo_info['dates'].get('taken'):
+        cprint("Date taken")
+        print(photo_info['dates']['taken'])
+    if photo_info['dates'].get('posted'):
+        cprint("Date posted")
+        d = datetime.fromtimestamp(int(photo_info['dates'].get('posted'))).isoformat()
+        print(d)
+
+    # description
+    cprint("Description")
+    print(photo_info['description']['_content'])
+    cprint("More meta")
     # print meta of photo url
     print(photo_url_meta['label'], "%sx%s" % (photo_url_meta['width'], photo_url_meta['height']))
 
