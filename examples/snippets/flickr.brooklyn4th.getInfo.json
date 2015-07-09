@@ -1,0 +1,215 @@
+{
+  "rotation": 0,
+  "urls": {
+    "url": [
+      {
+        "_content": "https://www.flickr.com/photos/zokuga/14392889220/",
+        "type": "photopage"
+      }
+    ]
+  },
+  "originalsecret": "192bbf7c1c",
+  "visibility": {
+    "ispublic": 1,
+    "isfamily": 0,
+    "isfriend": 0
+  },
+  "publiceditability": {
+    "canaddmeta": 1,
+    "cancomment": 1
+  },
+  "owner": {
+    "location": "Manhattan, U.S.A",
+    "path_alias": "zokuga",
+    "username": "Dan Nguyen @ New York City",
+    "nsid": "32451477@N02",
+    "iconfarm": 9,
+    "realname": "Dan Nguyen",
+    "iconserver": "8475"
+  },
+  "people": {
+    "haspeople": 0
+  },
+  "media": "photo",
+  "comments": {
+    "_content": "13"
+  },
+  "server": "3917",
+  "id": "14392889220",
+  "usage": {
+    "candownload": 1,
+    "canprint": 0,
+    "canblog": 0,
+    "canshare": 1
+  },
+  "secret": "6ef01a0fa4",
+  "farm": 4,
+  "safety_level": "0",
+  "description": {
+    "_content": "Woooo! What a show!\n\nThe fireworks barges had to move down river because of the currents, which meant that those of us on the Promenade missed out on about 90% of the show...but we still had a great view of the bridge-launched pyrotechnics. You can see all my other shots in this album: <a href=\"https://www.flickr.com/photos/zokuga/sets/72157645547685522\">www.flickr.com/photos/zokuga/sets/72157645547685522</a>"
+  },
+  "editability": {
+    "canaddmeta": 0,
+    "cancomment": 0
+  },
+  "license": "4",
+  "geoperms": {
+    "ispublic": 1,
+    "iscontact": 0,
+    "isfamily": 0,
+    "isfriend": 0
+  },
+  "originalformat": "jpg",
+  "dateuploaded": "1404571905",
+  "views": "26832",
+  "tags": {
+    "tag": [
+      {
+        "_content": "gothamist",
+        "id": "32431129-14392889220-22328",
+        "author": "32451477@N02",
+        "machine_tag": 0,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "Gothamist"
+      },
+      {
+        "_content": "july4th",
+        "id": "32431129-14392889220-31187",
+        "author": "32451477@N02",
+        "machine_tag": 0,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "July 4th"
+      },
+      {
+        "_content": "nyc",
+        "id": "32431129-14392889220-106",
+        "author": "32451477@N02",
+        "machine_tag": false,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "NYC"
+      },
+      {
+        "_content": "fireworks",
+        "id": "32431129-14392889220-4626",
+        "author": "32451477@N02",
+        "machine_tag": false,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "fireworks"
+      },
+      {
+        "_content": "summer",
+        "id": "32431129-14392889220-245",
+        "author": "32451477@N02",
+        "machine_tag": false,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "summer"
+      },
+      {
+        "_content": "independenceday",
+        "id": "32431129-14392889220-34515",
+        "author": "32451477@N02",
+        "machine_tag": false,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "Independence Day"
+      },
+      {
+        "_content": "bridge",
+        "id": "32431129-14392889220-127",
+        "author": "32451477@N02",
+        "machine_tag": false,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "bridge"
+      },
+      {
+        "_content": "brooklynbridge",
+        "id": "32431129-14392889220-15688",
+        "author": "32451477@N02",
+        "machine_tag": 0,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "Brooklyn Bridge"
+      },
+      {
+        "_content": "brooklynbridgepark",
+        "id": "32431129-14392889220-506504",
+        "author": "32451477@N02",
+        "machine_tag": 0,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "Brooklyn Bridge Park"
+      },
+      {
+        "_content": "brookyln",
+        "id": "32431129-14392889220-191498",
+        "author": "32451477@N02",
+        "machine_tag": 0,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "Brookyln"
+      },
+      {
+        "_content": "dumbo",
+        "id": "32431129-14392889220-7703",
+        "author": "32451477@N02",
+        "machine_tag": 0,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "DUMBO"
+      },
+      {
+        "_content": "newyorkcity",
+        "id": "32431129-14392889220-109",
+        "author": "32451477@N02",
+        "machine_tag": 0,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "New York City"
+      },
+      {
+        "_content": "night",
+        "id": "32431129-14392889220-1213",
+        "author": "32451477@N02",
+        "machine_tag": false,
+        "authorname": "Dan Nguyen @ New York City",
+        "raw": "night"
+      }
+    ]
+  },
+  "isfavorite": 0,
+  "location": {
+    "country": {
+      "place_id": "nz.gsghTUb4c2WAecA",
+      "_content": "United States",
+      "woeid": "23424977"
+    },
+    "accuracy": "16",
+    "locality": {
+      "place_id": ".skCPTpTVr.Q3WKW",
+      "_content": "New York",
+      "woeid": "2459115"
+    },
+    "context": "0",
+    "place_id": "CldNEG9QUL_lkqUcYA",
+    "region": {
+      "place_id": "ODHTuIhTUb75gdBu",
+      "_content": "New York",
+      "woeid": "2347591"
+    },
+    "longitude": "-73.992705",
+    "latitude": "40.704432",
+    "woeid": "12589335",
+    "county": {
+      "place_id": "CldNEG9QUL_lkqUcYA",
+      "_content": "Brooklyn",
+      "woeid": "12589335"
+    }
+  },
+  "title": {
+    "_content": "July 4th Fireworks, Brooklyn Bridge, 2014"
+  },
+  "notes": {
+    "note": []
+  },
+  "dates": {
+    "takengranularity": "0",
+    "posted": "1404571905",
+    "takenunknown": 0,
+    "lastupdate": "1436192865",
+    "taken": "2014-07-04 21:49:26"
+  }
+}
