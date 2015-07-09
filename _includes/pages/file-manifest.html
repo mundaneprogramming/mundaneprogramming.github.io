@@ -7,7 +7,9 @@
 
 
             <div class="description">
-              {{ file.description }}
+              {% if file.description %}
+              {{ file.description  }}
+              {% endif %}
             </div>
 
             <div class="links">
