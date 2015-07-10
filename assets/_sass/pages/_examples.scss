@@ -4,6 +4,18 @@
     h2, h3, h4{
       margin-top: 1.0em;
     }
+
+    h1{
+      font-size: floor(($font-size-h1 * 0.9))
+    }
+    h2{
+      font-size: floor(($font-size-h2 * 0.9))
+    }
+    h3{
+      font-size: floor(($font-size-h3 * 0.9))
+    }
+
+
 }
 
 .example-page{

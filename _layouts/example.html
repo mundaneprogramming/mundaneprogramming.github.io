@@ -27,27 +27,6 @@ layout: page
       </section>
 
 
-{% if page.the_need %}
-    <section class="meta-synops">
-        <div class="row">
-          <div class="col-sm-6">
-            <div id="the_need">
-              <h5>The need</h5>
-              {{ page.the_need | markdownify }}
-            </div>
-          </div>
-          <div class="col-sm-6">
-              <h5>The old-fashioned routine</h5>
-
-            <ol id="the_routine">
-              {% for rstep in page.the_routine %}
-                <li>{{ rstep }}</li>
-              {% endfor %}
-            </ol>
-          </div>
-        </div>
-    </section>
-    {% endif %}
 
 
 
@@ -81,6 +60,22 @@ layout: page
 
   <div class="example-content">
     <div class="container">
+
+    {% if page.the_need %}
+            <h1>The need</h1>
+            {{ page.the_need | markdownify }}
+            <h2>The old-fashioned routine</h2>
+
+            <ol id="the_routine">
+              {% for rstep in page.the_routine %}
+                <li>{{ rstep }}</li>
+              {% endfor %}
+            </ol>
+    {% endif %}
+
+
+
+
       {{ content }}
     </div>
   </div>
