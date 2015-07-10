@@ -8,7 +8,9 @@ $(document).ready(function(){
 
   // https://github.com/ghiculescu/jekyll-table-of-contents
   // ...I miss middleman...
-  $('#table-of-contents .toc').toc();
+  $('#table-of-contents .toc').toc(
+      {listType: 'ul', headers: 'h1, h2, h3', showSpeed: 0, noBackToTopLinks: true }
+  );
 })
 
 

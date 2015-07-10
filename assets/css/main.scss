@@ -11,11 +11,11 @@
         "custom_vars/typography",
         "vendor/bootstrap",
         "vendor/font-awesome/css/font-awesome.css",
+        "vendor/ghiculescu-jekyll-toc-styles",
         "template/footer",
         "template/header",
         "template/effects",
         "template/code"
-
 ;
 
 
@@ -29,9 +29,7 @@ body{
 
 
 .container{
-    p{
       max-width: $prose-container-width;
-    }
 }
 
 

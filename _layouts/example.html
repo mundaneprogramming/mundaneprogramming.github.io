@@ -7,7 +7,6 @@ layout: page
 <div class="example-page">
   <section id="meta-top">
     <div class="container">
-      <div class="well">
       <section id="meta-boilerplate">
             <div class="description">
               {{ page.description }}
@@ -25,13 +24,6 @@ layout: page
                 {% endif %}
             </ul>
       </section>
-
-
-
-
-
-
-
       <section id="meta-nav">
           <div class="row">
             <div class="col-sm-6">
@@ -48,34 +40,26 @@ layout: page
             </div>
           </div>
       </section> <!-- section#meta-nav -->
-
-
-    </div> <!--well -->
     </div> <!--container -->
-
   </section> <!--meta-top -->
 
 
 
 
-  <div class="example-content">
+  <div class="example-content single-col">
     <div class="container">
 
-    {% if page.the_need %}
-            <h1>The need</h1>
-            {{ page.the_need | markdownify }}
-            <h2>The old-fashioned routine</h2>
+      {% if page.the_need %}
+          <h1 id="the-need">The need</h1>
+          {{ page.the_need | markdownify }}
+          <h2 id="the-routine">The old-fashioned routine</h2>
 
-            <ol id="the_routine">
-              {% for rstep in page.the_routine %}
-                <li>{{ rstep }}</li>
-              {% endfor %}
-            </ol>
-    {% endif %}
-
-
-
-
+          <ol id="the_routine">
+            {% for rstep in page.the_routine %}
+              <li>{{ rstep }}</li>
+            {% endfor %}
+          </ol>
+      {% endif %}
       {{ content }}
     </div>
   </div>
@@ -83,7 +67,7 @@ layout: page
   {% if page.related_links %}
   <section class="related_links">
     <div class="container">
-      <h3>Related links</h3>
+      <h1 id="related-links">Related links</h1>
       <ul class="list-">
         {% for link in page.related_links %}
           <li><a href="{{link.url}}">{{link.title}}</a></li>

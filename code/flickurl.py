@@ -35,9 +35,9 @@ def get_biggest_photo_url_meta(photo_id, api_key):
         'photo_id': photo_id
         }
     # assuming that :size attribute is always sorted, smallest to biggest
-    resp = requests.get(BASE_URL, params = atts).json()
+    data = requests.get(BASE_URL, params = atts).json()
     # assuming that :size attribute is always sorted, smallest to biggest
-    biggestsize = resp['sizes']['size'][-1]
+    biggestsize = data['sizes']['size'][-1]
     return biggestsize
 
 def extract_photo_id(url):

@@ -1,6 +1,9 @@
 ---
 title: Extract data about a Flickr photo
 description: A command-line tool for getting the URL and metadata given a Flickr URL.
+rank: 50
+authors:
+  - dannguyen
 files:
   - name: code/flickurl.py
     description: A command-line script that contacts Flickr's API and pretty-prints photo info and URLs 
@@ -13,6 +16,13 @@ the_routine:
   - Click the "Download this photo" link
   - Click "Original size" link
   - Right-click photo to get its direct URL
+related_links:
+  - title: 'API docs for flickr.photos.getInfo'
+    url: https://www.flickr.com/services/api/flickr.photos.getInfo.html
+  - title: 'API docs for flickr.photos.getSizes'
+    url: https://www.flickr.com/services/api/flickr.photos.getSizes.html
+
+
 ---
 
 
@@ -25,7 +35,7 @@ Given a Flickr photo page URL:
 ![image](/files/images/screenshots/flickr.brooklyn4th.jpg){:.bord}
 
 
-Run {% include github-link.html filename="code/flickurl.js" %} like so:
+Run {% include github-link.html filename="code/flickurl.py" %} like so:
 
 ~~~sh
 python flickurl https://www.flickr.com/photos/zokuga/14392889220/
@@ -48,3 +58,8 @@ This script uses two endpoints:
 ## Sample flickr.photos.getInfo JSON
 
 {% include snippets/codepiece.html relpath="snippets/flickr.brooklyn4th.getInfo.json" parentdir="examples/"%}
+
+
+## Sample flickr.photos.getSizes JSON
+
+{% include snippets/codepiece.html relpath="snippets/flickr.brooklyn4th.getSizes.json" parentdir="examples/"%}

@@ -1,22 +1,39 @@
+.single-col{
+  width:  $prose-container-width;
+
+  margin: 0 auto;
+}
+
+.toc ul{
+  padding-left: 1.0em;
+  font-size: 16px;
+}
 
 
 .example-content{
-    h2, h3, h4{
+    h1, h2, h3, h4{
       margin-top: 1.0em;
+      margin-bottom: 0.2em;
     }
 
     h1{
-      font-size: floor(($font-size-h1 * 0.9))
+      font-size: floor(($font-size-h1 * 0.9));
     }
     h2{
-      font-size: floor(($font-size-h2 * 0.9))
+      font-size: floor(($font-size-h2 * 0.9));
     }
     h3{
-      font-size: floor(($font-size-h3 * 0.9))
+      font-size: floor(($font-size-h3 * 0.9));
     }
-
-
 }
+
+
+.related_links{
+  h1{
+    font-size: floor(($font-size-h1 * 0.7));
+  }
+}
+
 
 .example-page{
   img{
@@ -79,11 +96,3 @@
 
 
 }
-
-// .example-page{
-//   .container{
-//     p{
-//       max-width: $prose-container-width;
-//     }
-//   }
-// }

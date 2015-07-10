@@ -1,0 +1,106 @@
+{
+  "stat": "ok",
+  "sizes": {
+    "candownload": 1,
+    "canblog": 0,
+    "size": [
+      {
+        "width": 75,
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/sq/",
+        "height": 75,
+        "label": "Square",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4_s.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "150",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/q/",
+        "height": "150",
+        "label": "Large Square",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4_q.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "100",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/t/",
+        "height": "67",
+        "label": "Thumbnail",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4_t.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "240",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/s/",
+        "height": "160",
+        "label": "Small",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4_m.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "320",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/n/",
+        "height": 213,
+        "label": "Small 320",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4_n.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "500",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/m/",
+        "height": "333",
+        "label": "Medium",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "640",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/z/",
+        "height": "427",
+        "label": "Medium 640",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4_z.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "800",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/c/",
+        "height": 534,
+        "label": "Medium 800",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4_c.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "1024",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/l/",
+        "height": "683",
+        "label": "Large",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_6ef01a0fa4_b.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "1600",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/h/",
+        "height": 1067,
+        "label": "Large 1600",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_518de64af0_h.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "2048",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/k/",
+        "height": 1365,
+        "label": "Large 2048",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_696c83d60c_k.jpg",
+        "media": "photo"
+      },
+      {
+        "width": "4945",
+        "url": "https://www.flickr.com/photos/zokuga/14392889220/sizes/o/",
+        "height": "3297",
+        "label": "Original",
+        "source": "https://farm4.staticflickr.com/3917/14392889220_192bbf7c1c_o.jpg",
+        "media": "photo"
+      }
+    ],
+    "canprint": 0
+  }
+}
