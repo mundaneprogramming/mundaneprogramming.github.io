@@ -10,6 +10,7 @@
 }
 
 
+
 .example-content{
     h1, h2, h3, h4{
       margin-top: 1.0em;
@@ -36,6 +37,10 @@
 
 
 .example-page{
+   .subhed{
+      margin-bottom: 1px;
+   }
+
   img{
     max-width: 100%;
   }
@@ -53,15 +58,20 @@
   }
 
   #meta-boilerplate{
-    margin-top: 1.5em;
-    margin-bottom: 1.0em;
+    .description{
+      font-size: 1.2em;
+      line-height: 1.2em;
+      margin-bottom: 0.1em;
+    }
+
+    .keywords{
+      margin-left: 0;
+    }
   }
 
   #file-manifest{
 
-    h5{
-      margin-bottom: 1px;
-    }
+
     .description{
       font-size: 0.85em;
       font-style: normal;
@@ -82,16 +92,6 @@
       }
     }
 
-  }
-
-  .description{
-    font-size: 1.2em;
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-  }
-
-  .keywords{
-    margin-left: 0;
   }
 
 

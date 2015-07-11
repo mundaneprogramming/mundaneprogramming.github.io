@@ -12,6 +12,11 @@ layout: page
               {{ page.description }}
             </div>
 
+            {% if page.authors %}
+                <div class="byline">{% include snippets/byline.html authors=page.authors %}</div>
+            {% endif %}
+
+
             <ul class="keywords list-inline">
                 {% if page.keywords %}
                   <h5>Keywords</h5>
@@ -27,15 +32,15 @@ layout: page
       <section id="meta-nav">
           <div class="row">
             <div class="col-sm-6">
+              <h5 class="subhed">Contents</h5>
               {% include snippets/toc.html %}
             </div>
             <div class="col-sm-6">
               <div id="file-manifest">
                 {% if page.files %}
-                  <h5>Related files</h5>
+                  <h5 class="subhed">Related files</h5>
                   {% include pages/file-manifest.html files=page.files %}
                 {% endif %}
-
               </div>
             </div>
           </div>
@@ -49,17 +54,23 @@ layout: page
   <div class="example-content single-col">
     <div class="container">
 
-      {% if page.the_need %}
-          <h1 id="the-need">The need</h1>
-          {{ page.the_need | markdownify }}
-          <h2 id="the-routine">The old-fashioned routine</h2>
-
-          <ol id="the_routine">
-            {% for rstep in page.the_routine %}
-              <li>{{ rstep }}</li>
-            {% endfor %}
-          </ol>
+      {% if page.the_usecase %}
+        <section id="the-need">
+            <h1 id="the-need-hed">The use case</h1>
+            {{ page.the_usecase | markdownify }}
+        </section>
       {% endif %}
+      {% if page.the_routine %}
+        <section id="the-routine">
+            <h2 id="the-routine-hed">The routine</h2>
+            <ol>
+              {% for rstep in page.the_routine %}
+                <li>{{ rstep }}</li>
+              {% endfor %}
+            </ol>
+        </section>
+      {% endif %}
+      <!--begin markdown content -->
       {{ content }}
     </div>
   </div>
@@ -68,7 +79,7 @@ layout: page
   <section class="related_links">
     <div class="container">
       <h1 id="related-links">Related links</h1>
-      <ul class="list-">
+      <ul class="list-unstyled">
         {% for link in page.related_links %}
           <li><a href="{{link.url}}">{{link.title}}</a></li>
         {% endfor %}

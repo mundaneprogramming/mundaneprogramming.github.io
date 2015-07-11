@@ -1,4 +1,4 @@
-By
+by
 {% for aslug in page.authors %}
   <span class="author">
      {% include snippets/author-byline.html author_slug=aslug%}{% if forloop.index < forloop.length and forloop.length > 2%}, {%endif%}

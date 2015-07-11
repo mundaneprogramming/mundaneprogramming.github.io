@@ -9,7 +9,7 @@ the_routine:
   - Identify links to Twitter accounts
   - For each link, click to go to that Twitter account page
   - Click the "Follow" button
-the_need: |
+the_usecase: |
   All Twitter account links have an obvious pattern, so use a regex (no HTML parsing needed!) to extract them, then one-by-one, use the Twitter API endpoint to execute a "follow" action.
 rank: 10
 complete: false

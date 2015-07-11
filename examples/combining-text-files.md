@@ -9,7 +9,7 @@ the_routine:
   - Paste existing text file into new text file.
   - Open another existing text file.
   - Repeat.
-the_need: |
+the_usecase: |
   Using the relatively clean and straightforward baby names data from the Social Security Administration, this example shows several variations of how to combine text files in Bash and in Python, including how to add data on a per-file, per-line basis. This is a good time to not only get acquainted with the conveniences of Bash programming, but to practice using higher-level CSV libraries (even though they are overkill in this situation).
 keywords: |
   skills:

@@ -12,4 +12,10 @@
   cursor:pointer;
 }
 
+
+.toc ul:first-child > li{
+    font-weight: bold;
+}
+
+
 // https://github.com/ghiculescu/jekyll-table-of-contents#header-styling

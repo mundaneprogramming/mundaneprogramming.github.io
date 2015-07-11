@@ -11,9 +11,16 @@ import requests
 import json
 
 BASE_URL = 'https://api.flickr.com/services/rest/'
-
+MAX_DISPLAYABLE_PHOTO_DIMENSION = 1600 # i.e. a photo with width and height <= 1600
 
 def get_photo_info(photo_id, api_key):
+    """
+    This calls the Flickr endpoint to get a photo's metadata
+    https://www.flickr.com/services/api/flickr.photos.getInfo.html
+        photo_id: a number or string
+        return: a dict containing the Flickr response
+    """
+
     atts = {'api_key': api_key,
             'format': 'json',
             'method': 'flickr.photos.getInfo',
@@ -23,10 +30,13 @@ def get_photo_info(photo_id, api_key):
     photo = requests.get(BASE_URL, params = atts).json()['photo']
     return photo
 
-def get_biggest_photo_url_meta(photo_id, api_key):
+
+def get_photo_sizes(photo_id, api_key):
     """
+    This calls the Flickr endpoint to get a list of available photosizes
     https://www.flickr.com/services/api/flickr.photos.getSizes.html
-    Returns URL of biggest size available
+        photo_id: a number or string
+        return: a dict containing the Flickr response
     """
     atts = {'api_key': api_key,
         'format': 'json',
@@ -36,12 +46,34 @@ def get_biggest_photo_url_meta(photo_id, api_key):
         }
     # assuming that :size attribute is always sorted, smallest to biggest
     data = requests.get(BASE_URL, params = atts).json()
+    return data
+
+def get_biggest_photo_url(sizeinfo):
+    """
+    returns the URL of the biggest available version of a Flickr photo
+    sizeinfo: a dict containing the Flickr API response for photos.getSizes
+    """
     # assuming that :size attribute is always sorted, smallest to biggest
-    biggestsize = data['sizes']['size'][-1]
-    return biggestsize
+    biggest = sizeinfo['sizes']['size'][-1]
+    return biggest['source']
+
+
+def get_displayable_photo_url(sizeinfo, max_dim = MAX_DISPLAYABLE_PHOTO_DIMENSION):
+    """
+    returns the URL of the first photo to have width and height less-than-or-equal to
+        a specified number of pixels
+    sizeinfo: a dict containing the Flickr API response for photos.getSizes
+    maxdim: the max number of pixels
+    """
+    sizes = reversed(sizeinfo['sizes']['size']) # since sizes are smallest to biggest
+    url =  next(s['source'] for s in sizes if (
+                int(s['width']) <= max_dim and int(s['height']) <= max_dim ))
+    return url
+
 
 def extract_photo_id(url):
     """
+    Extracts the numerical photo ID from a Flickr photo page URL
     e.g. https://www.flickr.com/photos/statelibraryofnsw/4944459226/
     or already a photo ID, e.g. 4944459226
     """
@@ -54,16 +86,16 @@ def extract_photo_id(url):
 
 def extract_canonical_url(photo_info):
     """
-    returns the dict that contains canonical photopage URL and dimensions
-    photo_info is a dict
-    "urls": {
-      "url": [
-        {
-          "type": "photopage",
-          "_content": "https://www.flickr.com/photos/statelibraryofnsw/4944459226/"
-        }
-      ]
-    },
+    Returns the dict that contains canonical photopage URL and dimensions
+    photo_info is a dict:
+        "urls": {
+          "url": [
+            {
+              "type": "photopage",
+              "_content": "https://www.flickr.com/photos/statelibraryofnsw/4944459226/"
+            }
+          ]
+        },
     """
     return next(url['_content'] for url in photo_info['urls']['url'] if url['type'] == 'photopage')
 
@@ -81,18 +113,19 @@ if __name__ == '__main__':
     args = parser.parse_args()
     url = args.url[0]
     photo_id = extract_photo_id(url)
-    photo_url_meta = get_biggest_photo_url_meta(photo_id, api_key)
     photo_info = get_photo_info(photo_id, api_key)
+    sizes_info = get_photo_sizes(photo_id, api_key)
     # extract some variables
     title = photo_info['title']['_content']
     canonurl = extract_canonical_url(photo_info)
     owner_name = photo_info['owner']['realname']
-    source_url = photo_url_meta['source']
+    display_url = get_displayable_photo_url(sizes_info)
+    biggest_url = get_biggest_photo_url(sizes_info)
     # We need to sanitize quotemarks before inserting it into HTML
     title_owner = (title + " by: " + owner_name).replace('"', "''")
     # print copyable HTML
-    htmllink = """<a href="{page_url}" title="{title}"><img src="{src_url}" alt="{title}"></a>""".format(
-                page_url = canonurl, src_url = source_url, title = title_owner
+    htmllink = """<a href="{page_url}" title="Go to Flickr page for: {title}"><img src="{src_url}" alt="{title}"></a>""".format(
+                page_url = canonurl, src_url = display_url, title = title_owner
             )
     cprint("HTML image link")
     print(htmllink)
@@ -105,10 +138,9 @@ if __name__ == '__main__':
     # owner name
     cprint("Owner name")
     print(owner_name)
-
     # print direct url to photo
-    cprint("Direct Image URL")
-    print(source_url)
+    cprint("Biggest image URL")
+    print(biggest_url)
     # dates
     if photo_info['dates'].get('taken'):
         cprint("Date taken")
@@ -117,11 +149,12 @@ if __name__ == '__main__':
         cprint("Date posted")
         d = datetime.fromtimestamp(int(photo_info['dates'].get('posted'))).isoformat()
         print(d)
-
     # description
     cprint("Description")
     print(photo_info['description']['_content'])
-    cprint("More meta")
+    cprint("Available photo sizes")
     # print meta of photo url
-    print(photo_url_meta['label'], "%sx%s" % (photo_url_meta['width'], photo_url_meta['height']))
+    for size in sizes_info['sizes']['size']:
+        print(size['label'], "%sx%s" % (size['width'], size['height']))
+        print(size['source'])
 
