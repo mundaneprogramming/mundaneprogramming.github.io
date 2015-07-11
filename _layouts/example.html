@@ -65,7 +65,7 @@ layout: page
             <h2 id="the-routine-hed">The routine</h2>
             <ol>
               {% for rstep in page.the_routine %}
-                <li>{{ rstep }}</li>
+                <li>{{ rstep | markdownify}}</li>
               {% endfor %}
             </ol>
         </section>
