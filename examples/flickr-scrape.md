@@ -40,7 +40,7 @@ Given a Flickr photo page URL:
 
 [https://www.flickr.com/photos/zokuga/14392889220/](https://www.flickr.com/photos/zokuga/14392889220/)
 
-![image](/files/images/screenshots/flickr.brooklyn4th.jpg){:.bord}
+![image](/files/images/screenshots/flickr.brooklyn4th.jpg){:.bordered}
 
 
 Run {% include github-link.html filename="code/flickurl.py" %} like so:
@@ -51,7 +51,7 @@ python flickurl.py https://www.flickr.com/photos/zokuga/14392889220/
 
 This is what the output looks like:
 
-![image](/files/images/screenshots/flickrscrapeoutput.png){:.bord}
+![image](/files/images/screenshots/flickrscrapeoutput.png){:.bordered}
 
 ### Boilerplate HTML image link
 
