@@ -66,3 +66,17 @@ table.CodeRay{
     }
 }
 
+
+code {
+  padding: 1px 1px;
+  font-size: 100%;
+  color: $code-color;
+  border-radius: 0px;
+}
+
+a:link, a:visited{
+  code{
+    padding: 0;
+    color: $link-color;
+  }
+}
