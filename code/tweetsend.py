@@ -93,9 +93,15 @@ parser.add_argument('--reply-to', '-r',
 
 
 args = parser.parse_args()
-text = args.text[0]
-fname = args.filename if args.filename else None
+# get the creds file to authenticate
 creds = args.credsfile
+# get the tweet text
+text = args.text[0]
+# get the image filename to send
+fname = args.filename if args.filename else None
+# get the reply_to id if it exists (note that @twitteruser replied to must
+# be mentioned in the actual tweet text. We leave this up to the
+# invoking user
 r_id = args.reply_to
 resp = tweet(text, filename = fname, credsfile = creds,
         in_reply_to_status_id = r_id)

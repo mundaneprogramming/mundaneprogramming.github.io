@@ -23,9 +23,6 @@ def get_shortlink_photo(weburl):
     resp = requests.get(url, params = atts).json()
     return resp['data']
 
-
-
-
 parser = argparse.ArgumentParser()
 parser.add_argument("shortcode", nargs = 1, help = "Instagram web URL/shortcode")
 args = parser.parse_args()
