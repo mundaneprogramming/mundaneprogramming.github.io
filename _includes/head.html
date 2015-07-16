@@ -16,7 +16,7 @@
   {% if page.description %}
     {% assign meta_description = page.description %}
   {% elsif page.excerpt %}
-    {% assign mega_description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+    {% assign meta_description = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
   {% else %}
     {% assign meta_description = site.description %}
   {% endif %}

@@ -3,18 +3,19 @@ from datetime import datetime
 import requests
 import sys
 import newspaper
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
 from colorama import Fore, Style, Back, init as initcolorama
 from urllib.parse import urljoin
+
+
 
 TEMPLATE ="""
 {a}title{b}: {title}
 {a}site_name{b}: {site_name}
 {a}url{b}: {url}
 {a}retrieved_at{b}: {retrieved_at}
-{a}description{b}: |
-{a}{description}
-{a}date{b}: {date}
+{a}description{b}: {description}
+{a}published_at{b}: {published_at}
 {a}type{b}: {type}
 {a}authors{b}: {authors}
 {a}image{b}: {image}
@@ -42,8 +43,8 @@ d["authors"] =  next((x for x in [mdata['authors'], mdata['author'], article.aut
 
 
 article.authors if article.authors else ""
-d["date"] = article.publish_date
-d["description"] = "\n".join(["\t" + line for line in d["description"].splitlines()])
+d["published_at"] = article.publish_date
+d["description"] = "| \n".join(["\t" + line for line in d["description"].splitlines()])
 
 # if no site_name
 if not d["site_name"]:
