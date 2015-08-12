@@ -1,4 +1,17 @@
 # Download friends or followers
+# Usage:
+# $ python gettwitterpeeps_cli.py chuckgrassley friends
+#
+# Expects a creds file that looks like:
+# {
+#     "access_token": "XXXXX",
+#     "access_token_secret": "YYYYY",
+#     "consumer_secret": "ZZZZZ",
+#     "consumer_key": "CCCCCC"
+# }
+#
+# example: http://www.compjour.org/tutorials/twitter-app-authentication-process/
+
 from datetime import datetime
 import argparse
 import tweepy
@@ -6,7 +19,7 @@ import os
 import json
 
 DEFAULT_TWITTER_CREDS_PATH = '~/.creds/me.json'
-BATCH_SIZE = 100
+IDS_BATCH_SIZE = 100
 
 def get_api(creds_path):
     fn = creds_path
@@ -73,11 +86,10 @@ if __name__ == "__main__":
     # too lazy to catch invalid input here, meh
     # now get the profiles
     profiles = []
-    for x in range(0, len(user_ids), BATCH_SIZE):
-        batch_uids = user_ids[x:x+BATCH_SIZE]
+    for x in range(0, len(user_ids), IDS_BATCH_SIZE):
+        batch_uids = user_ids[x:x+IDS_BATCH_SIZE]
         try:
             results = api.lookup_users(batch_uids)
-
         # catch situation in which none of the names in the batch are found
         # or else Tweepy will error out
         except tweepy.error.TweepError as e:
@@ -87,7 +99,6 @@ if __name__ == "__main__":
                 # some other error, print the exception and
                 # save what we can
                 print(e)
-
         else:
             profiles.extend([user._json for user in results])
             print("User profiles collected:", len(profiles))
