@@ -18,7 +18,7 @@ def get_api(creds_path):
     #   upon hitting a wait limit, and then to automatically continue
     api = tweepy.API(auth,
             wait_on_rate_limit = True, wait_on_rate_limit_notify = True)
-    return tweepy.API(auth)
+    return api
 
 
 # This program gets: ids of the given user's friends or followers
