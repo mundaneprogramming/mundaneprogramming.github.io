@@ -51,8 +51,7 @@ if __name__ == "__main__":
         help = "Screen name of user to get tweets from")
     parser.add_argument("peeps_type", nargs = 1,
         help = "'friends' or 'followers' to collect")
-    parser.add_argument("--path", '-p',
-        default = ".", help = "Path to save to")
+    parser.add_argument("--output-path", '-o', help = "Path to save to")
     # Get screen name from commandline
     args = parser.parse_args()
     screen_name = args.screen_name[0]
@@ -66,7 +65,9 @@ if __name__ == "__main__":
     # too lazy to catch invalid input here, meh
     # now get the profiles
     profiles = get_profiles_from_ids(userids)
-    fn = "%s.%s.json" % (screen_name, peeps_type)
+
+    # Now save the file
+    fn = args.output_path if args.output_path else "%s.%s.json" % (screen_name, peeps_type)
     with open(fn, "w") as f:
         print("Writing to:", fn)
         data = json.dumps(profiles, indent = 2)
