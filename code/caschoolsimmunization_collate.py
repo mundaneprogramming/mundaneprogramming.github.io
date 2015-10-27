@@ -13,17 +13,44 @@ from xlrd import open_workbook
 XLS_DIR = "./data-hold/xls/immunization"
 FINISHED_DIR = './data-hold/finished'
 
+
 pre_2012_headers = ['school_code', 'county', 'school_type', 'district_code', 'school_name',
 'enrollment', 'uptodate_num', 'uptodate_pct', 'conditional_num', 'conditional_pct',
 'pme_num', 'pme_pct', 'pbe_num', 'pbe_pct', 'dtp_num', 'dtp_pct', 'polio_num',
 'polio_pct', 'mmr1_num', 'mmr1_pct', 'mmr2_num', 'mmr2_pct', 'hepb_num', 'hepb_pct',
 'vari_num', 'vari_pct']
-post_2012_headers = ['school_code', 'county', 'school_type', 'district_name', 'city',
+pre_2014_headers = ['school_code', 'county', 'school_type', 'district_name', 'city',
 'school_name', 'enrollment', 'uptodate_num', 'uptodate_pct', 'conditional_num', 'conditional_pct',
 'pme_num', 'pme_pct', 'pbe_num', 'pbe_pct', 'dtp_num', 'dtp_pct', 'polio_num',
 'polio_pct', 'mmr2_num', 'mmr2_pct', 'hepb_num', 'hepb_pct', 'vari_num', 'vari_pct', 'reported']
 # differences between pre/post 2012:
 #  post-2012 only records 2-dose MMR, e.g. `mmr2_num` and `mmr2_pct`
+post_2014_headers = ['school_code', 'county', 'school_type', 'district_name', 'city',
+    'school_name', 'enrollment', 'uptodate_num', 'uptodate_pct', 'conditional_num', 'conditional_pct',
+    'pme_num', 'pme_pct', 'pbe_num', 'pbe_pct',
+    # special fields to 2014
+    'pre_jan_pbe_num','pre_jan_pbe_pct',
+    'hcp_counseled_pbe_num', 'hcp_counseled_pbe_pct',
+    'religous_pbe_num', 'religous_pbe_pct',
+    # same ol fields as before
+    'dtp_num', 'dtp_pct', 'polio_num',
+    'polio_pct', 'mmr2_num', 'mmr2_pct', 'hepb_num', 'hepb_pct', 'vari_num', 'vari_pct', 'reported']
+
+
+
+common_headers = ['year',
+    'school_code', 'county', 'school_type', 'district_code',
+    'city', 'district_name', 'school_name',
+    'enrollment', 'uptodate_num', 'uptodate_pct', 'conditional_num', 'conditional_pct',
+    'pme_num', 'pme_pct', 'pbe_num', 'pbe_pct',
+    'pre_jan_pbe_num','pre_jan_pbe_pct',
+    'hcp_counseled_pbe_num', 'hcp_counseled_pbe_pct',
+    'religous_pbe_num', 'religous_pbe_pct',
+    'dtp_num', 'dtp_pct', 'polio_num',
+    'polio_pct', 'mmr1_num', 'mmr1_pct', 'mmr2_num', 'mmr2_pct', 'hepb_num', 'hepb_pct',
+    'vari_num', 'vari_pct',
+    'reported']
+
 
 makedirs(XLS_DIR, exist_ok = True)
 makedirs(FINISHED_DIR, exist_ok = True)
@@ -34,7 +61,14 @@ for xlsname in glob(os.path.join(XLS_DIR, '*.xls*')):
     # e.g. "2006" and "2007" from "K--2006-2007.xls"
     yr_1, yr_2 = re.search('(\d{4})-(\d{4})', xlsname).groups()
     year = int(yr_1)
-    headers = pre_2012_headers if year < 2012 else post_2012_headers
+    if year < 2012:
+        headers = pre_2012_headers
+    elif year < 2014:
+        headers = pre_2014_headers
+    else:
+        headers = post_2014_headers
+
+
     # open the Excel workbook
     book = open_workbook(xlsname)
     # open the first non-empty spreadsheet
@@ -61,10 +95,9 @@ with open(jname, "w") as jfile:
 # write a CSV
 cname = os.path.join(FINISHED_DIR, 'k-immune.csv')
 print("Writing to CSV:", cname)
-writer = csv.DictWriter(open(cname, 'w', encoding = 'utf-8'),
-   fieldnames = set(pre_2012_headers + post_2012_headers + ['year']),
-   delimiter=','
-)
+cfile = open(cname, 'w', encoding = 'utf-8')
+
+writer = csv.DictWriter(cfile, fieldnames = common_headers, delimiter=',')
 writer.writeheader()
 for d in data:
     writer.writerow(d)

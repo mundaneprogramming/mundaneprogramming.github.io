@@ -5,7 +5,7 @@ import os
 import json
 
 DEFAULT_TWITTER_CREDS_PATH = '~/.creds/me.json'
-MAX_COUNT = 200
+MAX_COUNT_PER_BATCH = 200
 
 def get_api(credsfile = DEFAULT_TWITTER_CREDS_PATH):
     fn = os.path.expanduser(credsfile)  # get the full path in case the ~ is used
@@ -22,7 +22,7 @@ def get_timeline(screen_name):
     tweets = []
     cursor = tweepy.Cursor(api.user_timeline, id = screen_name,
         trim_user = True, exclude_replies = False, include_rts = True)
-    for tweet in cursor.items(MAX_COUNT):
+    for tweet in cursor.items(MAX_COUNT_PER_BATCH):
         tweets.append(tweet._json)
     return tweets
 
@@ -31,7 +31,7 @@ def save_to_file(screen_name, tweets, path):
     # create a timestamped filename
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     basefn = "%s.tweets.%s.json" % (screen_name, timestamp)
-    fn = os.path.join(path basefn)
+    fn = os.path.join(path, basefn)
     # e.g. Saving to: dan.tweets.2015-06-20_2301.json
     print("Saving to:", fn)
     with open(fn, 'w') as f:
