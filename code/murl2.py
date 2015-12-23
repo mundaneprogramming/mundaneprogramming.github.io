@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from collections import OrderedDict
 from datetime import datetime
 from lxml.html import fromstring as html_fromstring
